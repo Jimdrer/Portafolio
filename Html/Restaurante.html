@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!--slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="shortcut icon" href="..//img/pics/ico/r">
+    <title>Gastronomia por el Mundo</title>
+</head>
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <div class="container">
+        <nav class="nav-main">
+            <ul class="nav-menu show">
+                <li>
+                    <a href="Mexicana.html">Comida Mexicana</a>
+                </li>
+                <li>
+                    <a href="Asiatica.html">Comida Asiatica</a>
+                </li>
+                <li>
+                    <a href="Europea.html">Comida Europea</a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="slide">
+        <ul class="slider">
+            <li><img src="img/fondos/tabla.jpg" alt="fondo1"></li>
+            <li><img src="img/fondos/fondo2.jpg" alt="fondo2"></li>
+            <li><img src="img/fondos/fondo3.jpeg" alt="fondo3"></li>
+            <li><img src="img/fondos/fondo4.jpg" alt="fondo4"></li>
+        </ul>
+    </div>
+<!--scripts-->
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+             mode:'fade'   
+            })
+            $('.fondo2').bxSlider({
+             mode:'fade'   
+            })
+            $('.fondo3').bxSlider({
+             mode:'fade'   
+            })
+            $('.fondo4').bxSlider({
+             mode:'fade'   
+            })
+        })
+    </script>
+</body>
+</html>
