@@ -4,6 +4,9 @@
     margin: 0;
     transition: .3s ease all;
 }
+a{
+    text-decoration: none;
+}
 body.dark{
     background: rgb(88, 88, 88);   
 }
@@ -12,9 +15,7 @@ body.dark h1{
 }
 header h1{
     text-align: center;
-}
-.name.dark{
-    color: #fff;
+    margin: -250px,-25PX;
 }
 .switch{
     background: #343d5b;
@@ -62,55 +63,12 @@ header h1{
     position: fixed;
     z-index: -1;
 }
-
-.menu{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0);
-    font-size: 20px;
-}
-.menu li:hover{
-    background-color: #000;
-    
-}
-.menu a:hover{
-    color: #fff;
-}
-.menu a{
-    color: #000;
-}
-.menu ul{
-    display: flex;
-    text-decoration: none;
-}
-.menu li{
-    padding: 15px;
-    color: #000;
-} 
-/*nav*/
-
-.menu ul li a{
-    padding: 3px;
-}
-.menu ul li a:hover{
-    border-bottom: 2px solid #ffffff;
-}
-.nav-main ul.menu{
-    flex: 1px;
-    margin-left: 20px;
-}
-.menu-btn{
-    position: absolute;
-    cursor: pointer;
-    top: 15px;
-    right: 30px;
-    z-index: 2;
-    display: none;
-}
 .wave{
     bottom: 0;
     width: 100%;
+}
+body.dark .wave path{
+    fill: rgb(0, 0, 0) !important;
 }
 
 .cont-prin{
@@ -128,25 +86,12 @@ header h1{
 .loc h3{
     font-size: 25px;
 }
-.cards{
-    display:grid;
-    grid-template-columns: repeat(4,1fr) ;
-    gap: 10px;/*espaciado interno entre columna*/
-    margin: 1px;
-    column-gap: 3%;
-    overflow: hidden;
-}
-.cards img{
-    width: 100%;
-    height: 300px;
-}
-.cartas-nuevas h2{
-    font-size: 20px;
-    margin: 10px 0;
-}
 .social{
     text-align: center;
     font-size: 35px;
+}
+body.dark .social{
+    color: #fff;
 }
 .face,.wapp,.twit,.insta{
     width: 40px;
@@ -154,6 +99,9 @@ header h1{
 }
 .footer{
     text-align: center;
+}
+body.dark .footer{
+    color: #fff;
 }
 
 @media (max-width: 700px){

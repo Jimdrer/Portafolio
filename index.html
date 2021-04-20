@@ -10,8 +10,8 @@
     <!--icono pestaña-->
     <link rel="shortcut icon" href="../Portafolio/img/pics/ico/portafolioweb.svg" />
     <!--css-->
-    <link rel="preload" href="normalice.css" as="style">
     <link rel="stylesheet" href="Css/normalice.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
     <link rel="stylesheet" href="Css/cv.css">
     <link rel="stylesheet" href="">
     <title>Perfil</title>
@@ -27,12 +27,7 @@
             <span><i class="fas fa-moon"></i></span>
         </button>
         <h1 class="name">Jose Dimas Alejandro Espinosa Razo</h1>
-    </header>
-    
-    <div class="menu-btn">
-      <i class="fas fa-bars fa-2x"></i>
-    </div>
-    
+    </header>  
     <div class="cont-prin">
         <div class="loc">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -46,20 +41,22 @@
     </div>     
         <!--cambios de tarjetas-->
     <div class="cards">
-        <div class="cambios">              
-            <div class="cambios-des">
-                    <h3 id="biblio">Quien Soy.</h3>
+        <div class="cards_container">              
+            <button arial-label="Anterior" class="cards_prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="cards_list">
+                <div class="cards_elem">
                     <p>ISC Jose Dimas Alejandro Espinosa Razo 
-                        <br>
-                        Soy un profesional comprometido a dar resultados positivos en el ámbito laboral que se presente. Dedicado y persistente en la solucion de problemas. Autodidacta, responsable, apasionado, proactivo y trabajador.
-                        <br><br>
-                        OBJETIVO LABORAL
-                        <br>
-                        Dar números positivos y servir adecuadamente en el área tecnológica dando el potencial necesario y reaccionando a la brevedad ante cualquier problema que se presente</p>              
-            </div>
-            <div class="cambios-des">               
-                <h3 id="education">Estudios.</h3>
-                <p>2011 - 2014<br>               
+                    <br>
+                    Soy un profesional comprometido a dar resultados positivos en el ámbito laboral que se presente. Dedicado y persistente en la solucion de problemas. Autodidacta, responsable, apasionado, proactivo y trabajador.
+                    <br><br>
+                    OBJETIVO LABORAL
+                    <br>
+                    Dar números positivos y servir adecuadamente en el área tecnológica dando el potencial necesario y reaccionando a la brevedad ante cualquier problema que se presente</p>              
+                </div>
+                <div class="cards_elem">               
+                    <p>2011 - 2014<br>               
                     Ingeniera en Sistemas Computacionales<br>
                     Centro De Estudios Cortázar<br>
                     Cortázar, Guanajuato<br>
@@ -83,31 +80,31 @@
                     Certified White Hat Professional CWHP+100<br>
                     Centro de Investigaciones en Alta Tecnología<br>
                     www.ccat.edu.mx</p>      
-            </div>
-            <div class="cambios-des">
-            <h3 id="skills">Conocimiento y Habilidades</h3>
-            <p>Desarrollo Web, Sql Server, Photoshop, Affter Effects, Premiere Pro, AutoCad, VirtualBox, VMware, Redes y Cableado Estructurado, Soporte Técnico Preventivo y Correctivo.
-                <br>
-                Aplicaciones Tecnologicas en C++, Java, JavaScript, Html5, Css, NodeJs, ReactJs, Github</p>
-            </div>
-            <div class="cambios-des">
-            <h3 id="experience">Experiencia</h3>
-            <p>Soltec E. y D. (2020 – 2020)<br>
-                Encargado Área de Informática<br>
-                Mantenimiento preventivo y correctivo al equipo de cómputo, cableado estructurado de la red informática, mantenimiento a cámaras CCTV, soporte técnico a servidores, impresoras y personal del área. 
-                <br><br>
-                Servinext. (2018 – 2018)<br>
-                Ingeniero JR (Pemex RIAMA)<br>
-                Clonación de discos duros, mantenimiento preventivo y correctivo a equipo de cómputo, configuración de redes a computadoras, respaldo de pst, trato con el cliente.
-                <br><br>
-                Petramin. (2011 – 2011)<br>
-                Auxiliar Sistemas<br>
-                Encargado de dar mantenimiento al equipo de cómputo, redes computacionales y actualizaciones en página web.</p>
-            </div>
+                </div>
+                <div class="cards_elem">
+                    <p>Sql Server, Photoshop, Affter Effects, Premiere Pro, AutoCad, VirtualBox, VMware, Redes y Cableado Estructurado, Soporte Técnico Preventivo y Correctivo.
+                    <br>
+                    Aplicaciones Tecnologicas en C++, Java, JavaScript, Html5, Css, NodeJs, ReactJs, Github</p>
+                </div>
+                <div class="cards_elem">
+                    <p>Soltec E. y D. (2020 – 2020)<br>
+                    Encargado Área de Informática<br>
+                    Mantenimiento preventivo y correctivo al equipo de cómputo, cableado estructurado de la red informática, mantenimiento a cámaras CCTV, soporte técnico a servidores, impresoras y personal del área. 
+                    <br><br>
+                    Servinext. (2018 – 2018)<br>
+                    Ingeniero JR (Pemex RIAMA)<br>
+                    Clonación de discos duros, mantenimiento preventivo y correctivo a equipo de cómputo, configuración de redes a computadoras, respaldo de pst, trato con el cliente.
+                    <br><br>
+                    Petramin. (2011 – 2011)<br>
+                    Auxiliar Sistemas<br>
+                    Encargado de dar mantenimiento al equipo de cómputo, redes computacionales y actualizaciones en página web.</p>
+                </div>
+            </div>    
+            <button arial-label="Anterior" class="cards_next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
-        <!--flechas-->
-        <div class="cards-next"></div>
-        <div class="cards-prev"></div>
+        <div role="tablist" class="cards_ind"></div>
     </div>
     
     <!--formulario-->
@@ -144,21 +141,20 @@
     </section>
     
     <!--redes sociales-->
-    <section class="social">
-       
+    <section class="social">    
         <p>Redes Sociales</p>
         <div class="enlaces">
             <a href="https://www.facebook.com">
-                <img class="face" src="../Portafolio/img/pics/ico/facebook.png" alt="">
+                <img class="face" src="../Portafolio/img/pics/ico/facebook.png">
             </a>
             <a href="https://api.whatsapp.com/send?phone=+524561267556">
-                <img class="wapp" src="../Portafolio/img/pics/ico/whatsapp.png" alt="">
+                <img class="wapp" src="../Portafolio/img/pics/ico/whatsapp.png">
             </a>
             <a href="https://www.twitter.com">
-                <img class="twit" src="../Portafolio/img/pics/ico/twitter.png" alt="">
+                <img class="twit" src="../Portafolio/img/pics/ico/twitter.png">
             </a>
             <a href="https://wwww.instagram.com">
-                <img class="insta" src="../Portafolio/img/pics/ico/instagram.png" alt="">
+                <img class="insta" src="../Portafolio/img/pics/ico/instagram.png">
             </a>
         </div>
     </section>
@@ -169,7 +165,9 @@
           <h5>JOSE DIMAS ALEJANDRO ESPINOSA RAZO</h5>
       </footer>
 
-      <script src="../Portafolio/JavaScript/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    
+    <script src="../Portafolio/JavaScript/index.js"></script>
 
 </body>
 </html>
