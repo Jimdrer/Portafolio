@@ -1,8 +1,3 @@
-document.querySelector('.menu-btn').addEventListener('click', () =>{
-    document.querySelector('.menu').classList.toggle('show');
-    
-});
-
 const btnSwitch = document.querySelector('#switch');
 btnSwitch.addEventListener('click', () => {
    document.body.classList.toggle('dark');
