@@ -86,6 +86,27 @@ body.dark .wave path{
 .loc h3{
     font-size: 25px;
 }
+.btn-contenido{
+text-transform: uppercase;
+background: transparent;
+color: black;
+padding: 0.375rem 0.75rem;
+letter-spacing: .25rem;
+display: inline-block;
+transition: all .3s linear;
+font-size: .875rem;
+border: 1.5px solid black;
+cursor: pointer;
+box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+border-radius: .5rem;
+}
+.ico{
+    
+}
+.ico button{
+    background: transparent;
+}
+
 .social{
     text-align: center;
     font-size: 35px;
