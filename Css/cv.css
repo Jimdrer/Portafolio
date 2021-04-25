@@ -25,33 +25,36 @@ header h1{
     cursor: pointer;
     display: flex;
     outline: none;
-    transform: translate(55px, 3px);
+    transform: translate(53px, 2px);
 }
 .switch span{
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
+    width: 33px;
+    height: 30px;
+    line-height: 32px;
     display: block;
     background: none;
-    color: #fff
+
 }
 .switch span::after{
     content: "";
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 30px;
     position: absolute;
-    background: #0bf81f;
+    background: #0bf852;
     top: 0;
     left: 0;
     right: unset;
     border-radius: 100px;
     transition: .3s ease all;
-    box-shadow: 0px 0px 2px 2px rgb(208, 255, 0);
+    box-shadow: 0px 0px 2px 3px rgb(70, 11, 11);
 }
+body.dark .switch span::after{
+    box-shadow: 0px 0px 2px 3px rgb(230, 245, 16);
+}
+
 .switch.active{
-    background: orange;
-    color: #000;
+    background: #ffffff;
 }
 .switch.active ::after{
     right: 0;
@@ -86,7 +89,8 @@ body.dark .wave path{
 .loc h3{
     font-size: 25px;
 }
-.btn-contenido{
+
+.btn-contenido button{
 text-transform: uppercase;
 background: transparent;
 color: black;
@@ -100,12 +104,29 @@ cursor: pointer;
 box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 border-radius: .5rem;
 }
-.ico{
-    
+
+.tecno img{
+    display: grid;
+    grid-template-columns: 1fr,1fr,1fr;
+    gap: 15px;
+    position: relative;
+    border-top:1px solid rgba(255, 255, 255, .1);
+    border-bottom:1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0 15px 33px rgba(0, 0, 0, .3);
+    background: rgba(255, 255, 255, .05);
+    border-radius: 10px;
+    margin: 15px 15px;
+    padding: .5px .5px;
+    color: #000;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
 }
-.ico button{
-    background: transparent;
+.tecno img:hover{
+    width: 75px;
+    height: 75px;
 }
+
 
 .social{
     text-align: center;
@@ -148,39 +169,6 @@ body.dark .footer{
         width: 25px;
         height: 25px;
     }
-    .cards{
-    grid-template-columns: repeat(2,1fr);
-    }
-    .menu-btn{
-        display: block;
-    }
-    .menu a{
-        color: #fff;
-    }
-    .nav-main ul.menu{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: black;
-        height: 100%;
-        padding: 30px;
-        opacity: .9;
-        transform: translateX(-400px);
-        transition: transform .5s ease-in-out;
-    }
-    .nav-main ul.menu.show{
-        transform: translateX(-20px);
-    }
-    .nav-main ul.menu li{
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    .cont-prin{
-        width: 95%;
-        margin: auto;
-    }
 }
 @media (max-width: 560px){
     header{
@@ -203,13 +191,5 @@ body.dark .footer{
     .switch span::after{
         width: 20px;
         height: 20px;
-    }
-    .cont-prin{
-        width: 95%;
-    }
-    .cards{
-        grid-template-columns: repeat(1,1fr);
-        width: 95%;
-        margin: auto;
     }
 }
