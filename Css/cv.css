@@ -104,29 +104,60 @@ cursor: pointer;
 box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 border-radius: .5rem;
 }
-
-.tecno img{
+.tecno{
     display: grid;
-    grid-template-columns: 1fr,1fr,1fr;
-    gap: 15px;
-    position: relative;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr, ;
+    align-items: center;
+    text-align: center;
+    justify-content: left;
+}
+.tecno div{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around; 
+    column-gap: 30px;
+    row-gap: 15px;
+}
+.btn img{
     border-top:1px solid rgba(255, 255, 255, .1);
     border-bottom:1px solid rgba(255, 255, 255, .1);
     box-shadow: 0 15px 33px rgba(0, 0, 0, .3);
     background: rgba(255, 255, 255, .05);
     border-radius: 10px;
-    margin: 15px 15px;
     padding: .5px .5px;
-    color: #000;
     z-index: 1;
     overflow: hidden;
     transition: .5s;
 }
-.tecno img:hover{
-    width: 75px;
-    height: 75px;
+.btn img:hover{
+    
+    height: 110%;
 }
+.btn img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(214, 56, 56, 0.15),transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: .5s;
+}
+.btn:hover img::before{
+    transform: skewX(45deg) translateX(200%);
 
+}
+/*
+.btn div{
+    width: 800px;
+    display: grid;
+    
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+*/
 
 .social{
     text-align: center;
