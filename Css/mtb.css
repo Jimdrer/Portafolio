@@ -124,7 +124,7 @@ hr{
 .banner-cartas-A{
     width: 100%;
     height: 350px;
-    background: url(../img/pics/Mtb/Imagenes/wall2.jpg) center; 
+    background: url(../img/pics/Mtb/Imagenes/wall2.jpg)no-repeat center; 
     background-size: 1250px 480px;
     margin-bottom: 35px;
 }
