@@ -40,7 +40,7 @@
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg></div>           
     </div>     
         <!--cambios de tarjetas-->
-    <section>
+    <section class="section-btn">
         <div class="titulo">
             <h2>
                 ISC Jose Dimas Alejandro Espinosa Razo
@@ -48,27 +48,28 @@
         </div>
 
 <!--contenido de juego a los botones-->
-
-        <div class="btn-contenido">
-            <button class="tab-btn activ" data-id="descripcion">Descripcion</button>
-            <button class="tab-btn" data-id="vision">Vision</button>
-            <button class="tab-btn" data-id="conocimientos">Conocimientos</button>
-        </div>
-            <div class="pestañas">
-                <div class="cont activ" id="descripcion">
-                    <p>Profesional comprometido a dar resultados positivos en el ámbito laboral que se presente. Dedicado y persistente en la solucion de problemas. Autodidacta, responsable, apasionado, proactivo y trabajador.</p>
-                    <br><br>
-                    <p>OBJETIVO LABORAL</p>
-                    <br>
-                    <p>Dar números positivos y servir adecuadamente en el área tecnológica dando el potencial necesario y reaccionando a la brevedad ante cualquier problema que se presente</p>              
-                </div>
-                <div class="cont" id="vision">
-                </div>
-                <div class="cont" id="conocimientos">
-                    <p>AutoCad, VirtualBox, VMware, Redes y Cableado Estructurado, Soporte Técnico Preventivo y Correctivo.</p>
-                </div>
-            </div>    
-        </div>       
+        <article class="about">
+            <div class="btn-contenido">
+                <button class="tab-btn activ" data-id="descripcion">Descripcion</button>
+                <button class="tab-btn" data-id="vision">Vision</button>
+                <button class="tab-btn" data-id="conocimientos">Conocimientos</button>
+            </div>
+                <div class="pestañas">
+                    <div class="cont activ" id="descripcion">
+                        <p>Profesional comprometido a dar resultados positivos en el ámbito laboral que se presente. Dedicado y persistente en la solucion de problemas. Autodidacta, responsable, apasionado, proactivo y trabajador.</p>
+                        <br><br>
+                        <p>OBJETIVO LABORAL</p>
+                        <br>
+                        <p>Dar números positivos y servir adecuadamente en el área tecnológica dando el potencial necesario y reaccionando a la brevedad ante cualquier problema que se presente</p>              
+                    </div>
+                    <div class="cont" id="vision">
+                        </div>
+                    <div class="cont" id="conocimientos">
+                        <p>AutoCad, VirtualBox, VMware, Redes y Cableado Estructurado, Soporte Técnico Preventivo y Correctivo.</p>
+                    </div>
+                </div>    
+            </div>
+        </article>       
     </section>
     <section class="tecno">
         <p>
@@ -177,10 +178,10 @@
     <footer class="footer">
         <h5>JOSE DIMAS ALEJANDRO ESPINOSA RAZO</h5>
     </footer>
-
+    <script src="../Portafolio/JavaScript/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     
-    <script src="../Portafolio/JavaScript/index.js"></script>
+    
     <script type="text/javascript" src="../Portafolio/JavaScript/vanilla-tilt.js"></script>
     <script>
         VanillaTilt.init(document.querySelectorAll(".btn"));

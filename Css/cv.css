@@ -103,13 +103,20 @@ cursor: pointer;
 box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 border-radius: .5rem;
 }
+
+.section-btn{
+    padding: 4rem 0;
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+     
+}
 .tecno{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 1fr, ;
     align-items: center;
     text-align: center;
-    justify-content: left;
 }
 .tecno div{
     display:grid;
@@ -133,7 +140,6 @@ border-radius: .5rem;
 .btn img{
     border-image: linear-gradient( to right, #03fc03 0%, #1a0 20%, #0f0f0f 30%, rgb(214, 16, 148))1;
     transition: .5s;
-    border-top-left-radius: ;
 }
 .dweb{
     margin-top: 15px;
@@ -186,6 +192,9 @@ body.dark p{
     header {
     font-size: 14px;
     }
+    .cont-prin{
+        background-size: auto;
+    }
     .switch img{
         height: 23px;
     }
@@ -213,10 +222,16 @@ body.dark p{
     .switch{
         transform: translate( 25px, 0)
     }
+    .cont-prin{
+        background-size: auto;
+    }
 }
 @media (max-width: 575px){
     header{
         font-size: 11px;
+    }
+    .cont-prin{
+        background-size: auto;
     }
     .switch img{
         height: 18px;
@@ -238,5 +253,26 @@ body.dark p{
     .switch span::after{
         width: 20px;
         height: 20px;
+    }
+}
+@media (max-width: 520px){ 
+    .cont-prin{
+        background-size: auto;
+    }
+    .tecno{
+        justify-content: center;
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 15px;
+        transition: translate(20px,0);
+    }
+    .tecno div{
+    justify-content: center;
+    align-items: center;
+    column-gap: 0px;
+    row-gap: 10px;
+    transition: translate(20px,0);
+    }
+    .btn img{
+        
     }
 }

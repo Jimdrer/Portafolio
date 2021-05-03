@@ -176,10 +176,11 @@ hr{
     font-size: 15px;
 }
 .footer-container{
+    text-align: center;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 .footer-container ul{
@@ -226,13 +227,12 @@ hr{
     }
     .banner-cartas-A .contenido,.banner-cartas-B .contenido{
         width: 80%;
-        
     }
     .banner-cartas-A .contenido{
         color: #ffffff;
     }
-    .footer-enlaces .footer-container{
-        grid-template-columns: repeat(1,1fr);
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media (max-width: 500px){
@@ -246,7 +246,9 @@ hr{
         width: 100%;
         padding: 60px 20px;
     }
-    .footer-enlaces .footer-container{
-        grid-template-columns: 1fr;
+    .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3px;
     }
+
 }

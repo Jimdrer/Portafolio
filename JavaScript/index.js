@@ -4,15 +4,22 @@ btnSwitch.addEventListener('click', () => {
   btnSwitch.classList.toggle('active'); 
 });
 
-windows.addEventListener('load',function(){
-  new Glider(document.querySelector('cards_list'))
-});
-new Glider(document.querySelector('.cards'), {
-  slidesToShow: 1,
-  dots: '#dots',
-  draggable: true,
-  arrows: {
-    prev: '.cards-prev',
-    next: '.cards-next'
+const about = document.querySelector(".about");
+const btns = document.querySelectorAll(".tab-btn");
+const articles = document.querySelectorAll(".cont");
+about.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
+  if (id) {
+    // remove selected from other buttons
+    btns.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    // hide other articles
+    articles.forEach(function (article) {
+      article.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
   }
 });
