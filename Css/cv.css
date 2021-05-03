@@ -105,7 +105,7 @@ border-radius: .5rem;
 }
 
 .section-btn{
-    padding: 4rem 0;
+    padding: 2rem 0;
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
@@ -259,18 +259,27 @@ body.dark p{
     .cont-prin{
         background-size: auto;
     }
+    .btn img{
+        justify-items: center;
+        align-content: center;
+        height: 50px;
+    }
     .tecno{
         justify-content: center;
         grid-template-columns: repeat(1,1fr);
-        margin-top: 15px;
-        transition: translate(20px,0);
+        row-gap: 5px;
     }
     .tecno div{
     justify-content: center;
     align-items: center;
     column-gap: 0px;
     row-gap: 10px;
-    transition: translate(20px,0);
     }
-    
+}
+@media (max-width: 450px){
+    header{
+        transform: translate(20px,0)
+    }
+    .switch{
+        transform: translate(1px, 1px);
 }
