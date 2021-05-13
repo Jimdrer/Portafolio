@@ -27,10 +27,11 @@ ul{
 .nav-main{
     font-size: 17px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 60px;
     padding: 20px 0;
+
 }
 .nav-brand{
     width: 50px;
