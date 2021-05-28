@@ -580,7 +580,25 @@ body{
 }
 
 
-.contenido-grid{
-	display: grid;
-	padding-top: 5px;
+.contenido-grid div{
+	display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: -10px;/*espaciado interno entre columna*/
+	padding: 10px,0,5px,0;
+	margin-right: 0;
+	
+}
+.contenido-grid img{
+	border: rgba(0,0,0,.1) solid;
+	border-radius: 10px;
+
+	
+}
+.line1 p{
+	text-align: center;
+	font-size: 30px;
+}
+.line1 span{
+	color: #128f18;
+	font-size: 20px;
 }
