@@ -42,18 +42,20 @@ nav{
 .search{
     margin-left: 20px;
     padding-top: 8px;
+	/* border: 1px black solid; */
 }
 .barra-busqueda{
-    width: 500px;
+    width: 800px;
     vertical-align: middle;
     ;
 }
 .barra-busqueda input#search{
     width: auto;
     height: 45px;
+	width: 100%;
     background: #fff;
     border: line transparent;
-    font-size: 10pt;
+    font-size: 15pt;
     float: left;
     color: #63717f;
     padding-left: 45px;
@@ -62,13 +64,13 @@ nav{
 .barra-busqueda input#search::placeholder{
     color: #65737e;
 }
-.barra-busqueda .icon{
-    position: absolute;
-    top: 50%;
+.barra-busqueda span{
+	position: absolute;
     margin-left: 15px;
-    margin-top: -55px;
-    z-index: 1;
-    color: #4f5b66;
+    margin-top: 15px;
+    z-index: 2;
+    color: #434c53;
+	
 }
 .usuario{
     text-align: right;
