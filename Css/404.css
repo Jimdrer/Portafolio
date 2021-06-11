@@ -19,37 +19,34 @@ section{
     justify-content: center;
     align-items: center;
     font-size: 3em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
-.error span:first-child {
-    margin-right: 20px;
+.error h2:first-child {
+    margin-right: 200px;
 }
-.error span:last-child {
+.error h2:last-child {
     color: black;
     background-color: rgba(0, 0, 0, 0);
     animation: fadeWhite 4s forwards;
     animation-delay: 2s;
     position: relative;
 }
-.error span:last-child:after {
-    content: "error";
+.error h2:last-child:after {
+    content: "ERROR";
     position: absolute;
-    left: 2px;
-    top: -25px;
+    left: 125px;
+    top: 6px;
     clip: rect(0, 2900px, 0, 0);
     background-color: black;
     color: white;
     animation: glitch 3s infinite alternate-reverse;
     animation-delay: 4s;
 }
-.error span:last-child:before {
-    content: "error";
+.error h2:last-child:before {
+    content: "ERROR";
     position: absolute;
-    left: -2px;
-    top: -20px;
+    left: 125px;
+    top: 5px;
     clip: rect(0, 1800px, 0, 0);
     background-color: rgb(236, 25, 25);
     color: white;

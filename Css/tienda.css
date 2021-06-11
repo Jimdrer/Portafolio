@@ -18,17 +18,14 @@ body{
 }
 nav{
 	display: flex;
-	/* justify-content: space-between; */
 }
-/* .logo{
-	border:1px #000 solid;
- } */
 .logo img{
     height: 45px;
-	margin-left: 15px;
+	margin-left: 40px;
     margin-top: 7px;
 }
 .logo span{
+	margin-left: 15px;
 	display: inline-block;
 	font-size: 25px;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -40,7 +37,8 @@ nav{
 	width: 100%;
 }
 .search{
-    margin-left: 20px;
+	width: auto;
+    margin-left: 50px;
     padding-top: 8px;
 	/* border: 1px black solid; */
 }
@@ -71,14 +69,13 @@ nav{
     color: #434c53;
 }
 .usuario{
-	width: auto;
+	display: flex;
+	justify-content:space-around;
 	/* border: 1px #000 solid; */
-	padding: 0 auto;
+	width: 45%;
+	padding-top: 5px;
 }
 .usuario a{
-    position: relative;
-	margin: 0 160px;
-	
     font-size: 40px;
 }
 /*barra menu*/
@@ -428,28 +425,49 @@ nav{
 /*------------------------------------*/
 /* ------------Contenido--------------*/
 /*------------------------------------*/
+.contenido-grid{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 5px 10px ;
+	text-align: center;
+}
 .contenido-grid img{
 	border: rgba(0,0,0,.1) solid;
 	border-radius: 10px;
-}
-.line1{
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
 
 }
-.line1 p{
-	text-align: center;
+.contenido-grid p{
 	font-size: 30px;
 }
-.line1 span{
+.contenido-grid span{
 	color: #128f18;
 	font-size: 20px;
 }
 /* ------------------------- */
+/* ------- Footer ---------- */
+/* ------------------------- */
+
+footer{
+	margin:auto;
+	width: 100%;
+	padding: 5px;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+}
+footer div ol li{
+	padding: 5px;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: auto auto auto auto;
+	justify-content: space-around;
+	color: #000;
+	text-decoration: none;
+}
+/* ------------------------- */
 /* REsponsive / Mediaqueies */
 /* ------------------------- */
-/* @media screen and (max-width: 1400px){ */
+/* @media screen and (max-width: 1400px){ 
 	.menu .contenedor-links-nav {
 		padding: 0 5px;
 	}
@@ -457,7 +475,7 @@ nav{
 		font-size: 14px;
 		margin-left: 65px;
 	}
-}
+} */
 @media  screen and (max-width: 1300px){
 	.menu .contenedor-links-nav {
 		padding: 0 5px;
@@ -489,6 +507,14 @@ nav{
 	.menu .contenedor-links-nav .links a {
 		font-size: 14px;
 		margin-left: 5px;
+	}
+	.contenido-grid{
+		grid-template-columns: 1fr 1fr;
+		text-align: center;
+	}
+	.contenido-grid img{
+		height: auto;
+		width: auto;
 	}
 }
 
