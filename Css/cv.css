@@ -105,24 +105,32 @@ border-radius: .5rem;
 }
 
 .section-btn{
-    padding: 2rem 0;
-    width: 90vw;
+    padding: 2rem 2rem;
+    width: 100%;
     margin: 0 auto;
     max-width: 1170px;
 }
 .tecno{
+    /* border: #000 1px solid; */
+    width: 60%;
+    margin: 0 auto;
+    /* padding: 0 auto; */
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 1fr, ;
+    column-gap: 5px;
     align-items: center;
     text-align: center;
 }
 .tecno div{
+    /* border: 1px solid #000; */
+    width: auto;
     display:grid;
+    /* margin: 0 10px; */
+    padding: 0 23px;
     grid-template-columns: repeat(4,1fr);
-    justify-content: space-around; 
-    column-gap: 30px;
+    column-gap: 15px;
     row-gap: 15px;
+    align-items: center;
 }
 .btn img{
     border-top:1px solid rgba(255, 255, 255, .1);
@@ -164,6 +172,10 @@ body.dark .social{
 .insta{
     width: 40px;
     height: 40px;
+}
+.formulario{
+    width: 500px;
+    margin: 0 auto;
 }
 .footer{
     text-align: center;
