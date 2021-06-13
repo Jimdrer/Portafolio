@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     transition: .3s ease all;
+    color: #000 ;
 }
 a{
     text-decoration: none;
@@ -10,12 +11,10 @@ a{
 body.dark{
     background: rgb(88, 88, 88);   
 }
-body.dark h1{
-    color: #fff;
-}
 
 header h1{
     text-align: center;
+    margin: -250px,-25PX;
 }
 .switch{
     background: #343d5b;
@@ -25,33 +24,36 @@ header h1{
     cursor: pointer;
     display: flex;
     outline: none;
-    transform: translate(55px, 3px);
+    transform: translate(53px, 2px);
 }
 .switch span{
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
+    width: 33px;
+    height: 30px;
+    line-height: 32px;
     display: block;
     background: none;
-    color: #fff
+
 }
 .switch span::after{
     content: "";
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 30px;
     position: absolute;
-    background: #0bf81f;
+    background: #0bf852;
     top: 0;
     left: 0;
     right: unset;
     border-radius: 100px;
     transition: .3s ease all;
-    box-shadow: 0px 0px 2px 2px rgb(208, 255, 0);
+    box-shadow: 0px 0px 2px 3px rgb(70, 11, 11);
 }
+body.dark .switch span::after{
+    box-shadow: 0px 0px 2px 3px rgb(230, 245, 16);
+}
+
 .switch.active{
-    background: orange;
-    color: #000;
+    background: #ffffff;
 }
 .switch.active ::after{
     right: 0;
@@ -68,7 +70,7 @@ header h1{
     width: 100%;
 }
 body.dark .wave path{
-    fill: #fff !important;
+    fill: rgb(0, 0, 0) !important;
 }
 
 .cont-prin{
@@ -86,21 +88,130 @@ body.dark .wave path{
 .loc h3{
     font-size: 25px;
 }
+
+.btn-contenido button{
+text-transform: uppercase;
+background: transparent;
+color: black;
+padding: 0.375rem 0.75rem;
+letter-spacing: .25rem;
+display: inline-block;
+transition: all .3s linear;
+font-size: .875rem;
+border: 1.5px solid black;
+cursor: pointer;
+box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+border-radius: .5rem;
+}
+
+.section-btn{
+    padding: 2rem 2rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+.tecno{
+    /* border: #000 1px solid; */
+    width: 60%;
+    margin: 0 auto;
+    /* padding: 0 auto; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 5px;
+    align-items: center;
+    text-align: center;
+}
+.tecno div{
+    /* border: 1px solid #000; */
+    width: auto;
+    display:grid;
+    /* margin: 0 10px; */
+    padding: 0 23px;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+    align-items: center;
+}
+.btn img{
+    border-top:1px solid rgba(255, 255, 255, .1);
+    border-bottom:1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0 15px 33px rgba(0, 0, 0, .3);
+    background: rgba(255, 255, 255, .05);
+    border-radius: 10px;
+    padding: .5px .5px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    
+}
+.btn img{
+    border-image: linear-gradient( to right, #03fc03 0%, #1a0 20%, #0f0f0f 30%, rgb(214, 16, 148))1;
+    transition: .5s;
+}
+.dweb{
+    margin-top: 15px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.bici{
+    height: 180px;
+    width: 300px;
+}
 .social{
     text-align: center;
     font-size: 35px;
 }
-.face,.wapp,.twit,.insta{
+body.dark .social{
+    color: #fff;
+}
+.gthub,
+.face,
+.wapp,
+.twit,
+.insta{
     width: 40px;
     height: 40px;
 }
+.formulario{
+    width: 500px;
+    margin: 0 auto;
+}
 .footer{
     text-align: center;
+    color: #000;
+}
+body.dark .footer{
+    color: #fff;
+}
+body.dark h1{
+    color: #fff;
+}
+body.dark h2{
+    color: #fff;
+}
+body.dark h{
+    color: #fff;
+}
+body.dark h4{
+    color: #fff;
+}
+body.dark h5{
+    color: #fff;
+}
+body.dark p{
+    color: #fff;
 }
 
-@media (max-width: 700px){
+@media (max-width: 755px){
     header {
     font-size: 14px;
+    }
+    .cont-prin{
+        background-size: auto;
+    }
+    .switch img{
+        height: 23px;
     }
     .switch{
         
@@ -121,14 +232,24 @@ body.dark .wave path{
         width: 25px;
         height: 25px;
     }
+}
+@media (max-width: 620px){
+    .switch{
+        transform: translate( 25px, 0)
+    }
     .cont-prin{
-        width: 95%;
-        margin: auto;
+        background-size: auto;
     }
 }
-@media (max-width: 560px){
+@media (max-width: 575px){
     header{
         font-size: 11px;
+    }
+    .cont-prin{
+        background-size: auto;
+    }
+    .switch img{
+        height: 18px;
     }
     .switch{
         border-radius: 1000px;
@@ -137,7 +258,7 @@ body.dark .wave path{
         cursor: pointer;
         display: flex;
         outline: none;
-        transform: translate(8px, 1px);
+        transform: translate(28px, 1px);
     }
     .switch span{
         width: 20px;
@@ -148,12 +269,33 @@ body.dark .wave path{
         width: 20px;
         height: 20px;
     }
+}
+@media (max-width: 520px){ 
     .cont-prin{
-        width: 95%;
+        background-size: auto;
     }
-    .cards{
+    .btn img{
+        justify-items: center;
+        align-content: center;
+        height: 50px;
+    }
+    .tecno{
+        justify-content: center;
         grid-template-columns: repeat(1,1fr);
-        width: 95%;
-        margin: auto;
+        row-gap: 5px;
+    }
+    .tecno div{
+    justify-content: center;
+    align-items: center;
+    column-gap: 0px;
+    row-gap: 10px;
+    }
+}
+@media (max-width: 450px){
+    header{
+        transform: translate(20px,0)
+    }
+    .switch{
+        transform: translate(1px, 1px);
     }
 }
