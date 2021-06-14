@@ -8,6 +8,7 @@
 a{
     text-decoration: none;
 }
+
 body.dark{
     background: rgb(88, 88, 88);   
 }
@@ -85,8 +86,14 @@ body.dark .wave path{
     align-items: center;
     justify-content: flex-end;
 }
+.cont-prin .loc{
+    transform: translateY(-95px);
+
+}
 .loc h3{
-    font-size: 25px;
+    font-size: 45px;
+    color: rgb(238, 255, 0);
+    text-shadow: #fff;
 }
 
 .btn-contenido button{
@@ -148,13 +155,18 @@ border-radius: .5rem;
     border-image: linear-gradient( to right, #03fc03 0%, #1a0 20%, #0f0f0f 30%, rgb(214, 16, 148))1;
     transition: .5s;
 }
-.dweb{
-    margin-top: 15px;
-    justify-items: center;
-    align-items: center;
+.paginas h2{
     text-align: center;
+    margin-top: 20px;
 }
-.bici{
+.paginas .grid-pags{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15px;
+    text-align: center;
+    
+}
+.paginas img{
     height: 180px;
     width: 300px;
 }
@@ -177,6 +189,10 @@ body.dark .social{
     width: 500px;
     margin: 0 auto;
 }
+.formulario h2,h4{
+    text-align: center;
+    margin-top: 5px;
+}
 .footer{
     text-align: center;
     color: #000;
@@ -190,7 +206,7 @@ body.dark h1{
 body.dark h2{
     color: #fff;
 }
-body.dark h{
+body.dark h3{
     color: #fff;
 }
 body.dark h4{
@@ -233,12 +249,16 @@ body.dark p{
         height: 25px;
     }
 }
+
 @media (max-width: 620px){
     .switch{
         transform: translate( 25px, 0)
     }
     .cont-prin{
         background-size: auto;
+    }
+    .tecno{
+        transform: translateX(-85px);
     }
 }
 @media (max-width: 575px){
@@ -274,21 +294,40 @@ body.dark p{
     .cont-prin{
         background-size: auto;
     }
+    header {
+        font-size: 9px;
+    }
     .btn img{
         justify-items: center;
         align-content: center;
         height: 50px;
     }
     .tecno{
-        justify-content: center;
         grid-template-columns: repeat(1,1fr);
         row-gap: 5px;
+        padding-left: 80px;
+        text-align: center;
     }
     .tecno div{
     justify-content: center;
     align-items: center;
     column-gap: 0px;
     row-gap: 10px;
+    }
+    .paginas .grid-pags{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* margin-top: 15px; */
+        grid-template-rows: 1fr, 1fr;
+        row-gap: 8px;
+    }
+    .paginas img{
+        height: 100px;
+        width: 200px;
+    }    
+    .formulario{
+        width: 300px;
+        margin: 0 auto;
     }
 }
 @media (max-width: 450px){
