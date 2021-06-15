@@ -37,11 +37,11 @@ particlesJS(
           }
         },
         "size": {
-          "value": 3,
+          "value": 4.5,
           "random": true,
           "anim": {
             "enable": false,
-            "speed": 40,
+            "speed": 38,
             "size_min": 0.1,
             "sync": false
           }
@@ -49,7 +49,7 @@ particlesJS(
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#000000",
+          "color": "#000",
           "opacity": 0.8,
           "width": 1.5
         },
