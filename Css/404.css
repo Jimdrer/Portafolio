@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
 }
+
 body{
     background-color: #161616d7;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='96' viewBox='0 0 60 96'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2360058f' fill-opacity='0.62'%3E%3Cpath d='M36 10a6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-12 0 6 6 0 0 0-6-6 6 6 0 0 1-6-6V10a6 6 0 1 1 12 0 6 6 0 0 0 12 0zm24 78a6 6 0 0 1-6-6 6 6 0 0 0-6-6 6 6 0 0 1-6-6V58a6 6 0 1 1 12 0 6 6 0 0 0 6 6v24zM0 88V64a6 6 0 0 0 6-6 6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 section{
     display: flex;
@@ -14,117 +19,189 @@ section{
     align-content: center;
     height: 280px; 
 }
-.error{    
+
+/* -------------------------- */
+/* ----------GLITCH---------- */
+/* -------------------------- */
+.text{
+    font-family: 'play';
+}
+.error{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
-    user-select: none;
 }
-.error h2:first-child {
-    margin-right: 200px;
-}
-.error h2:last-child {
-    color: black;
-    background-color: rgba(0, 0, 0, 0);
-    animation: fadeWhite 4s forwards;
-    animation-delay: 2s;
+.error .text{
     position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 45px;
+    transform: scale(2);
+    padding: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-.error h2:last-child:after {
-    content: "ERROR";
+.error .text::before,
+.error .text::after{
+    padding: 30px;
+    color: #fff;
+    content: attr(data-text);
     position: absolute;
-    left: 125px;
-    top: 6px;
-    clip: rect(0, 2900px, 0, 0);
-    background-color: black;
-    color: white;
-    animation: glitch 3s infinite alternate-reverse;
-    animation-delay: 4s;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    top: 0;
 }
-.error h2:last-child:before {
-    content: "ERROR";
-    position: absolute;
-    left: 125px;
-    top: 5px;
-    clip: rect(0, 1800px, 0, 0);
-    background-color: rgb(236, 25, 25);
-    color: white;
-    animation: glitch 3s infinite alternate-reverse;
-    animation-delay: 4s;
+.error .text::before{
+    left: 3px;
+    text-shadow: -2px 0 rgba(146, 146, 146, 0.411);
+    animation: glitch-1 2s linear infinite reverse;
 }
-@keyframes fadeWhite {
-    100% {
-    color: white;
+.error .text::after{
+    left: -3px;
+    text-shadow: -2px 0 blue;
+    animation: glitch-2 2s linear infinite reverse;
+}
+@keyframes glitch-1{
+    0%{
+        clip:rect(132px, auto, 101px, 30px);
     }
-}
-@keyframes glitch {
-    0% {
-    clip: rect(79px, 9999px, 45px, 0);
-    }
-    5% {
-    clip: rect(87px, 9999px, 15px, 0);
+    5%{
+        clip:rect(17px, auto, 94px, 30px);
     }
     10% {
-    clip: rect(54px, 9999px, 7px, 0);
+        clip: rect(40px, auto, 66px, 30px);
     }
     15% {
-    clip: rect(31px, 9999px, 6px, 0);
+        clip: rect(87px, auto, 82px, 30px);
     }
     20% {
-    clip: rect(63px, 9999px, 80px, 0);
+        clip: rect(137px, auto, 61px, 30px);
     }
     25% {
-    clip: rect(29px, 9999px, 15px, 0);
+        clip: rect(34px, auto, 14px, 30px);
     }
     30% {
-    clip: rect(57px, 9999px, 14px, 0);
+        clip: rect(133px, auto, 74px, 30px);
     }
     35% {
-    clip: rect(76px, 9999px, 48px, 0);
+        clip: rect(76px, auto, 107px, 30px);
     }
     40% {
-    clip: rect(19px, 9999px, 15px, 0);
+        clip: rect(59px, auto, 130px, 30px);
     }
     45% {
-    clip: rect(45px, 9999px, 15px, 0);
+        clip: rect(29px, auto, 84px, 30px);
     }
     50% {
-    clip: rect(83px, 9999px, 56px, 0);
+        clip: rect(22px, auto, 67px, 30px);
     }
     55% {
-    clip: rect(85px, 9999px, 95px, 0);
+        clip: rect(67px, auto, 62px, 30px);
     }
     60% {
-    clip: rect(57px, 9999px, 78px, 0);
+        clip: rect(10px, auto, 105px, 30px);
     }
     65% {
-    clip: rect(49px, 9999px, 62px, 0);
+        clip: rect(78px, auto, 115px, 30px);
     }
     70% {
-    clip: rect(62px, 9999px, 77px, 0);
+        clip: rect(105px, auto, 13px, 30px);
     }
     75% {
-    clip: rect(74px, 9999px, 26px, 0);
+        clip: rect(15px, auto, 75px, 30px);
     }
     80% {
-    clip: rect(99px, 9999px, 81px, 0);
+        clip: rect(66px, auto, 39px, 30px);
     }
     85% {
-    clip: rect(91px, 9999px, 24px, 0);
+        clip: rect(133px, auto, 73px, 30px);
     }
     90% {
-    clip: rect(80px, 9999px, 28px, 0);
+        clip: rect(36px, auto, 128px, 30px);
     }
     95% {
-    clip: rect(52px, 9999px, 22px, 0);
+        clip: rect(68px, auto, 103px, 30px);
     }
     100% {
-    clip: rect(65px, 9999px, 96px, 0);
+        clip: rect(14px, auto, 100px, 30px);
     }
 }
+@keyframes glitch-2 {
+    0% {
+        clip: rect(129px, auto, 36px, 30px);
+    }
+    5% {
+        clip: rect(36px, auto, 4px, 30px);
+    }
+    10% {
+        clip: rect(85px, auto, 66px, 30px);
+    }
+    15% {
+        clip: rect(91px, auto, 91px, 30px);
+    }
+    20% {
+        clip: rect(148px, auto, 138px, 30px);
+    }
+    25% {
+        clip: rect(38px, auto, 122px, 30px);
+    }
+    30% {
+        clip: rect(69px, auto, 54px, 30px);
+    }
+    35% {
+        clip: rect(98px, auto, 71px, 30px);
+    }
+    40% {
+        clip: rect(146px, auto, 34px, 30px);
+    }
+    45% {
+        clip: rect(134px, auto, 43px, 30px);
+    }
+    50% {
+        clip: rect(102px, auto, 80px, 30px);
+    }
+    55% {
+        clip: rect(119px, auto, 44px, 30px);
+    }
+    60% {
+        clip: rect(106px, auto, 99px, 30px);
+    }
+    65% {
+        clip: rect(141px, auto, 74px, 30px);
+    }
+    70% {
+        clip: rect(20px, auto, 78px, 30px);
+    }
+    75% {
+        clip: rect(133px, auto, 79px, 30px);
+    }
+    80% {
+        clip: rect(78px, auto, 52px, 30px);
+    }
+    85% {
+        clip: rect(35px, auto, 39px, 30px);
+    }
+    90% {
+        clip: rect(67px, auto, 70px, 30px);
+    }
+    95% {
+        clip: rect(71px, auto, 103px, 30px);
+    }
+    100% {
+        clip: rect(83px, auto, 40px, 30px);
+    }
+}
+/* ---------------------------- */
+/* -----------RELOJ------------ */
+/* ---------------------------- */
 
 .clock{
+    margin-top: 105px;
     width: 280px;
     height: 280px;
     display: flex;
@@ -197,7 +274,7 @@ section{
     z-index: 12;
     border-radius: 6px 6px 0 0;
 }
-#serv img{
+/* #serv img{ 
     width: 430px;
     height: 430px;
-}
+ } */
