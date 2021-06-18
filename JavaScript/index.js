@@ -1,7 +1,7 @@
 const btnSwitch = document.querySelector('#switch');
 btnSwitch.addEventListener('click', () => {
   document.body.classList.toggle('dark');
-  btnSwitch.classList.toggle('active'); 
+  btnSwitch.classList.toggle('activ'); 
 });
 
 const about = document.querySelector(".about");
@@ -12,14 +12,14 @@ about.addEventListener("click", function (e) {
   if (id) {
     // remove selected from other buttons
     btns.forEach(function (btn) {
-      btn.classList.remove("active");
+      btn.classList.remove("activ");
     });
-    e.target.classList.add("active");
+    e.target.classList.add("activ");
     // hide other articles
     articles.forEach(function (article) {
-      article.classList.remove("active");
+      article.classList.remove("activ");
     });
     const element = document.getElementById(id);
-    element.classList.add("active");
+    element.classList.add("activ");
   }
 });
