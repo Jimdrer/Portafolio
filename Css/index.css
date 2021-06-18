@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
 *{
     box-sizing: border-box;
     padding: 0;
@@ -95,7 +96,13 @@ body.dark .wave path{
     color: rgb(238, 255, 0);
     text-shadow: #fff;
 }
-.btn-contenido button{
+.section-btn h1,
+h2,
+h3,
+h4 {
+    line-height: 1;
+}
+.section-btn .btn{
 text-transform: uppercase;
 background: transparent;
 color: black;
@@ -109,8 +116,12 @@ cursor: pointer;
 box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 border-radius: .5rem;
 }
+.section-btn .btn:hover{
+    color: #fff;
+    background: #222;
+}
 .pestañas{
-    font-size: 20px;
+    font-size: 30px;
 }
 .section-btn{
     padding: 2rem 2rem;
@@ -118,11 +129,58 @@ border-radius: .5rem;
     margin: 0 auto;
     max-width: 1170px;
 }
+.about{
+    background: rgba(194, 191, 191, 0.74);
+    border-radius: 5px;
+    display: grid;
+    grid-auto-flow: auto 1fr;
+}
+.btn-contenido{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.tab-btn:nth-child(1){
+    border-top-left-radius: 5px;
+}
+.tab-btn:nth-child(3){
+    border-top-right-radius: 5px;
+}
+.tab-btn{
+    padding: 10px 0;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    display: block;
+    background: hsl(212, 33%, 89%);
+    cursor: pointer;
+    transition: all .3s linear;
+    letter-spacing: .25rem;
+}
+.tab-btn:hover:not(.active){
+    background: hsl(205, 100%, 96%);
+    color: #49a6e9;
+}
+.pestañas{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 2rem 1.5rem;
+}
+.cont{
+    display: none;
+}
+.tab-btn.active{
+    background: rgb(219, 217, 217);
+}
+.cont.active{
+    display: block;
+}
 .tecno{
     /* border: #000 1px solid; */
     width: 60%;
     margin: 0 auto;
-    /* padding: 0 auto; */
+    font-size: 25px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 5px;
@@ -159,6 +217,15 @@ border-radius: .5rem;
 .paginas h2{
     text-align: center;
     margin-top: 20px;
+    font-size: 40px;
+    /* text-shadow: blue 1px 3px ; */
+    filter: drop-shadow(0 0 1px red)
+    drop-shadow(1px 1px 0 red)
+    drop-shadow(-1px 1px 0 red)
+    drop-shadow(1px -1px 0 red)
+}
+.paginas h3{
+    font-size: 25px;
 }
 .paginas .grid-pags{
     display: grid;
@@ -188,12 +255,69 @@ body.dark .social{
     height: 40px;
 }
 .formulario{
-    width: 500px;
+    width: min(700px, 100%);
     margin: 0 auto;
+    padding: 3px;
+    font-size: 25px;
+    font-family: 'baloo tammudu 2';
 }
-.formulario h2,h4{
+.formulario fieldset{
+    border-radius: 15px;
+    background-color: #343d5ba9;
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    padding: 5px;
+    font-size: 28px;
+    border-radius: 4px;
+    background-color: rgb(231, 158, 21);
+    box-shadow: rgba(0, 0, 0, 0.726) 2px 2px;
+        
+}
+.formulario h4{
     text-align: center;
     margin-top: 5px;
+}
+/* .formulario input{
+    display: flexbox;
+    margin-right: ;
+} */
+.contenedor-campos{
+    
+}
+.campo{
+    margin-bottom: 25px;
+}
+.campo label{
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: -5px;
+    display: block;
+}
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    /* text-align: ; */
+}
+.campo textarea{
+    height: 160px;
+}
+.boton{
+    background-color: #49a6e9;
+    color: #fff;
+    padding: 10px 30px;
+    margin-top: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    border: none;
 }
 .footer{
     text-align: center;

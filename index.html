@@ -46,29 +46,27 @@
                 ISC Jose Dimas Alejandro Espinosa Razo
             </h2>
         </div>
-
 <!--contenido de juego a los botones-->
         <article class="about">
             <div class="btn-contenido">
-                <button class="tab-btn activ" data-id="descripcion">Descripcion</button>
+                <button class="tab-btn activ" data-id="descripcion">Descripción</button>
                 <button class="tab-btn" data-id="vision">Vision</button>
-                <button class="tab-btn" data-id="conocimientos">Conocimientos</button>
+                <button class="tab-btn" data-id="objetivo">Objetivo</button>
             </div>
                 <div class="pestañas">
                     <div class="cont activ" id="descripcion">
-                        <p>Profesional comprometido a dar resultados positivos en el ámbito laboral que se presente. Dedicado y persistente en la solucion de problemas. Autodidacta, responsable, apasionado, proactivo y trabajador.</p>
-                        <br><br>
-                        <p>OBJETIVO LABORAL</p>
-                        <br>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, optio. Quia ipsam reprehenderit pariatur.</p>              
+                        <h4>Descripción</h4>
+                        <p>Profesional comprometido a dar resultados positivos en el ámbito laboral que se presente. Dedicado y persistente en dar la solución adecuada para el cliente.</p>
                     </div>
                     <div class="cont" id="vision">
-                        </div>
-                    <div class="cont" id="conocimientos">
-                        <p>AutoCad, VirtualBox, VMware, Redes y Cableado Estructurado, Soporte Técnico Preventivo y Correctivo.</p>
+                        <h4>Vision</h4>
+                        <p>Ayudar al cliente a aterrizar o mejorar sus ideas dando asi inicio a  levantar su proyecto y desarrollarlo.</p>
                     </div>
-                </div>    
-            </div>
+                    <div class="cont" id="objetivo">
+                        <h4>Objetivo</h4>
+                        <p>Desarrorar proyectos a peticion del cliente para su satisfacción, ayudandole asi a emprender en el ambito digital dandose a conocer y crecer.</p>
+                    </div>
+                </div>
         </article>       
     </section>
     <section class="tecno">
@@ -131,34 +129,36 @@
     </div>
     <!--formulario-->
     <section class="formulario" id="contact">
-        <h2>Contacto</h2>
         <h4>(Complemento DEMO)</h4>
         <form>
             <fieldset>
-                <legend>Completa el formulario</legend>
-                <div>
-                <label>Nombre</label>
-                <input type="text" placeholder="Nombre" required>
+                <legend>Contacto</legend>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Nombre</label>
+                        <input class="input-text" type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label >Apellido</label>
+                        <input class="input-text" type="text" placeholder="Apellidos">
+                    </div>
+                    <div class="campo">
+                        <label >Telefono</label>
+                        <input class="input-text" type="tel" placeholder="Telefono">
+                    </div>
+                    <div class="campo">
+                        <label >Correo</label>
+                        <input class="input-text" type="email" placeholder="Correo electronico" required/> 
+                    </div>
+                    <div class="campo">
+                        <label >Comentarios</label>
+                        <textarea class="input-text"></textarea>
+                    </div>
                 </div>
                 <div>
-                <label >Apellidos</label>
-                <input type="text" placeholder="Apellidos">
+                    <input class="boton" type="submit" value="Enviar">
                 </div>
-                <div>
-                <label >Telefono</label>
-                <input type="tel" placeholder="Telefono">
-                </div>
-                <div>
-                <label >Correo electronico</label>
-                <input type="email" placeholder="Correo electronico" required/> 
-                </div>
-                <div>
-                <label >Comentarios</label>
-                <textarea></textarea>
-                </div>
-                <div>
-                <input type="submit" value="Enviar">
-                </div>
+                
             </fieldset>
         </form>
     </section>
