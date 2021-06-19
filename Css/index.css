@@ -432,6 +432,10 @@ body.dark p{
         align-content: center;
         height: 50px;
     }
+    .btn-contenido button{
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
     .tecno{
         grid-template-columns: repeat(1,1fr);
         row-gap: 5px;
@@ -467,6 +471,19 @@ body.dark p{
     .switch{
         transform: translate(1px, 1px);
     }
+    .section-btn .btn{
+        font-size: 5px;
+        letter-spacing: 5px;
+    }
+    .pestañas{
+        font-size: 25px;
+    }
+    .btn-contenido{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
     .tecno{
         grid-template-columns: repeat(1,1fr);
         row-gap: 5px;
@@ -501,9 +518,14 @@ body.dark p{
     .btn-contenido button{
         font-size: 22px;
     }
-    /* .formulario{
-        width: auto;
-        margin: 0 auto;
-        height: 150px;
-    } */
+    .formulario legend{
+        text-align: center;
+        font-size: 25px;
+    }
+    .campo input{
+        height: 40px;
+    }
+    .campo textarea{
+        height:100px
+    }
 }
