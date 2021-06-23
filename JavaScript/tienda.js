@@ -1,9 +1,9 @@
 const btnDepartamentos = document.getElementById('btn-departamentos'),
-	  btnCerrarMenu = document.getElementById('btn-menu-cerrar'),
-	  grid = document.getElementById('grid'),
-	  contenedorEnlacesNav = document.querySelector('#menu .contenedor-enlaces-nav'),
-	  contenedorSubCategorias = document.querySelector('#grid .contenedor-subcategorias'),
-	  esDispositivoMovil = () => window.innerWidth <= 800;
+	btnCerrarMenu = document.getElementById('btn-menu-cerrar'),
+	grid = document.getElementById('grid'),
+	contenedorEnlacesNav = document.querySelector('#menu .contenedor-enlaces-nav'),
+	contenedorSubCategorias = document.querySelector('#grid .contenedor-subcategorias'),
+	esDispositivoMovil = () => window.innerWidth <= 800;
 
 btnDepartamentos.addEventListener('mouseover', () => {
 	if(!esDispositivoMovil()){
