@@ -353,7 +353,7 @@ body.dark p{
     color: #fff;
 }
 
-@media (max-width: 755px){
+/*@media (max-width: 755px){
     header {
     font-size: 14px;
     }
@@ -382,8 +382,8 @@ body.dark p{
         width: 25px;
         height: 25px;
     }
-}
-@media (max-width: 575px){
+}*/
+/*@media (max-width: 575px){
     header{
         font-size: 11px;
     }
@@ -411,16 +411,16 @@ body.dark p{
         width: 20px;
         height: 20px;
     }
-}
+}*/
 @media (max-width: 820px){ 
     .cont-prin{
         background-size: auto;
     }
     header h1{
-        font-size: 20px;
+        font-size: 30px;
     }
     .switch{
-        margin-left: 1px;
+        margin-left: 25px;
     }
     .section-btn h2{
         font-size: 23px;
@@ -471,7 +471,7 @@ body.dark p{
 }
 @media (max-width: 400px){
     header h1{
-        font-size: auto;
+        font-size: 15px;
     }
     .switch{
         display: flex;
@@ -539,8 +539,18 @@ body.dark p{
         font-size: 15px;
         margin-left: 25px;
     }
-    header button .switch{
-        width: 25px;
-        height: 22px;
+    .switch{
+        width: 39px;
+        height: 18px;
+    }
+    .switch span{
+        width: 3px;
+        height: 3px;
+        /* line-height: 150px; */
+        margin-right: 16.5px;
+    }
+    .switch span::after{
+        width: 18.5px;
+        height: 18.5px;
     }
 }
