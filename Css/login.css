@@ -11,7 +11,7 @@ main article {
 	margin: 20px 0;
 	padding: 20px;
 	height: 1000px;
-}
+} 
 body{
     background: #eaeded;
 
@@ -78,24 +78,14 @@ nav{
 .usuario a{
     font-size: 40px;
 }
-
 /*barra menu*/
-
-
 .contenedor {
 	margin: auto;
 	width: 90%;
-	max-width: 1500px;
-	/*display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100vh;
-	margin: -20px 0 50px;*/
+	max-width: 100%;
 }
 
-
-
+/*barra menu*/
 /* ------------------------- */
 /* Enlaces del NAV */
 /* ------------------------- */
