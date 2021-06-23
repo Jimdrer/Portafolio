@@ -469,15 +469,27 @@ body.dark p{
         margin: 0 auto;
     }
 }
-@media (max-width: 400px){
+@media (max-width: 600px){
     header h1{
-        font-size: 15px;
+        font-size: 5vw;
+        margin-left: 50px;
     }
     .switch{
-        display: flex;
-        margin-left: -13px;
-        margin-right: 10px;
+        width: 45px;
+        height: 23px;
+        margin-left: 15px;
     }
+    .switch span img{
+        width: 20px;
+        height: 20px;
+        /* transform: translateY(-px); */
+        /* margin-top: -15px; */
+        /* line-height: 105px; */
+    }
+    .switch span::after{
+        width: 22px;
+        height: 22px;
+    } 
     .section-btn{
         font-size: 14px;
     }   
@@ -534,23 +546,27 @@ body.dark p{
         margin-top: 2px;
     }
 }
-@media (max-width: 360px){
+@media (max-width: 440px){
     header h1{
-        font-size: 15px;
-        margin-left: 25px;
+        font-size:4.5vw ;
+        margin-left: 28px;
     }
     .switch{
+        display: flex;
         width: 39px;
         height: 18px;
+        margin-left: 15px;
     }
-    .switch span{
-        width: 3px;
-        height: 3px;
-        /* line-height: 150px; */
-        margin-right: 16.5px;
+    .switch span img{
+        width: 15px;
+        height: 15px;
+        transform: translateY(-4.5px);
+        /* margin-top: -15px; */
+        /* line-height: 105px; */
+        
     }
     .switch span::after{
         width: 18.5px;
         height: 18.5px;
-    }
+    } 
 }
