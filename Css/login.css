@@ -19,9 +19,12 @@ body{
 nav{
 	display: flex;
 }
+.logo{
+	display: flex;
+}
 .logo img{
     height: 45px;
-	margin-left: 40px;
+	margin-left: 35px;
     margin-top: 7px;
 }
 .logo span{
@@ -37,13 +40,12 @@ nav{
 	width: 100%;
 }
 .search{
-	width: auto;
-    margin-left: 50px;
+	width: 70%;
+    margin-left: 30px;
     padding-top: 8px;
 	/* border: 1px black solid; */
 }
 .barra-busqueda{
-    width: 800px;
     vertical-align: middle;
 }
 .barra-busqueda input#search{
@@ -85,7 +87,6 @@ nav{
 	max-width: 100%;
 }
 
-/*barra menu*/
 /* ------------------------- */
 /* Enlaces del NAV */
 /* ------------------------- */
@@ -456,7 +457,9 @@ nav{
 /*-------------------*/
 /*Loguin*/
 /*-------------------*/
-
+.contenedor .container{
+	margin: auto;
+}
 .contenedor .container h1 {
 	font-weight: bold;
 	margin: 0;
