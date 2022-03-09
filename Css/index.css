@@ -246,6 +246,8 @@ section.tecno{
 .paginas img{
     height: 180px;
     width: 300px;
+    align-items: center;
+    text-align: center;
 }
 .social{
     text-align: center;
