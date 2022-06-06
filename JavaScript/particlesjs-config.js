@@ -50,12 +50,12 @@ particlesJS(
           "enable": true,
           "distance": 150,
           "color": "#000",
-          "opacity": 0.8,
+          "opacity": .5,
           "width": 1.5
         },
         "move": {
           "enable": true,
-          "speed": 5,
+          "speed": 3.3,
           "direction": "none",
           "random": false,
           "straight": false,
