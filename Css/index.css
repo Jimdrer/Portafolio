@@ -180,14 +180,40 @@ header li{
 .c canvas{
     position: absolute;
 }
+
+-------------------/* PROYECTOS  */-------------------
+
+.proyectos{
+    margin-top: 10px;
+}
 .pt{
     display: flex;
     justify-content: center;
     font-size: 25px;
 }
-
 .pt img{
     width: 45px;
+}
+.grid_proy{
+    display: flex;
+    justify-content: space-around;
+}
+
+-------------------/* PORTAFOLIO  */-------------------
+
+.portafolio{
+    margin-top: 10px;
+}
+.pf{
+    display: flex;
+    justify-content: center;
+}
+.pf img{
+    width:45px;
+}
+.grid_port{
+    display: flex;
+    justify-content: space-around;
 }
 .contact{
     margin-top: 10px;
