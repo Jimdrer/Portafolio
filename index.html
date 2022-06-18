@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--icono pestaña-->
     <link rel="shortcut icon" href="../Portafolio/img/pics/ico/portafolioweb.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="Css/index.css">
-    
+    <link rel="stylesheet" href="Css/responsive_indx.css">
 
     <title>Mi CV</title>
 </head>
 <body>
     <div class='particles' id="particles-js"></div>
-
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
 <header>
     <h1>Jose Dimas Alejandro Espinosa Razo</h1>
-    <ul>
-        <li><a href="#in">Inicio</a></li>
+    <ul class="nav-menu show">
+        <li class="active"><a href="#in">Inicio</a></li>
         <li><a href="#am">Acerca de Mi</a></li>
         <li><a href="#qh">¿Que hago?</a></li>
         <li><a href="#sk">Skills</a></li>
-        <li><a href="#xp">Experience</a></li>
+        <li><a href="#xp">Experiencia</a></li>
         <li><a href="#pr">Proyectos</a></li>
         <li><a href="#cn">Contacto</a></li>
     </ul>
@@ -29,16 +32,17 @@
 <section class="inicio" id="in">
     <div class="saludo">
         <h1>Hola, Soy Dimas <img src="../Portafolio/img/pics/ico/mano.png" alt=""></h1>
-        <h3>Soy Desarrollador Frontend</h3>
+        <h2>Desarrollador Frontend</h2>
         <p>Apasionado Desarrollador de Software <img src="../Portafolio/img/pics/ico/cohete.png" alt=""> con un interes especial en las tecnologias de Frontend, con experiencia y aún en autoaprendisaje en la construcción de aplicaciones Web con JavaScript / Nodejs / Angular / Vuejs.</p>
     </div>
     <div class="foto">
-        <img src="../Portafolio/img/pics/me.jpeg" alt="">
+        <img id="foto" src="../Portafolio/img/pics/me.jpeg" alt="">
     </div>
 </section>
 <section class="acerca" id="am">
     <img class="rep" src="../Portafolio/img/pics/ico/ingeniero-de-software.png" alt="">
-    <div class="desc"><h1>Acerca de Mi <img src="../Portafolio/img/pics/ico/hombre.png" alt=""></h1>
+    <div class="desc">
+        <h1>Acerca de Mi <img src="../Portafolio/img/pics/ico/hombre.png" alt=""></h1>
         <p> Soy Ingeniero en Sistemas graduado en la Licenciatura en Ingenieria en Sistemas  Computacionales de la escuela y con un TSU en Tecnologias de la Información y Comunicación El ambito por aprender programación es reciente (no más de 3 años) debido lo que está pasando actualmente, principalmente me llamo la atención el gusto por la rama por el uso de la tecnologia y los diferentes lenguajes manejados asi como el desarrollo de las habilidades personales, el diseño grafico, la creatividad, el autoaprendisaje y la disciplina en el ambito del desarrollo de software.<br><br>
         Mi carrera laboral se basa en su mayor parte al trabajo físico siendo mantenimiento preventivo y correctivo, atención al cliente, ventas y claro tambien manejando redes computacionales, actualizaciones a equipo de computo, respaldo de correos electronicos con su respectivo pst, respaldo de cuentas y su información personal y restauración de Sistemas Operativos.<br><br>
         He decidido dar éste cambio radical en mi entorno laboral debido a la pandemia debido a que un dia me preguntaron si podia hacerles una pagina web, en ese entonces no tenia idea de como empezar ni que se necesitaba, por ése hecho decidi tomar cursos así dando lugar al gusto por el desarrollo web y que hasta la fecha sigue en pie ese entusiasmo por seguir en ésto llamado "Desarrollo Web"
@@ -210,16 +214,36 @@
     </div>
     <div class="grid_proy">
         <div class="pokedex">
-            <img src="" alt="">
+            <img class="t1" src="../" alt="pokedex">
             <h2>POKEDEX</h2>
+            <h3>Tecnologias Usadas</h3>
+            <span>
+            <img src="../Portafolio/img/pics/ico/tecnologias/html.ico" alt="HTML">
+            <img src="../Portafolio/img/pics/ico/tecnologias/css.ico" alt="CSS">
+            <img src="../Portafolio/img/pics/ico/tecnologias/js.ico" alt="JS">
+            </span>
         </div>
         <div class="pasteleria">
-            <img src="" alt="">
-            <h1>PASTELERIA</h1>
+            <img src="" alt="pasteleria">
+            <h2>PASTELERIA</h2>
+            <h3>Tecnologias Usadas</h3>
+            <span>
+                <img src="../Portafolio/img/pics/ico/tecnologias/html.ico" alt="HTML">
+                <img src="../Portafolio/img/pics/ico/tecnologias/css.ico" alt="CSS">
+                <img src="../Portafolio/img/pics/ico/tecnologias/js.ico" alt="JS">
+                <img src="../Portafolio/img/pics/ico/tecnologias/base.ico" alt="SQL">
+            </span>
         </div>
         <div class="b_virtua">
-            <img src="" alt="">
+            <img src="" alt="museo_virtual">
             <h2>Biblioteca virtual<br>Blue Extinction</h2>
+            <h3>Tecnologias Usadas</h3>
+            <span>    
+                <img src="../Portafolio/img/pics/ico/tecnologias/html.ico" alt="HTML">
+                <img src="../Portafolio/img/pics/ico/tecnologias/css.ico" alt="CSS">
+                <img src="../Portafolio/img/pics/ico/tecnologias/js.ico" alt="JS">
+                <img src="../Portafolio/img/pics/ico/tecnologias/base.ico" alt="SQL">
+            </span>
         </div>
     </div>
 </section>
@@ -230,22 +254,34 @@
     </div>
     <div class="grid_port">
         <div class="mtb">
-            <div>
-                <img src="" alt="">
+                <img src="" alt="mtb">
                 <h1>MTB</h1>
-            </div>
+                <h3>Tecnologias Usadas</h3>
+            <span>
+                <img src="../Portafolio/img/pics/ico/tecnologias/html.ico" alt="HTML">
+                <img src="../Portafolio/img/pics/ico/tecnologias/css.ico" alt="CSS">
+                <img src="../Portafolio/img/pics/ico/tecnologias/js.ico" alt="JS">
+            </span>
         </div>
         <div class="tienda">
-            <div>
-                <img src="" alt="">
-                <h1>TIENDA</h1>
-            </div>
+            <img src="../Portafolio/img/pics/tienda.png" alt="tienda" width="100%">
+            <h1>TIENDA</h1>
+            <h3>Tecnologias Usadas</h3>
+            <span>
+                <img src="../Portafolio/img/pics/ico/tecnologias/html.ico" alt="HTML">
+                <img src="../Portafolio/img/pics/ico/tecnologias/css.ico" alt="CSS">
+                <img src="../Portafolio/img/pics/ico/tecnologias/js.ico" alt="JS">
+            </span>
         </div>
         <div class="restaurante">
-            <div>
-                <img src="" alt="">
-                <h1>RESTAURANTE</h1>
-            </div>
+            <img src="" alt="restaurante">
+            <h1>RESTAURANTE</h1>
+            <h3>Tecnologias Usadas</h3>
+            <span>
+                <img src="../Portafolio/img/pics/ico/tecnologias/html.ico" alt="HTML">
+                <img src="../Portafolio/img/pics/ico/tecnologias/css.ico" alt="CSS">
+                <img src="../Portafolio/img/pics/ico/tecnologias/js.ico" alt="JS">
+            </span>
         </div>
     </div>
 </section>
@@ -254,11 +290,25 @@
         <h1>Contacto </h1>
         <img src="../Portafolio/img/pics/ico/ordenador.png" alt="">
     </div>
-        <div class="grid_contc">
-        <div><img src="../Portafolio/img/pics/ico/Phone_30029.png" alt=""><h1>Telefono</h1><h2>+52 (456) 126 7556</h2></div>
-        <div><img src="../Portafolio/img/pics/ico/linkedin.png" alt=""><h1>Linkedin</h1><a href="www.linkedin.com/in/jimdrer">Jose Dimas Alejandro Espinosa Razo</a></div>
-        <div><img src="../Portafolio/img/pics/ico/email.png" alt=""><h1>Email</h1><h2>dim_er89@outlook.com</h2></div>
-        <div><img src="../Portafolio/img/pics/ico/lugar.png" alt=""><h1>Locación</h1><h2>Valle de Santiago, Guanajuato</h2></div>
+    <div class="grid_contc">
+        <div>
+            <img src="../Portafolio/img/pics/ico/Phone_30029.png" alt="">
+            <h1>Telefono</h1>
+            <h2>+52 (456) 126 7556</h2>
+        </div>
+        <div>
+            <img src="../Portafolio/img/pics/ico/linkedin.png" alt="">
+            <h1>Linkedin</h1>
+            <a href="www.linkedin.com/in/jimdrer">Jose Dimas Alejandro Espinosa Razo</a>
+        </div>
+        <div>
+            <img src="../Portafolio/img/pics/ico/email.png" alt=""><h1>Email</h1>
+            <h2>dim_er89@outlook.com</h2>
+        </div>
+        <div>
+            <img src="../Portafolio/img/pics/ico/lugar.png" alt=""><h1>Locación</h1>
+            <h2>Valle de Santiago, Guanajuato</h2>
+        </div>
     </div>
 </footer>
     <!--Particles.js-->
