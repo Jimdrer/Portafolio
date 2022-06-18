@@ -11,18 +11,15 @@
     position: fixed;
 }
 
-header, section, footer{
-    padding-left: 100px;
-    padding-right: 100px;
-}
 section{
+    padding-left: 50px;
+    padding-right: 50px;
     margin-top: 10px;
-}
+} 
 a{
     text-decoration: none;
     color: black;
     transition: 1ms all;
-    font-size: 25px;
 }
 a:hover{
     color:rgb(42, 127, 206)
@@ -31,25 +28,44 @@ li{
     display: inline;
 }
 header{
+    padding: 0 5px;
+    margin: auto;
+    height: 55px;
     display: flex;
-    border: 1px solid;
-    background: rgba(255, 248, 235, 0.61);
-    justify-content: space-between;
-}
-header ul{
-    width: 50%;
-    display: flex;
+    border-bottom: 2px solid rgb(180, 2, 2);
+    background: #E9193B;
     justify-content: space-between;
     align-items: center;
 }
-header li{
-    font-size: 24px;
+.nav-menu{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    
 }
-
-
+.nav-menu li a{
+    text-transform: uppercase;
+    padding: 10px 13px;
+    display: block;
+    color: white;
+}
+.nav-menu li:hover, li.active{
+    background-color: #A61131;
+    transition: .4s;
+    border-radius: 3px;
+}
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 20px;
+    z-index: 2;
+    display: none;
+}
 .inicio{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display:flex;
 }
 .inicio .saludo img{
     width: 40px;
@@ -64,24 +80,22 @@ header li{
     width: 25px;
 }
 .foto{
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     margin: auto;
     background-image: linear-gradient(rgb(31, 30, 30), rgb(9, 255, 0));
     border-radius: 50%;
 }
-.inicio .foto img{
-    height: 250px;
-    width: 250px;
+.foto img{
+    height: 350px;
+    width: 350px;
     border-radius: 50%;
     margin: auto;
     align-items: center;
     border: 6px solid transparent;
 }
 .acerca{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
+    display: flex;
 }
 .rep{
     align-items: center;
@@ -180,25 +194,79 @@ header li{
 .c canvas{
     position: absolute;
 }
+
+-------------------/* PROYECTOS  */-------------------
+
+.proyectos{
+    margin-top: 20px;
+}
 .pt{
     display: flex;
     justify-content: center;
     font-size: 25px;
 }
-
 .pt img{
     width: 45px;
 }
-.contact{
-    margin-top: 10px;
+.grid_proy{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem,1fr));
+    gap: 15px;
 }
-.contact .ct{
+.grid_proy div{
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 15px;
+    background-color: white;
+}
+.grid_proy span img{
+    width:35px;
+}
+-------------------/* PORTAFOLIO  */-------------------
+.portafolio{
+    margin-top: 20px;
+}
+.pf{
     display: flex;
     justify-content: center;
-}
-.contact h1{
-    text-align: center;
     font-size: 25px;
+    text-align: center;
+}
+.pf img{
+    width:45px;
+}
+.grid_port{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem,1fr));
+    gap: 15px;
+}
+.grid_port div{
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.grid_port img{
+    top: 0;
+    
+    border-radius: 5px 5px 0 0;
+}
+.grid_port span img{
+    width: 45px;
+}
+-------------------/* FOOTER  */-------------------
+footer{
+    margin-top: 20px;
+}
+.ct{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    /* text-align: center; */
 }
 .contact img{
     width: 45px;
@@ -206,7 +274,7 @@ header li{
 .grid_contc{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(18em,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem,1fr));
     gap: 10px;
     
 }
