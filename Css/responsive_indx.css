@@ -1,0 +1,91 @@
+@media screen and (max-width: 800px){
+    header{
+        font-size: 15px;
+        justify-content: center;
+    }
+    .menu-btn{
+        display: block;
+        position: fixed;
+    }
+    .nav-menu{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 0, 0);
+        /* opacity: .9; */
+        height: 100%;
+        /* padding: 30px; */
+        transform: translateX(-450px);
+        transition: transform .3s;
+        flex-direction: column;  
+        z-index: 2;
+        border-right: 1px solid;  
+    }
+    .show{
+        transform: translateX(-20px);
+    }
+    .nav-menu li{
+        background-color: rgb(252, 252, 252);
+        width: 100%;
+    }
+    .nav-menu li a{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        display: block;
+        padding: 30px 55px;
+    }
+    /* ------------ INICIO ------------ */
+    .inicio{
+        flex-direction: column;
+        text-align: justify;
+    }
+    .inicio h1, 
+    /* ------------ ACERCA ------------ */
+    .acerca{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width: 500px){
+    header h1{
+        font-size: 20px;
+    }
+    /* ------------ INICIO ------------ */
+    .inicio{
+        flex-direction: column;
+        text-align: justify;
+    }
+    .inicio #foto{
+        width: 250px;
+        height: 250px;
+    }
+    .inicio h1, 
+    /* ------------ ACERCA ------------ */
+    .acerca img{
+        width: 200px;
+    }
+    /* ------------ SKILL --------------- */
+    .grid_skill{
+        width: 50px;
+    }
+    /* ------------ PROYECTOS --------------- */
+    .grid_proy div{
+        width: 288px;
+    }
+    /* ------------ PORTAFOLIO --------------- */
+    .grid_port img{
+        width: 150px;
+    }
+    .grid_port div{
+        width: 288px;
+    }
+    .ct {
+        margin-top: 15px;
+        font-size: 20px;
+    }
+    .grid_contc div{
+        width: 388px;
+    }
+}
