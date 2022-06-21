@@ -48,7 +48,7 @@
         flex-direction: column-reverse;
     }
 }
-@media screen and (max-width: 380px){
+@media screen and (max-width: 480px){
     header h1{
         font-size: 18px;
     }
