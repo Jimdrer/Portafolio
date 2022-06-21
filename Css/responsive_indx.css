@@ -48,14 +48,17 @@
         flex-direction: column-reverse;
     }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 380px){
     header h1{
-        font-size: 20px;
+        font-size: 18px;
     }
     /* ------------ INICIO ------------ */
     .inicio{
         flex-direction: column;
         text-align: justify;
+    }
+    .saludo p{
+        font-size: 5px;
     }
     .inicio #foto{
         width: 250px;
@@ -65,6 +68,9 @@
     /* ------------ ACERCA ------------ */
     .acerca img{
         width: 200px;
+    }
+    .acerca p{
+        font-size: 20px;
     }
     /* ------------ SKILL --------------- */
     .grid_skill{
