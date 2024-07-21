@@ -1,8 +1,7 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
-    
+    margin: 0;    
 }
 .particles{ 
     width: 100%;
@@ -253,6 +252,302 @@ header{
 .grid_port img{
     top: 0;
     
+    border-radius: 5px 5px 0 0;
+}
+.grid_port span img{
+    width: 45px;
+}
+-------------------/* FOOTER  */-------------------
+footer{
+    margin-top: 20px;
+}
+.ct{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    /* text-align: center; */
+}
+.contact img{
+    width: 45px;
+}
+.grid_contc{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem,1fr));
+    gap: 10px;
+    
+}
+.grid_contc div{
+    text-align: center;
+    border-radius: 7px 7px 0 0;
+    border: 1px solid;
+    font-size: 15px;
+    /* height: 200px; */
+    padding-top: 30px;
+    background-image: linear-gradient(rgba(44, 44, 44, 0.363),rgba(255, 255, 255, 0.986));
+}
+    *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+.particles{ 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+}
+
+section{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 10px;
+} 
+a{
+    text-decoration: none;
+    color: black;
+    transition: 1ms all;
+}
+a:hover{
+    color:rgb(42, 127, 206)
+}
+li{
+    display: inline;
+}
+header{
+    padding: 0 5px;
+    margin: auto;
+    height: 55px;
+    display: flex;
+    border-bottom: 2px solid rgb(180, 2, 2);
+    background: #E9193B;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-menu{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    
+}
+.nav-menu li a{
+    text-transform: uppercase;
+    padding: 10px 13px;
+    display: block;
+    color: white;
+}
+.nav-menu li:hover, li.active{
+    background-color: #A61131;
+    transition: .4s;
+    border-radius: 3px;
+}
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 20px;
+    z-index: 2;
+    display: none;
+}
+.inicio, .titulo{
+    display:flex;
+}
+.inicio .saludo img{
+    width: 40px;
+}
+.inicio div h1{
+    font-size: 45px;
+}
+.inicio div p{
+    font-size: 25px;
+}
+.inicio div p img{
+    width: 25px;
+}
+.inicio .foto{
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    background-image: linear-gradient(rgb(31, 30, 30), rgb(9, 255, 0));
+    border-radius: 50%;
+}
+.foto img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    margin: auto;
+    align-items: center;
+    border: 6px solid transparent;
+}
+.acerca{
+    display: flex;
+}
+.rep{
+    align-items: center;
+    margin: auto;
+}
+.acerca .desc{
+    font-size: 25px;
+    text-align: justify;
+    
+}
+.acerca .desc img{
+    width: 40px;
+}
+.que_hago{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+
+}
+.qh img{
+    width: 60px;
+    margin-bottom: -10px;
+}
+.grid_qh{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem,1fr));
+    gap: 10px;
+}
+.grid_qh div{
+    height: 190px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border: 2px solid rgb(235, 157, 157);
+    border-radius: 5px;
+    font-size: 30px;
+    align-items: center;
+    background-image: linear-gradient(rgba(44, 44, 44, 0.363),rgba(255, 255, 255, 0.986));
+    
+}
+.grid_qh div img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+}
+.skills{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.skills .ttl img{
+    height: 50px;
+}
+.grid_skill{
+    margin-top: 10px;
+    display: grid;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
+    gap: 1rem;
+}
+.grid_skill .a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid_skill .b{
+    background: #f5deb3;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 60px -1px rgba(255, 255, 255, .15);
+} 
+.grid_skill img{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    
+}
+.grid_skill .c{ 
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, .2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, .7),
+                .5px .5px 0 rgba(0, 0, 0, .15),
+                .5px 12px 10px -10px rgba(0, 0, 0, .05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c canvas{
+    position: absolute;
+}
+
+-------------------/* PROYECTOS  */-------------------
+
+.proyectos{
+    margin-top: 20px;
+}
+.pt{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+.pt img{
+    width: 45px;
+}
+.grid_proy{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%,1fr));
+    gap: 15px;
+}
+.grid_proy div{
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 15px;
+    background-color: white;
+}
+.grid_proy div > img{
+    width: 100%;
+    height: 75%;
+}
+.grid_proy span img{
+    width:35px;
+}
+-------------------/* PORTAFOLIO  */-------------------
+.portafolio{
+    margin-top: 20px;
+}
+.pf{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    text-align: center;
+}
+.pf img{
+    width:45px;
+}
+.grid_port{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%,1fr));
+    gap: 15px;
+}
+.grid_port div{
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.grid_port div > img{
+    width: 100%;
+    height: 75%;
+}
+.grid_port img{
+    top: 0;  
     border-radius: 5px 5px 0 0;
 }
 .grid_port span img{
