@@ -1,26 +1,25 @@
-const btnSwitch = document.querySelector('#switch');
+// addEventListener('DOMContentLoaded', () => {
+//     const menu_btn = document.querySelector('.menu-btn')
+//     if (menu_btn){
+//         menu_btn.addEventListener('click', () => {
+//             const menu_nav = document.querySelector('.nav-menu')
+//             menu_nav.classList.toggle('show')
+//         })
+//     }
+// })
 
-btnSwitch.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  btnSwitch.classList.toggle('active'); 
+document.querySelector('.menu-btn').addEventListener('click', () =>{
+    document.querySelector('.nav-menu').classList.toggle('show');
 });
 
-const about = document.querySelector(".about");
-const btns = document.querySelectorAll(".tab-btn");
-const articles = document.querySelectorAll(".cont");
-about.addEventListener("click", function (e) {
-  const id = e.target.dataset.id;
-  if (id) {
-    // remove selected from other buttons
-    btns.forEach(function (btn) {
-      btn.classList.remove("activ");
-    });
-    e.target.classList.add("activ");
-    // hide other articles
-    articles.forEach(function (article) {
-      article.classList.remove("activ");
-    });
-    const element = document.getElementById(id);
-    element.classList.add("activ");
-  }
-});
+$(function(){
+    $('.c').easyPieChart({
+        size:120,
+        barColor:"#36e617",
+        scaleLength: 0,
+        lineWidth: 10,
+        trackColor: "",
+        lineCap: "circle",
+        animate: 2000,
+    })
+})

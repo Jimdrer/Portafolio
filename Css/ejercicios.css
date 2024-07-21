@@ -1,0 +1,544 @@
+<<<<<<< HEAD
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    /* justify-content:center; */
+    background: #000;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 100vh;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.card{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-top: 100px;
+    left: 120px;
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    clip-path: circle(150px at center);
+    transition: 0.5s;
+}
+.card:hover .circle:before{
+    background: rgb(25, 204, 19);
+    clip-path: circle(500px at center);
+}
+.card img{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    height: 180px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card:hover img{
+    left: 83%;
+    height: 230px;
+}
+.card .texto{ 
+    position: relative;
+    width: 50%;
+    left: 0%;
+    padding: 20px 47px 20px 45px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .texto{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.card .texto h2{
+    color: rgb(77, 80, 77);
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+}
+.card .texto p{
+    color: rgb(255, 255, 255);
+}
+.card .texto a{
+    position: relative;
+    color: lavender;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    color: lightcoral;
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+/* -----------loader---------- */
+.loader{
+    position: relative;
+    left: 250px;
+    top: 200px;
+    /* width: 100%; */
+    /* height: 100vh;  */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0);
+    animation: changeColor 5s linear infinite;
+    z-index: 1;
+}
+@keyframes changeColor{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.loader h2{
+    color: rgb(0, 255, 191);
+    font-weight: 200;
+    font-family: serif;
+    letter-spacing: 10px;
+}
+.loader .load{
+    position: relative;
+    display: flex;
+}
+.loader .load .punto{
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 255, 191),
+                0 0 20px rgb(0, 255, 191),
+                0 0 40px rgb(0, 255, 191),
+                0 0 60px rgb(0, 255, 191),
+                0 0 80px rgb(0, 255, 191),
+                0 0 100px rgb(0, 255, 191);
+    margin: 20px 10px;
+    transform: scale(.1);
+    border-radius: 50%;
+    animation: puntoAnim 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+.loader .load:last-child .punto{
+    animation-delay: calc(-.1s * var(--i));
+}
+@keyframes puntoAnim{
+    0%{
+        transform: scale(.1);
+    }
+    10%{
+        transform: scale(1);
+    }
+    50%,100%{
+        transform: scale(.1);
+    }
+}
+/* -------------Imagen Fondo-------------- */
+.loop-anim{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background: rgba(39, 39, 39, 0.021);
+    z-index: 1;
+}
+.loop-anim h2{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    /* line-height: 100vh; */
+    font-size: 100px; 
+    color: cornsilk;
+}
+.banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+.banner .bloques{
+    position: relative;
+    display: block;
+    width: 5vh;
+    height: 5vh;
+    /* background: #0ff; */
+    animation: anim .75s ease-in-out forwards;
+}
+.banner .bloques:nth-child(even){
+    animation: anim  1s ease-in-out forwards;
+}
+.banner .bloques:nth-child(7n+3){
+    animation: anim  2.5s ease-in-out forwards;
+}
+.banner .bloques:nth-child(7n+7){
+    animation: anim  1.5s ease-in-out forwards;
+}
+@keyframes anim{
+    0%{
+        opacity: 0;
+        transform: scale(0) translateY(1000px);
+    }
+    50%{
+        opacity: 1;
+        background: url(../img/fondos/JS.svg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 10%;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+        background: url(../img/fondos/JS.svg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 10%;
+    }
+}
+
+/* ----------Script----------- */
+i
+{
+    display: inline-block;
+    position: absolute;
+    height: 200px;
+    background: linear-gradient(transparent, #fff);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: animate 5s linear infinite;
+}
+i:nth-child(3n+1)
+{
+    background: linear-gradient(transparent, #0ff);
+}
+i:nth-child(3n+2)
+{
+    background: linear-gradient(transparent, #0f0);
+}
+i:nth-child(3n+3)
+{
+    background: linear-gradient(transparent, #f00);
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(-200px);
+    }
+    100%
+    {
+        transform: translateY(calc(100vh + 200px));
+    }
+=======
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    /* justify-content:center; */
+    background: #000;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 100vh;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.card{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-top: 100px;
+    left: 120px;
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    clip-path: circle(150px at center);
+    transition: 0.5s;
+}
+.card:hover .circle:before{
+    background: rgb(25, 204, 19);
+    clip-path: circle(500px at center);
+}
+.card img{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    height: 180px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card:hover img{
+    left: 83%;
+    height: 230px;
+}
+.card .texto{ 
+    position: relative;
+    width: 50%;
+    left: 0%;
+    padding: 20px 47px 20px 45px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .texto{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.card .texto h2{
+    color: rgb(77, 80, 77);
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+}
+.card .texto p{
+    color: rgb(255, 255, 255);
+}
+.card .texto a{
+    position: relative;
+    color: lavender;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    color: lightcoral;
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+/* -----------loader---------- */
+.loader{
+    position: relative;
+    left: 250px;
+    top: 200px;
+    /* width: 100%; */
+    /* height: 100vh;  */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0);
+    animation: changeColor 5s linear infinite;
+    z-index: 1;
+}
+@keyframes changeColor{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.loader h2{
+    color: rgb(0, 255, 191);
+    font-weight: 200;
+    font-family: serif;
+    letter-spacing: 10px;
+}
+.loader .load{
+    position: relative;
+    display: flex;
+}
+.loader .load .punto{
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 255, 191),
+                0 0 20px rgb(0, 255, 191),
+                0 0 40px rgb(0, 255, 191),
+                0 0 60px rgb(0, 255, 191),
+                0 0 80px rgb(0, 255, 191),
+                0 0 100px rgb(0, 255, 191);
+    margin: 20px 10px;
+    transform: scale(.1);
+    border-radius: 50%;
+    animation: puntoAnim 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+.loader .load:last-child .punto{
+    animation-delay: calc(-.1s * var(--i));
+}
+@keyframes puntoAnim{
+    0%{
+        transform: scale(.1);
+    }
+    10%{
+        transform: scale(1);
+    }
+    50%,100%{
+        transform: scale(.1);
+    }
+}
+/* -------------Imagen Fondo-------------- */
+.loop-anim{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background: rgba(39, 39, 39, 0.021);
+    z-index: 1;
+}
+.loop-anim h2{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    /* line-height: 100vh; */
+    font-size: 100px; 
+    color: cornsilk;
+}
+.banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+.banner .bloques{
+    position: relative;
+    display: block;
+    width: 5vh;
+    height: 5vh;
+    /* background: #0ff; */
+    animation: anim .75s ease-in-out forwards;
+}
+.banner .bloques:nth-child(even){
+    animation: anim  1s ease-in-out forwards;
+}
+.banner .bloques:nth-child(7n+3){
+    animation: anim  2.5s ease-in-out forwards;
+}
+.banner .bloques:nth-child(7n+7){
+    animation: anim  1.5s ease-in-out forwards;
+}
+@keyframes anim{
+    0%{
+        opacity: 0;
+        transform: scale(0) translateY(1000px);
+    }
+    50%{
+        opacity: 1;
+        background: url(../img/fondos/JS.svg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 10%;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+        background: url(../img/fondos/JS.svg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 10%;
+    }
+}
+
+/* ----------Script----------- */
+i
+{
+    display: inline-block;
+    position: absolute;
+    height: 200px;
+    background: linear-gradient(transparent, #fff);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: animate 5s linear infinite;
+}
+i:nth-child(3n+1)
+{
+    background: linear-gradient(transparent, #0ff);
+}
+i:nth-child(3n+2)
+{
+    background: linear-gradient(transparent, #0f0);
+}
+i:nth-child(3n+3)
+{
+    background: linear-gradient(transparent, #f00);
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(-200px);
+    }
+    100%
+    {
+        transform: translateY(calc(100vh + 200px));
+    }
+>>>>>>> 8e38f89fe71ba0e9207b6f6c0bdce563e0410d34
+} 
