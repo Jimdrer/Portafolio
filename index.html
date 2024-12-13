@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../Paginas-Web/Portafolio/img/pics/ico/portafolioweb.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="../Paginas-Web/Portafolio/Css/index.css">
-    <link rel="stylesheet" href="../Paginas-Web/Portafolio/Css/responsive_indx.css">
+    <!--<link rel="stylesheet" href="../Paginas-Web/Portafolio/Css/responsive_indx.css">-->
 
     <title>Mi CV</title>
 </head>
@@ -18,10 +18,8 @@
         <i class="fas fa-bars fa-2x"></i>
     </div>
 <header>
-    <h1>Jose Dimas Alejandro Espinosa Razo</h1>
-    <ul class="nav-menu show">
+    <ul class="nav-menu">
         <li class="active"><a href="#in">Inicio</a></li>
-        <li><a href="#am">Acerca de Mi</a></li>
         <li><a href="#qh">¿Que hago?</a></li>
         <li><a href="#sk">Skills</a></li>
         <li><a href="#xp">Experiencia</a></li>
@@ -31,25 +29,18 @@
 </header>
 <section class="inicio" id="in">
     <div class="saludo">
-        <h1>Hola, Soy Dimas <img src="../Paginas-Web/Portafolio/img/pics/ico/mano.png" alt=""></h1>
+        <div class="portada" id="background">
+            <img id="foto" src="../Paginas-Web/Portafolio/img/pics/me.jpeg" alt="">
+        </div>
+        <h1>Hola, soy Dimas <img id="img" src="../Paginas-Web/Portafolio/img/pics/ico/mano.png" alt=""></h1>
         <h2>Desarrollador Frontend</h2>
-        <p>Apasionado Desarrollador Front-end <img src="../Paginas-Web/Portafolio/img/pics/ico/cohete.png" alt=""> con un interes especial en las tecnologias de Front-end, Back-end, Ux/Ui y diseno grafico con experiencia y aún en aprendisaje en la construcción de paginas web con las tecnologias de JavaScript / Nodejs / Angular / Vuejs. / Phyton / React / Figma / Photoshop / 
-        Ahora a la fecha estoy actualizandome con cursos en plataformas como Microsoft, Udemy, FreeCodeCamp, Cisco.</p>
-    </div>
-    <div class="foto">
-        <img id="foto" src="../Paginas-Web/Portafolio/img/pics/me.jpeg" alt="">
-    </div>
-</section>
-<section class="acerca" id="am">
-    <img class="rep" src="..Paginas-Web/Portafolio/img/pics/ico/ingeniero-de-software.png" alt="">
-    <div class="desc">
-        <h1>Acerca de Mi <img src="../Paginas-Web/Portafolio/img/pics/ico/hombre.png" alt=""></h1>
-        <p> Soy Ingeniero en Sistemas graduado en la Licenciatura en Ingenieria en Sistemas  Computacionales con TSU en Tecnologias de la Información y Comunicación. Principalmente me llamo la atención el gusto de la rama por el uso de la tecnologia y los diferentes lenguajes manejados asi como el desarrollo de las habilidades personales, el diseño grafico, la creatividad, el autoaprendisaje y la disciplina en el ambito del desarrollo de software.<br><br>
-        Mi carrera laboral se basa en su mayor parte al mantenimiento preventivo y correctivo, atención al cliente, ventas y redes computacionales, actualizaciones a equipo de computo, respaldo de correos electronicos con su respectivo pst y su información personal y restauración de Sistemas Operativos.<br><br>
-        He decidido dar éste cambio radical en mi entorno laboral debido a la pandemia debido a que un dia me preguntaron si podia hacerles una pagina web, en ese entonces no tenia idea de como empezar ni que se necesitaba, por ése hecho decidi tomar cursos así dando lugar al gusto por el desarrollo web y que hasta la fecha sigue en pie ese entusiasmo por seguir en ésto llamado "Desarrollo Web".
-        </p>
+        
+        <p>Mi nombre de pila es Jose Dimas Alejandro Espinosa Razo y soy un apasionado Desarrollador Front-end <img id="cohete" src="../Paginas-Web/Portafolio/img/pics/ico/cohete.png" alt=""> con un interes especial en las tecnologias de Front-end, Back-end, Ux/Ui y diseno grafico con experiencia y aún en aprendisaje en la construcción de paginas web con las tecnologias de JavaScript / Nodejs / Angular / Vuejs. / Phyton / React / Figma / Photoshop. Actualmente estoy actualizandome con cursos en plataformas como Microsoft, Udemy, FreeCodeCamp y Cisco. <img id="img" src="../Paginas-Web/Portafolio/img/pics/ico/hombre.png" alt=""> <br>
+        <img class="rep" src="../Paginas-Web/Portafolio/img/pics/ico/ingeniero-de-software.png" alt=""><br>
+        Con carrera de Ingeniero en Sistemas Computacionales y un TSU en Tecnologias de la Información y Comunicación, me nacio el gusto de aprender gracias a la tecnologia y los diferentes lenguajes manejados asi como el desarrollo de las habilidades personales, el diseño grafico, la creatividad, el autoaprendisaje y la disciplina en el ambito del desarrollo de software.</p>        
     </div>
 </section>
+
 <section class="que_hago" id="qh">
     <div class="qh">
         <h1>¿Que hago? <img src="../Paginas-Web/Portafolio/img/pics/ico/esquema-del-proyecto.png" alt=""></h1>
@@ -259,7 +250,7 @@
     </div>
     <div class="grid_prjts">
         <div class="mtb">
-            <a href="../Paginas-Web/Portafolio/Html/mtb.html"><img class="img" src="../Paginas-Web/Portafolio/img/pics/Mtb/Imagenes/mtblogo.png" alt="mtb"></a>
+            <a href="..Paginas-Web/Portafolio/Html/mtb.html"><img class="img" src="../Paginas-Web/Portafolio/img/pics/Mtb/Imagenes/mtblogo.png" alt="mtb"></a>
             <div class="info_proy">
                 <h2>MTB</h2>
                 <h3>Tecnologias Usadas</h3>
@@ -329,10 +320,6 @@
         <div>
             <img src="../Paginas-Web/Portafolio/img/pics/ico/email.png" alt=""><h1>Email</h1>
             <h2>dim_er89@outlook.com</h2>
-        </div>
-        <div>
-            <img src="../Paginas-Web/Portafolio/img/pics/ico/lugar.png" alt=""><h1>Locación</h1>
-            <h2>Valle de Santiago, Guanajuato</h2>
         </div>
     </div>
 </footer>
