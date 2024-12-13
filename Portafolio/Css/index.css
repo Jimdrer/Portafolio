@@ -37,10 +37,13 @@ header{
     align-items: center;
 }
 .nav-menu{
+    padding: 20px;
+    margin: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: auto;
-    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
     padding: auto;
 }
 .nav-menu li a{
@@ -61,6 +64,10 @@ header{
     right: 20px;
     z-index: 2;
     display: none;
+}
+.inicio{
+    padding: auto;
+    margin: 20px;
 }
 .saludo #img{
     width: 40px;
@@ -98,8 +105,8 @@ header{
     width: 230px;
 }
 .que_hago{
-    padding-top: 20px;
-    margin-top: auto;
+    padding-top: auto;
+    margin-top: 75px;
     text-align: center;
     font-size: 30px;
 
