@@ -32,30 +32,32 @@ header{
     height: 55px;
     display: flex;
     border-bottom: 2px solid rgb(180, 2, 2);
-    background: #E9193B;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(5px);
     justify-content: space-between;
     align-items: center;
 }
 .nav-menu{
+    width: 100%;
     padding: 20px;
     margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     font-size: 25px;
-    padding: auto;
+    z-index: 100;
 }
-.nav-menu li a{
+.nav-menu a{
     text-transform: uppercase;
     padding: 10px 13px;
     display: block;
-    color: white;
+    color: rgb(27, 26, 26);
 }
 .nav-menu li:hover, li.active{
-    background-color: #A61131;
+    background-color: rgb(238, 171, 171);
     transition: .4s;
-    border-radius: 3px;
+    border-radius: 25px;
+    box-shadow: 0 0 15px 0 rgb(180, 18, 18);
 }
 .menu-btn{
     position: absolute;
@@ -65,7 +67,14 @@ header{
     z-index: 2;
     display: none;
 }
-.inicio{
+.contacto{
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(1.5px);
+    width: 30%;
+}
+.contacto img{
+    height: 55px;
+}.inicio{
     padding: auto;
     margin: 20px;
 }
@@ -82,7 +91,7 @@ header{
     width: 25px;
 }
 #background{
-    float: right;
+    float: left;
     width: 260px;
     height: 260px;
     border-radius: 50%;
@@ -100,7 +109,7 @@ header{
     transform: translate(2%, 2%);
 }
 .rep{
-    float: left;
+    float: right;
     height: 230px;
     width: 230px;
 }
