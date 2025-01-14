@@ -40,8 +40,17 @@ header{
     align-items: center;
     z-index: 100;
 }
+header p{
+    font-size: 18px;
+    
+}
+header img{
+    width: 55px;
+    height: 55px;
+    padding-left: 5px;
+}
 .nav-menu{
-    width: 100%;
+    width: 83%;
     padding: 5px;
     display: flex;
     justify-content: right;
@@ -53,7 +62,7 @@ header{
     display: block;
     color: rgb(27, 26, 26);
 }
-.nav-menu li:hover, li.active{
+.nav-menu li:hover{
     background-color: rgb(238, 171, 171);
     transition: .4s;
     border-radius: 25px;
@@ -224,7 +233,7 @@ header{
 }
 .pt img{
     height: 80px;
-    padding-left: 25px;
+    padding-left: 7px;
 }
 .grid_prjts{
     display: grid;
@@ -242,9 +251,9 @@ header{
     justify-content: center;
 }
 .pf img{
-    height: 80px;
+    height: 70px;
     width: 80px;
-    padding-left: 25px;
+    padding-left: 7px;
 }
 -------------------/* FOOTER  */-------------------
 footer{
@@ -274,4 +283,35 @@ footer{
     /* height: 200px; */
     padding-top: 30px;
     background-image: linear-gradient(rgba(44, 44, 44, 0.363),rgba(255, 255, 255, 0.986));
+}
+
+/* BREAKPOINTS */
+@media (max-width: 992px){
+    header{
+        padding: 1rem;
+    }
+    .grid_qh{
+        grid-template-columns:repeat(auto-fill, minmax(12rem,1fr));
+    }
+    .grid_qh div{
+        height: 160px;
+        font-size: 25px;
+    }
+    .grid_qh div img{
+        width: 50px;;
+    }
+    .grid_skill{
+        grid-template-columns:repeat(auto-fill, minmax(10rem,1fr));
+    }
+    .grid_prjts .img{
+        height: 60%;
+        width: 60%;
+    }
+    .info_proy img{
+        width: 60px;
+        height: 60px;
+    }
+}
+@media (max-width: 768px){
+
 }
