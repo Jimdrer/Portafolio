@@ -31,7 +31,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    position: fixed;
+    position: sticky;
     display: flex;
     border:.5px solid rgba(180, 2, 2, 0.329);
     background: rgba(0, 0, 0, 0.062);
@@ -75,15 +75,22 @@ header img{
     right: 20px;
     z-index: 2;
     display: none;
+    font-size: 2.8rem;
 }
 .contacto{
     background-color: rgba(0, 0, 0, .1);
     backdrop-filter: blur(1.5px);
-    width: 30%;
+    margin-top: 0;
 }
-.contacto img{
-    height: 55px;
-}.inicio{
+.datos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30px,1fr));    
+}
+.datos div{
+    display: flex;
+    justify-content: center;
+}
+.inicio{
     padding: auto;
     margin: 20px;
 }
