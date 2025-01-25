@@ -33,11 +33,19 @@ header{
     width: 100%;
     position: sticky;
     display: flex;
-    background: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(8px);
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+}
+header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(5px);
 }
 .logo{
   display: flex;
@@ -336,6 +344,12 @@ footer{
     }
 }
 @media (max-width: 768px){
+    .logo{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        z-index: 2;
+    }
     .menu-btn{
         display: inline-flex;
     }
@@ -357,16 +371,16 @@ footer{
         background: rgba(0, 0, 0, .1);
         backdrop-filter: blur(8px);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transition: .3s ease;
+        overflow: hidden;
     }
     #check:checked~.nav-menu{
-        height: 25rem;
+        height: 18.3rem;
     }
     .nav-menu a{
-        
         display:block;
-        
         font-size: 1.3rem;
-        margin: .5rem 0;
+        margin: .8rem 0;
         text-align: center;
         font-weight: 950;
         background-image: linear-gradient(180deg, rgba(255, 0, 0, 0.116), rgb(255, 0, 0));
