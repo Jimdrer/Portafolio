@@ -9,7 +9,12 @@
     z-index: -1;
     position: fixed;
 }
-
+p{
+    font-size: clamp(12px, 4vw, 25px);
+}
+h1{
+    font-size: clamp(25px, 4vw, 45px);
+}
 section{
     padding-left: 50px;
     padding-right: 50px;
@@ -116,7 +121,7 @@ header::before{
     font-size: 45px;
 }
 .inicio div p{
-    font-size: 25px;
+    
 }
 .inicio #cohete{
     width: 25px;
@@ -312,17 +317,11 @@ footer{
     .logo, .nav-menu{
         text-align: right;
     }
-    .nav-menu a{
-        font-size: 15px;
-    }
 }
 @media (max-width: 992px){
 
     header{
         padding: 1.3rem 5%;
-    }
-    .nav-menu{
-        font-size: 17px;
     }
     .grid_qh{
         grid-template-columns:repeat(auto-fill, minmax(12rem,1fr));
