@@ -328,7 +328,7 @@ header::before{
         overflow: hidden;
     }
     #check:checked~.nav-menu{
-        height: 20rem;
+        height: 21rem;
     }
     .nav-menu a{
         display:block;
