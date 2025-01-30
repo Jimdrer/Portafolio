@@ -191,7 +191,7 @@ header::before{
     margin-top: 10px;
     display: grid;
     grid-auto-rows: 7rem;
-    grid-template-columns: repeat(auto-fit, minmax(85px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(95px,1fr));
     gap: 1rem;
     
 }
