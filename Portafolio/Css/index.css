@@ -84,8 +84,8 @@ header::before{
 }
 .nav-menu a:hover{
     background-color: rgb(238, 171, 171);
-    transition: .4s;
-    border-radius: 25px;
+    transition: .6s;
+    border-radius: 18px;
     box-shadow: 0 0 15px 0 rgb(180, 18, 18);
 }
 .menu-btn{
