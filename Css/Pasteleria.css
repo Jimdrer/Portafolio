@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+p{
+    font-size: clamp(12px, 4vw, 25px);
+}
+nav{
+    width: 100%;
+    height: fit-content;
+}
+.logo img{
+    width: 150px;
+}
+.slider{
+    width: 100%;
+    height: 550px;
+    background-color: aqua;
+}
+.myslides img{
+    width: 150px;
+}
+.section-btn p{
+    text-align: justify;
+}
+.titulo{
+    text-align: center;
+}
+.section-btn .btn{
+text-transform: uppercase;
+background: transparent;
+color: black;
+padding: 0.375rem 0.75rem;
+letter-spacing: .25rem;
+display: inline-block;
+transition: all .3s linear;
+font-size: 20px;
+border: 1.5px solid black;
+cursor: pointer;
+box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+border-radius: .5rem;
+}
+.tabs .tabbtn:hover{
+    color: #fff;
+    background: #000000;
+}
+.section-btn{
+    padding: 2rem 2rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+.tabs{
+    background: rgba(194, 191, 191, 0.74);
+    border-radius: 5px;
+    display: grid;
+    grid-auto-flow: auto 1fr;
+}
+.btn-contenido{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.tabbtn:nth-child(1){
+    border-top-left-radius: 5px;
+}
+.tabbtn:nth-child(3){
+    border-top-right-radius: 5px;
+}
+.tabbtn{
+    padding: 10px 0;
+    border: none;
+    text-transform: capitalize;
+    font-size: clamp(15px, 4vw, 35px);
+    display: block;
+    background: hsl(27, 96%, 44%);
+    cursor: pointer;
+    transition: all .3s linear;
+    letter-spacing: .25rem;
+}
+.pestañas{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem 1.5rem;
+}
+.enlaces{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.ico{
+    height: 50px;
+}

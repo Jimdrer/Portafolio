@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Pasteleria.css">
+    <link rel="stylesheet" href="Pasteleria.js">
+    <link rel="shortcut icon" href="../Módulo 3 - Pasteleria/Ico/pasteleria.gif" />
+    <title>Sweet Cupcake</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="../Módulo 3 - Pasteleria/Pasteleria.html">
+                <img src="../Módulo 3 - Pasteleria/Ico/pasteleria.png" alt="logo">
+            </a>
+        
+            <div class="contenedor contenedor-links-nav">    
+                <div class="btn-departamentos" id="btn-departamentos">
+                    <p>Todos los <span>Departamentos</span></p>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="links">
+                    <a href="../Html/404.html">Lo más vendido</a>
+                    <a href="../Html/404.html">Ultimas Novedades</a>
+                    <a href="../Html/404.html">Promociones</a>
+                    <a href="../Html/login.html">Cuenta</a>
+                    <a href="../Html/404.html">Historial</a>
+                    <a href="../Html/404.html">Ayuda</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="contenedor contenedor-grid">
+                <div class="grid" id="grid">
+                    <div class="categorias">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subtitulo">Categorias</h3>
+                        <a href="#" data-categoria="hogar-y-cocina">Pastelillos<i class="fas fa-angle-right"></i></a>
+                        <a href="#" data-categoria="ropa-y-accesorios">Eventos<i class="fas fa-angle-right"></i></a>
+                        <a href="#" data-categoria="juegos-y-juguetes">Tipos de Pasteles<i class="fas fa-angle-right"></i></a>
+                        <a href="#" data-categoria="alimentos-y-bebidas">Galletas<i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <div class="contenedor-subcategorias">
+                        <div class="subcategoria" data-categoria="pastelillos">
+                            <div class="links-subcategoria">
+                                <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                                <h3 class="subtitulo">Pastelillos</h3>
+                                <a href="#" data-categoria="1">Estilos</a>
+                                <a href="#" data-categoria="2">Eventos</a>
+                                <a href="#" data-categoria="3">Ingredientes</a>
+                                <a href="#" data-categoria="4">Sabores</a>
+                            </div>
+                            <div class="banner-subcategoria">
+                                <a href="#">
+                                    <img src="../Módulo 3 - Pasteleria/Img/plum-cake-g9f1729c10_1280.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="galeria-subcategoria">
+                                <a href="#">
+                                    <img src="../Módulo 3 - Pasteleria/Img/strawberries-ga8d30d3c3_1280.jpg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="../Módulo 3 - Pasteleria/Img/strawberrycake-gd1f99d4f3_1280.jpg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="../Módulo 3 - Pasteleria/Img/wedding-cake-gaf8b219d6_1280.jpg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="../Módulo 3 - Pasteleria/Img/wedding-cake-gb51658055_1280.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="usuario">            
+                <a href="../Html/login.html"><i class="fas fa-user"></i></a>
+                <a href="../Html/carrito.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="slider">
+            <div class="mySlides fade">
+            <a href="#"><img src="../Módulo 3 - Pasteleria/Img/cake-gbfba16991_1920.jpg"></a>
+            </div>
+        
+            <div class="mySlides fade">
+            <img src="../Módulo 3 - Pasteleria/Img/cake-g6aa0351c4_1280.jpg">
+            </div>
+        
+            <div class="mySlides fade">
+            <img src="../Módulo 3 - Pasteleria/Img/plum-cake-g9f1729c10_1280.jpg">
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <section class="section-btn">
+        <div class="titulo">
+            <h2>
+                Sweet Cupcake
+            </h2>
+        </div>
+<!--contenido de juego a los botones-->
+        <article class="about">
+            <div class="btn-contenido">
+                <button class="tab-btn activ" data-id="mision">Misión</button>
+                <button class="tab-btn" data-id="vision">Visión</button>
+                <button class="tab-btn" data-id="objetivo">Objetivo</button>
+            </div>
+                <div class="pestañas">
+                    <div class="cont activ" id="mision">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, accusamus!</p>
+                    </div>
+                    <div class="cont" id="vision">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolores fugit sapiente, laudantium asperiores itaque.</p>
+                    </div>
+                    <div class="cont" id="objetivo">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit iusto sint quaerat molestias, perspiciatis eius officiis iste hic magni ad ex ratione minima quasi ipsa voluptatibus, distinctio expedita? Nesciunt, ipsam.</p>
+                    </div>
+                </div>
+        </article>       
+    </section>     
+    <div class="grid">
+        <div class="1">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, quis corrupti. Corrupti commodi quibusdam quo nesciunt? Facilis modi provident dignissimos dolorum rerum repellendus sint perspiciatis quod, assumenda, labore omnis nobis.
+            </p>
+        </div>
+        <div class="2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure error dolorem cupiditate velit maxime tempore doloribus dolor autem. Quas provident, iste doloremque iusto perferendis vitae aspernatur porro consequuntur similique repellendus.
+        </div>
+        <div class="3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est dolore dolorem nemo fugit ipsum asperiores, magni repellat culpa quod, accusamus officia aliquam omnis magnam rerum eius. Consequatur quos excepturi aliquam.
+        </div>
+    </div>
+            <section class="formulario" id="contact">
+                <h4></h4>
+                <form>
+                    <fieldset>
+                        <legend>Contacto</legend>
+                        <div class="contenedor-campos">
+                            <div class="campo">
+                                <label>Nombre</label>
+                                <input class="input-text" type="text" placeholder="Nombre" required>
+                            </div>
+                            <div class="campo">
+                                <label >Apellido</label>
+                                <input class="input-text" type="text" placeholder="Apellidos">
+                            </div>
+                            <div class="campo">
+                                <label >Telefono</label>
+                                <input class="input-text" type="tel" placeholder="Telefono">
+                            </div>
+                            <div class="campo">
+                                <label >Correo</label>
+                                <input class="input-text" type="email" placeholder="Correo electronico" required/> 
+                            </div>
+                            <div class="campo">
+                                <label >Comentarios</label>
+                                <textarea class="input-text"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <input class="boton" type="submit" value="Enviar">
+                        </div>
+                        
+                    </fieldset>
+                </form>
+            </section>
+            
+            <!--redes sociales-->
+            <section class="social">    
+                <p>Redes Sociales</p>
+                <div class="enlaces">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img class="face" src="../Módulo 3 - Pasteleria/Ico/facebook.png">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=+524561267556" target="_blank">
+                        <img class="wapp" src="../Módulo 3 - Pasteleria/Ico/whatsapp.png">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img class="twit" src="../Módulo 3 - Pasteleria/Ico/twitter.png">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img class="insta" src="../Módulo 3 - Pasteleria/Ico/instagram.png">
+                    </a>
+                </div>
+            </section>        
+
+            <footer>
+                <p>Sweet Cupcake<br>Todos los Derechos Reservados</p>
+                <div>
+                    <ul>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Nuestra Empresa</a></li>
+                    </ul>
+                    <ul>    
+                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="#">Comprar</a></li>
+                    </ul>    
+                        <a href="#">Mapa del Sitio</a>
+                        <a href="#"></a>
+                </div>    
+            </footer>
+
+    <script src="../Módulo 3 - Pasteleria/Pasteleria.js"></script>
+
+
+</body>
+</html>

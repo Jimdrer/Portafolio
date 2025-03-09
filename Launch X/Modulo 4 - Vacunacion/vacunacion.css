@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(56, 51, 49);
+}
+.menu{
+    position: sticky;
+    display: flex;
+    padding: auto;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+.menu ul{
+    text-decoration: none;
+    display: flex;
+}
+.menu ul li{
+    padding: 10px;
+}
+.menu ul li a{
+    padding: 3px;
+}
+.menu button{
+    height: 35px;
+    width: 130px;
+    
+    
+}
+.principal{
+    /* display: flex; */
+}
+.principal .cont{
+    position: absolute;
+    z-index: 1;
+}
+.cont h1, p{
+    right: 50px;
+}
+
+.cartel1{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.cartel1 .posterblanco .I{
+    /* position: relative; */
+    height: 500px;
+    border-style: solid;
+    /* width: 100%; */
+}
+.posterblanco .triangulo1{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-left: 50px solid #a09d99;
+    border-bottom: 50px solid #a09d99;
+    transform: rotate(45deg);
+    align-items: center ;
+}
+.cartel1 .D{
+    /* position: static; */
+    height: 500px;
+    left: 600px;
+}
+.date, .agenda{
+    /* position: relative; */
+    z-index: 1;
+    margin-left: 25px;
+    top: 350px;
+}
+.agenda{
+    width: 600px;
+    height: 80px;
+    justify-content: space-between;
+    display: flex;
+    padding: 25px;
+    background-color: rgba(247, 247, 247, 0.596);
+}
+.agenda button{
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    border-color: transparent;
+    color: white;
+    background-color: rgb(36, 36, 252);
+}
+.logos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.seccion2 .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 10px 0;
+    width: 80%;
+    margin-left: 100px;
+    
+}
+.cards i{
+    color: blue;
+    padding-top: 7px;
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: aliceblue;
+    text-align: center;
+    justify-content: center;
+}
+.cards h4, p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.cards p{
+    margin-top: 8px;
+    text-align: justify;
+}
+.cards div{
+    border-width: 2px;
+    border-style: solid;
+    width: 190px;
+    height: 265px;
+    border-color: #d4d2cece;
+    border-radius: 5px;
+    
+}
+footer{
+    display: flex;
+}
+.about ul li{
+    display: flex;
+}

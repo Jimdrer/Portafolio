@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/carrito.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="contenedor-m">
+        <div class="logo">
+            <a href="../Html/Tienda.html">
+                <img src="../img/pics/ico/tiendalog.png" alt="logo">
+            </a>
+            <a href="../Html/Tienda.html"><span>Smart<br>Smarket</span></a>
+        </div>
+        <div class="search">
+            <div class="barra-busqueda">
+                <span class="icon"><i class="fas fa-search"></i></span>
+                <input type="search" id="search" placeholder="Busca tu producto"> 
+            </div>
+        </div>    
+        <div class="usuario">            
+            <a href="../Html/login.html"><i class="fas fa-user"></i></a>
+            <a href="../Html/carrito.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>    
+    <div class="menu" id="menu">
+        <div class="contenedor contenedor-boton-menu">
+            <buttton id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></buttton>
+            <buttton id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></buttton>
+        </div>
+        <div class="contenedor contenedor-links-nav">    
+            <div class="btn-departamentos" id="btn-departamentos">
+                <p>Todos los <span>Departamentos</span></p>
+                <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="links">
+                <a href="../Html/404.html">Lo más vendido</a>
+                <a href="../Html/404.html">Ultimas Novedades</a>
+                <a href="../Html/404.html">Promociones</a>
+                <a href="../Html/login.html">Cuenta</a>
+                <a href="../Html/404.html">Historial</a>
+                <a href="../Html/404.html">Ayuda</a>
+            </div>
+        </div>
+        <div class="contenedor contenedor-grid">
+            <div class="grid" id="grid">
+                <div class="categorias">
+                    <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                    <h3 class="subtitulo">Categorias</h3>
+                    <a href="#" data-categoria="hogar-y-cocina">Hogar y Cocina<i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="ropa-y-accesorios">Ropa y Accesorios<i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="juegos-y-juguetes">Juegos y Juguetes<i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="alimentos-y-bebidas">Alimentos y Bebidas<i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="herramientas">Herramientas<i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="tecnologia">Tecnologia<i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="salud-y-belleza">Salud y Belleza<i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="contenedor-subcategorias">
+                    <div class="subcategoria" data-categoria="hogar-y-cocina">
+                        <div class="links-subcategoria">
+                            <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                            <h3 class="subtitulo">Hogar y Cocina</h3>
+                            <a href="#" data-categoria="electrodomesticos">Electrodomesticos</a>
+                            <a href="#" data-categoria="linea-blanca">Linea Blanca</a>
+                            <a href="#" data-categoria="muebles">Muebles</a>
+                            <a href="#" data-categoria="decoracion">Decoración</a>
+                            <a href="#" data-categoria="cocina">Cocina</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                            <a href="#">
+                                <img src="../img/pics/Tienda/hogar-banner-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="galeria-subcategoria">
+                            <a href="#">
+                                <img src="../img/pics/Tienda/hogar-galeria-1.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/hogar-galeria-2.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/hogar-galeria-3.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/hogar-galeria-4.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="subcategoria" data-categoria="ropa-y-accesorios">
+                        <div class="links-subcategoria">
+                            <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                            <h3 class="subtitulo">Ropa y Accesorios</h3>
+                            <a href="#" data-categoria="bebes">Bebés</a>
+                            <a href="#" data-categoria="playeras">Playeras</a>
+                            <a href="#" data-categoria="pantalones">Pantalones</a>
+                            <a href="#" data-categoria="zapatos">Zapatos</a>
+                            <a href="#" data-categoria="joyas-y-accesorios">Joyas y Accesotios</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                            <a href="#">
+                                <img src="../img/pics/Tienda/ropa-banner-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="galeria-subcategoria">
+                            <a href="#">
+                                <img src="../img/pics/Tienda/ropa-galeria-1.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/ropa-galeria-2.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/ropa-galeria-3.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/ropa-galeria-4.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="subcategoria" data-categoria="juegos-y-juguetes">
+                        <div class="links-subcategoria">
+                            <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                            <h3 class="subtitulo">Juegos y Juguetes</h3>
+                            <a href="#" data-categoria="juegos-de-mesa">Juegos de Mesa</a>
+                            <a href="#" data-categoria="muñecos-y-muñecas">Muñecos y Muñecas</a>
+                            <a href="#" data-categoria="montables">Montables</a>
+                            <a href="#" data-categoria="gimnasios">Gimnasios</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                            <a href="#">
+                                <img src="../img/pics/Tienda/juegos-banner-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="galeria-subcategoria">
+                            <a href="#">
+                                <img src="../img/pics/Tienda/juegos-galeria-1.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/juegos-galeria-2.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/juegos-galeria-3.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/juegos-galeria-4.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="subcategoria" data-categoria="alimentos-y-bebidas">
+                        <div class="links-subcategoria">
+                            <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                            <h3 class="subtitulo">Alimentos y Bebidas</h3>
+                            <a href="#" data-categoria="pastas">Pastas</a>
+                            <a href="#" data-categoria="enlatados">Enlatados</a>
+                            <a href="#" data-categoria="frutas-y-verduras">Frutas y Verduras</a>
+                            <a href="#" data-categoria="bebidas-hidratantes">Bebidas Hidratantes</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                            <a href="#">
+                                <img src="../img/pics/Tienda/comida-banner-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="galeria-subcategoria">
+                            <a href="#">
+                                <img src="../img/pics/Tienda/comida-galeria-1.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/comida-galeria-4.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/comida-galeria-3.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../img/pics/Tienda/comida-galeria-4.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="subcategoria" data-categoria="herramientas">
+                        <div class="links-subcategoria">
+                            <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                            <h3 class="subtitulo">Herramientas</h3>
+                            <a href="#" data-categoria="para-el-jardin">Para el Jardín</a>
+                            <a href="#" data-categoria="manuales">Manuales</a>
+                            <a href="#" data-categoria="electricas">Electricas</a>
+                            <a href="#" data-categoria="accesorios">Accesorios</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                        <div class="galeria-subcategoria">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="subcategoria" data-categoria="tecnologia">
+                        <div class="links-subcategoria">
+                            <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                            <h3 class="subtitulo">Tecnologia</h3>
+                            <a href="#" data-categoria="celulares-y-tablets">Celulares y Tablets</a>
+                            <a href="#" data-categoria="televisores">Televisores</a>
+                            <a href="#" data-categoria="audio">Audio</a>
+                            <a href="#" data-categoria="computo">Computo</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                        <div class="galeria-subcategoria">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="subcategoria" data-categoria="salud-y-belleza">
+                        <div class="links-subcategoria">
+                            <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                            <h3 class="subtitulo">Salud y Belleza</h3>
+                            <a href="#" data-categoria="maquillajes">Maquillajes</a>
+                            <a href="#" data-categoria="perfumes-y-fragancias">Perfumes y Fragancias</a>
+                            <a href="#" data-categoria="cuidado-de-la-piel">Cuidado de la Piel</a>
+                            <a href="#" data-categoria="cuidado-del-cabello">Cuidado del Cabello</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                        <div class="galeria-subcategoria">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+    <div>
+
+    </div>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="V2XHHDJH6DEJE">
+        <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+    </form>
+        
+</body>
+</html>

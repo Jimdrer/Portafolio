@@ -1,0 +1,184 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="../Css/ejercicios.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="card">
+            <div class="circle"></div>
+            <div class="texto">
+                <h2>Xbox</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ullam, necessitatibus voluptates alias cupiditate molestias voluptatibus distinctio excepturi, labore libero quas magni aperiam unde dicta optio!</p>
+                <a href="#">RESERVA AHORA</a>
+            </div>
+            <img src="../img/pics/Ejercicios/xbox.png" alt="">
+            
+        </div>
+        <div class="loader">
+        <div class="load">
+            <div class="punto" style="--i:0;"></div>
+            <div class="punto" style="--i:1;"></div>
+            <div class="punto" style="--i:2;"></div>
+            <div class="punto" style="--i:3;"></div>
+            <div class="punto" style="--i:4;"></div>
+            <div class="punto" style="--i:5;"></div>
+            <div class="punto" style="--i:6;"></div>
+            <div class="punto" style="--i:7;"></div>
+            <div class="punto" style="--i:8;"></div>
+            <div class="punto" style="--i:9;"></div>
+        </div>
+        <h2>Cargando...</h2>
+        <div class="load">
+            <div class="punto" style="--i:0;"></div>
+            <div class="punto" style="--i:1;"></div>
+            <div class="punto" style="--i:2;"></div>
+            <div class="punto" style="--i:3;"></div>
+            <div class="punto" style="--i:4;"></div>
+            <div class="punto" style="--i:5;"></div>
+            <div class="punto" style="--i:6;"></div>
+            <div class="punto" style="--i:7;"></div>
+            <div class="punto" style="--i:8;"></div>
+            <div class="punto" style="--i:9;"></div>
+        </div>
+        </div>
+        <div class="loop-anim">
+            <h2>Animación</h2>
+            <div class="banner">
+                <div class="bloques"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const banner = document.getElementsByClassName('banner')[0];
+        const bloques = document.getElementsByClassName('bloques');
+
+        for (var i=1; i<400; i++){
+            banner.innerHTML +="<div class='bloques'></div>";
+            bloques[i].style.animationDelay = `${i * .05}s`;
+        }
+    </script>
+    <script>
+        function rain(){
+            let amount = 200;
+            let body = document.querySelector('body');
+            let i = 0;
+            while(i < amount){
+                let drop = document.createElement('i');
+
+                let size = Math.random()*5;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() *-20;
+                let duration = Math.random() * 5;
+
+                drop.style.width = 0.2 + size + 'px';
+                drop.style.left = posX + 'px';
+                drop.style.animationDelay = delay+ 's';
+                drop.style.animationDuration = 1 + duration+'s';
+                
+                body.appendChild(drop);
+                i++
+            }
+        }
+
+        rain();
+    </script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="../Css/ejercicios.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="card">
+            <div class="circle"></div>
+            <div class="texto">
+                <h2>Xbox</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ullam, necessitatibus voluptates alias cupiditate molestias voluptatibus distinctio excepturi, labore libero quas magni aperiam unde dicta optio!</p>
+                <a href="#">RESERVA AHORA</a>
+            </div>
+            <img src="../img/pics/Ejercicios/xbox.png" alt="">
+            
+        </div>
+        <div class="loader">
+        <div class="load">
+            <div class="punto" style="--i:0;"></div>
+            <div class="punto" style="--i:1;"></div>
+            <div class="punto" style="--i:2;"></div>
+            <div class="punto" style="--i:3;"></div>
+            <div class="punto" style="--i:4;"></div>
+            <div class="punto" style="--i:5;"></div>
+            <div class="punto" style="--i:6;"></div>
+            <div class="punto" style="--i:7;"></div>
+            <div class="punto" style="--i:8;"></div>
+            <div class="punto" style="--i:9;"></div>
+        </div>
+        <h2>Cargando...</h2>
+        <div class="load">
+            <div class="punto" style="--i:0;"></div>
+            <div class="punto" style="--i:1;"></div>
+            <div class="punto" style="--i:2;"></div>
+            <div class="punto" style="--i:3;"></div>
+            <div class="punto" style="--i:4;"></div>
+            <div class="punto" style="--i:5;"></div>
+            <div class="punto" style="--i:6;"></div>
+            <div class="punto" style="--i:7;"></div>
+            <div class="punto" style="--i:8;"></div>
+            <div class="punto" style="--i:9;"></div>
+        </div>
+        </div>
+        <div class="loop-anim">
+            <h2>Animación</h2>
+            <div class="banner">
+                <div class="bloques"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const banner = document.getElementsByClassName('banner')[0];
+        const bloques = document.getElementsByClassName('bloques');
+
+        for (var i=1; i<400; i++){
+            banner.innerHTML +="<div class='bloques'></div>";
+            bloques[i].style.animationDelay = `${i * .05}s`;
+        }
+    </script>
+    <script>
+        function rain(){
+            let amount = 200;
+            let body = document.querySelector('body');
+            let i = 0;
+            while(i < amount){
+                let drop = document.createElement('i');
+
+                let size = Math.random()*5;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() *-20;
+                let duration = Math.random() * 5;
+
+                drop.style.width = 0.2 + size + 'px';
+                drop.style.left = posX + 'px';
+                drop.style.animationDelay = delay+ 's';
+                drop.style.animationDuration = 1 + duration+'s';
+                
+                body.appendChild(drop);
+                i++
+            }
+        }
+
+        rain();
+    </script>
+</body>
+>>>>>>> 8e38f89fe71ba0e9207b6f6c0bdce563e0410d34
+</html>
