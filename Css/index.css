@@ -116,7 +116,8 @@ header::before{
     height: 300px;
 }
 .saludo{
-    position: absolute;
+    
+    position: relative;
     top: 50%;
     transform: translate(0, -50%);
 }
@@ -142,6 +143,9 @@ header::before{
     transition: 0.9s;
     position: absolute;
     transform: translate(2%, 2%);
+}
+#qh{
+    margin: 20px;
 }
 .qh{
     display: flex;
@@ -298,7 +302,7 @@ iframe{
         padding: 1.3rem 5%;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 500px){
     .logo{
         display: flex;
         align-items: center;
