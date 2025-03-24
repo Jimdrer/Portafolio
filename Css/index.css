@@ -280,15 +280,22 @@ header::before{
     padding-left: 7px;
 }
 .uxui{
+    margin: 20px;
+    
+}
+#ux{
+    text-align: center;
+}
+.figma{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
-    text-align: center;
-    gap: 16px;
-    margin-bottom: 25px;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
 }
-iframe{
-    width: 1fr;
-    height: 350px;
+.figma img{
+    max-width: 250px;
 }
 
 @media (max-width: 1024px){
