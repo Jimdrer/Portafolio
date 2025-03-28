@@ -279,23 +279,17 @@ header::before{
     width: 80px;
     padding-left: 7px;
 }
-.uxui{
-    margin: 20px;
-    
-}
 #ux{
     text-align: center;
 }
 .figma{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
+    text-align: center;
+    gap: 16px;
 }
-.figma img{
-    max-width: 250px;
+.figma div img{
+    max-width: 165px;
 }
 
 @media (max-width: 1024px){
