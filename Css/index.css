@@ -150,10 +150,11 @@ header::before{
 .qh{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .qh img{
     width: 60px;
-    margin-bottom: -10px;
+    
 }
 .grid_qh{
     margin-top: 10px;
@@ -334,7 +335,7 @@ header::before{
         overflow: hidden;
     }
     #check:checked~.nav-menu{
-        height: 21rem;
+        height: 13rem;
     }
     .nav-menu a{
         display:block;
