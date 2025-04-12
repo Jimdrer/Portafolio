@@ -16,6 +16,7 @@ body{
     /* position: relative; */
     font-family: sans-serif;
     overflow: hidden;
+    text-align: center;
 }
 .lines {
     position: flex;
@@ -110,25 +111,25 @@ section{
     font-weight: 700;
     font-size: 45px;
     transform: scale(2);
-    padding: 30px;
+    padding-left: 27px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 .error .text::before,
 .error .text::after{
-    padding: 30px;
     color: #fff;
     content: attr(data-text);
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(255, 1, 1, 0);
     overflow: hidden;
     top: 0;
+    padding-left: 10px;
 }
 .error .text::before{
     left: 3px;
-    text-shadow: -2px 0 rgba(146, 146, 146, 0.411);
+    text-shadow: -2px 0 rgba(250, 2, 2, 0.411);
     animation: glitch-1 2s linear infinite reverse;
 }
 .error .text::after{
