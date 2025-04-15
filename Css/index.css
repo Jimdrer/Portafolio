@@ -176,7 +176,8 @@ header::before{
 }
 .skills .ttl{
     display: flex;
-    margin-top: 25px;
+    margin-top: 30px;
+    margin-bottom: 25px;
     justify-content: center;
     font-size: 18px;
 }
@@ -184,12 +185,12 @@ header::before{
     height: 50px;
 }
 .grid_skill{
-    margin-top: 10px;
+    margin: auto;
     display: grid;
     grid-auto-rows: 7rem;
     grid-template-columns: repeat(auto-fit, minmax(110px,1fr));
     gap: 1rem;
-    
+    padding-bottom: 30px;
 }
 .grid_skill .a{
     display: flex;
@@ -234,6 +235,7 @@ header::before{
 
 -------------------/* PROYECTOS  */-------------------
 
+
 .proyectos{
     margin-top: 20px;
     justify-items: center;
@@ -242,16 +244,21 @@ header::before{
     padding: 8px;
 }
 .pt{
-    padding: 20px;
+    margin: auto;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-image: radial-gradient(circle, red, transparent);
 }
 .pt img{
     height: 80px;
     padding-left: 7px;
 }
+
 .grid_prjts{
+    padding-top: 20px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
     text-align: center;
@@ -261,13 +268,19 @@ header::before{
     height: 40px;
     width: 40px;
 }
+.info_proy{
+    margin: auto;
+    background: rgba(168, 35, 35, 0.425);
+    border-radius: 8px;
+    width: 50%;
+}
 .img{
     height: 165px;
     width: 165px;
 }
 .pf{
+    padding-top: 30px;
     display: flex;
-    padding: 20px;
     align-items: center;
     justify-content: center;
 }
@@ -277,10 +290,13 @@ header::before{
     padding-left: 7px;
 }
 .uxui{
+    padding-top: 30px;
     padding-bottom: 20px;
     text-align: center;
 }
 .figma{
+    padding-top: 20px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
     text-align: center;
@@ -289,6 +305,25 @@ header::before{
 }
 .figma img{
     max-width: 165px;
+}
+
+.grad-border{
+    height: 1%;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.left-border, .right-border {
+    width: 30%;
+    border-bottom: 3px solid #695f52;
+    display: inline-block;
+}
+.left-border {
+    border-image: linear-gradient(270deg, #d10404, #ffffff) 1;
+}
+.right-border {
+    border-image: linear-gradient(90deg, #d10404, #fff) 1;
 }
 
 @media (max-width: 1024px){
