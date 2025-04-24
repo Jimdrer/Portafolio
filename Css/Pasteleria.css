@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
 p{
     font-size: clamp(12px, 4vw, 25px);
@@ -14,6 +15,26 @@ section .sweet1{
     justify-content: center;
     align-items: center;
 }
+.sweet1::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #eccea7c5, transparent);
+    z-index: 10000;
+}
+.sweet1::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #eccea788;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
 .sweet1 img{
     position: absolute;
     top: 0;
@@ -22,6 +43,15 @@ section .sweet1{
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+}
+#text{
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 1;
+}
+#cup, #straw{
+    z-index: 2;
 }
 
 .slider{
