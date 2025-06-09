@@ -1,10 +1,8 @@
 function descargarArchivo(){
     const seleccionado = document.querySelector('input[name="archivo"]:checked').value;
     
-    // Crear un enlace temporal para la descarga
     const link = document.createElement('a');
     link.href = "https://drive.proton.me/urls/H4QBBPVQ70#ZcuFEGiMiMv9";
-    link.download = "https://drive.proton.me/urls/H4QBBPVQ70#ZcuFEGiMiMv9";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -15,6 +13,6 @@ function descargarArchivo(){
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    // Opcional: Mostrar mensaje
+
     alert(`Iniciando descarga de ${seleccionado}`);
 };
