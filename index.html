@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="../Portafolio/Css/index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+        
     <title>Portafolio</title>
 </head>
 <body>
@@ -84,14 +84,26 @@
 
 <section class="inicio" id="in">
     <div class="saludo">
-        <div class="portada" id="background">
-            <img id="foto" src="../Portafolio/img/pics/me.jpeg" alt="">
-        </div>
         <div id="saludo">
+            <div class="portada" id="background">
+                <img id="foto" src="../Portafolio/img/pics/me.jpeg" alt="">
+            </div>
             <h1>Jose Dimas Alejandro Espinosa Razo</h1>
             <p>Desarrollador Front-end con un interes especial en las tecnologias de Front-end, Back-end, Ux/Ui y diseno grafico con experiencia y aún en aprendisaje en la construcción de paginas web con las tecnologias de JavaScript / Nodejs / Angular / Vuejs. / Phyton / React / Figma / Photoshop. Actualmente estoy actualizandome con cursos en plataformas como Microsoft, Udemy, FreeCodeCamp y Cisco.</p>
-        </div>      
+        </div>
     </div>
+    <form id="cv">
+        <h2>Curriculum Vitae</h2>
+        <div class="download-option">
+            <input type="radio" id="archivo1" name="archivo" value="espanol" checked>
+            <label for="archivo1">Espanol</label>
+        </div>
+        <div class="download-option">
+            <input type="radio" id="archivo2" name="archivo" value="english">
+            <label for="archivo2">English</label>
+        </div>
+        <button id="cv-button" type="button" onclick="descargarArchivo()"><img src="../Portafolio/img/pics/ico/pdf.ico"></button>
+    </form>
 </section>
 <section class="que_hago" id="qh">
     <div class="qh">
@@ -253,7 +265,8 @@
                 <img src="../Portafolio/img/pics/ico/tecnologias/css.ico" alt="CSS">
                 <img src="../Portafolio/img/pics/ico/tecnologias/js.ico" alt="JS">
                 </span>
-            </div>    
+                <h4>Nota: El diseno de la pokedex es prototipo del diseno, implementare un segundo estilo con React .</h4>    
+            </div>
         </div>
         <div class="pasteleria">
             <a href="../Portafolio/Html/404.html"><img class="img" src="../Portafolio/Launch X/Módulo 3 - Pasteleria/Ico/pasteleria.png" alt="pasteleria"></a>
@@ -374,10 +387,7 @@
     <!--Particles.js-->
     <script src="../Portafolio/JavaScript/particles.min.js"></script>
     <script src="../Portafolio/JavaScript/particlesjs-config.js"></script>
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
-    <!--<script src="../Portafolio/JavaScript/index.js"></script>-->
+    <script src="../Portafolio/JavaScript/index.js"></script>
     
 </body>
 </html>

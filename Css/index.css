@@ -117,12 +117,6 @@ header::before{
     position: relative;
     height: 300px;
 }
-.saludo{
-    
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-}
 .saludo h1, .saludo p{
     text-align: justify;
     margin-top: 15px;
@@ -145,6 +139,40 @@ header::before{
     transition: 0.9s;
     position: absolute;
     transform: translate(2%, 2%);
+}
+#cv{
+    display: block;
+    translate: 12%;
+    margin: 0 auto;
+    width: 310px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    justify-content: center
+}
+#cv h2{
+    display: block;
+    position: absolute;
+}
+.download-option{
+    border-radius: 5px;
+    border: 1px solid #dddbd7;
+    display:inline-block;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+#cv-button{
+    background-color: #ff8818;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #695f52;
+    align-items: center;
+    margin-left: 10px;
 }
 #qh{
     margin: 20px;

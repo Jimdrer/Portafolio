@@ -9,11 +9,12 @@ p{
 section .sweet1{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 80%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 10px;
 }
 .sweet1::before{
     content: '';
@@ -53,7 +54,6 @@ section .sweet1{
 #cup, #straw{
     z-index: 2;
 }
-
 .slider{
     width: 100%;
     height: 550px;
