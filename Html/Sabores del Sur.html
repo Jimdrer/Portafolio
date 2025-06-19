@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Sur - Cocina tradicional</title>
+    <link rel="stylesheet" href="../Css/Sabores del Sur.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Sabores del Sur</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#reservas" class="reserva-btn">Reservas</a></li>
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>Auténtica cocina tradicional</h2>
+            <p>Sabores que evocan recuerdos</p>
+            <a href="#reservas" class="btn">Reserva ahora</a>
+        </div>
+    </header>
+
+    <!-- Sección Especiales -->
+    <section class="especiales">
+        <h2 class="section-title">Nuestros platos estrella</h2>
+        <div class="especiales-grid">
+            <div class="plato-card">
+                <img src="plato1.jpg" alt="Asado criollo">
+                <h3>Asado criollo</h3>
+                <p>Corte premium con guarnición tradicional</p>
+                <span class="precio">$2,800</span>
+            </div>
+            <!-- Más platos... -->
+        </div>
+    </section>
+
+    <!-- Sección Menú -->
+    <section class="menu" id="menu">
+        <h2 class="section-title">Nuestro Menú</h2>
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-category="entradas">Entradas</button>
+            <button class="tab-btn" data-category="principales">Platos principales</button>
+            <button class="tab-btn" data-category="postres">Postres</button>
+            <button class="tab-btn" data-category="bebidas">Bebidas</button>
+        </div>
+        <div class="menu-items">
+            <!-- Los ítems del menú se cargarán dinámicamente con JavaScript -->
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section class="nosotros" id="nosotros">
+        <div class="nosotros-content">
+            <h2 class="section-title">Nuestra historia</h2>
+            <p>Desde 1985 llevando los sabores tradicionales a tu mesa...</p>
+            <!-- Más contenido... -->
+        </div>
+        <div class="nosotros-img">
+            <img src="chef.jpg" alt="Nuestro chef">
+        </div>
+    </section>
+
+    <!-- Sección Contacto/Reservas -->
+    <section class="contacto" id="contacto">
+        <div class="contacto-info">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+            <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+            <p><i class="fas fa-envelope"></i> info@saboresdelsur.com</p>
+            <div class="redes-sociales">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="reservas-form" id="reservas">
+            <h3>Reserva tu mesa</h3>
+            <form id="form-reserva">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Teléfono" required>
+                <input type="date" required>
+                <input type="time" required>
+                <input type="number" placeholder="N° de personas" min="1" required>
+                <textarea placeholder="Notas especiales"></textarea>
+                <button type="submit" class="btn">Confirmar reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Horarios</h4>
+                <p>Lunes a Viernes: 12:00 - 16:00 / 20:00 - 00:00</p>
+                <p>Sábados y Domingos: 12:00 - 00:00</p>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Sabores del Sur. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/Sabores del Sur.js"></script>
+</body>
+</html>
