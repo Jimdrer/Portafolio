@@ -6,3 +6,109 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+//Colores Tarjeta
+.bg-green{
+    background: rgb(135, 211, 22);
+}
+.bg-red{
+    background: rgb(236, 96, 15);
+}
+.bg-blue{
+    background: rgb(140, 140, 250);
+}
+.bg-yellow{
+    background: rgba(255, 255, 0, 0.678);
+}
+.bg-brown{
+    background: rgba(163, 77, 6, 0.836);
+}
+.bg-purple{
+    background: rgba(201, 20, 201, 0.726);
+}
+.bg-black{
+    background: black;
+}
+.bg-pink{
+    background: pink;
+}
+.bg-gray{
+    background: rgb(134, 134, 134);
+}
+.bg-white{
+    background: white;
+}
+.bg-all{
+    background: rgb(95, 95, 95);
+}
+
+//Tipo
+
+.color-fire{
+    background: orangered;
+    .ico_type{
+        
+        height: 20px;
+        width: 20px;
+        background: white;
+    }
+}
+.color-grass{
+    background: green;
+}
+.color-steel{
+    background: rgb(117, 106, 106);
+}
+.color-water{
+    background: rgb(0, 183, 255);
+}
+.color-psychic{
+    background: rgb(221, 44, 221);
+}
+.color-ground{
+    background: rgb(114, 41, 12);
+}
+.color-ice{
+    background: rgb(127, 223, 223);
+}
+.color-flying{
+    background: rgb(205, 249, 255);
+}
+.color-ghost{
+    background: rgba(150, 150, 150, 0.555);
+}
+.color-normal{
+    background: cadetblue;
+}
+.color-poison{
+    background: maroon;
+}
+.color-rock{
+    background: moccasin;
+}
+.color-{
+    background: rgb(185, 5, 5);
+}
+.color-shadow{
+    background: #707070;
+}
+.color-bug{
+    background: rgb(61, 95, 9);
+}
+.color-dragon{
+    background-image: linear-gradient(180deg, orangered 50%, rgb(219, 145, 197) 50%);
+}
+.color-electric{
+    background: rgb(233, 229, 11);
+}
+.color-fairy{
+    background: rosybrown;
+}
+.color-shadow{
+    background: silver;
+}
+.color-unknow{
+    background: rgb(77, 71, 71);
+}
+
+
