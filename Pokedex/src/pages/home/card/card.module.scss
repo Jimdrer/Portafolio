@@ -5,9 +5,20 @@
   flex-direction: column;
   position: relative;
 
+  &:hover{
+    transform: scale(1);
+    transition-duration: 200ms;
+    > img{
+      margin-top: 20px;
+      transform: scale(1.1);
+      transition-duration: 300ms;
+      filter: drop-shadow(1px 3px 0px black);
+    }
+  }
+
   .img_pokemon {
     width: 160px;
-    margin: 0 auto;
+    margin: 0 119px;
     z-index: 1;
   }
 
@@ -77,9 +88,9 @@
         border: 1px solid #424242;
         border-radius: 5px;
         text-align: center;
-        height: 34px;
+        height: 25px;
         line-height: 19px;
-        width: 80px;
+        width: 50px;
         color: aliceblue;
     }
         img{

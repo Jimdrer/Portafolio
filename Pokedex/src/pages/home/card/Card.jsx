@@ -34,32 +34,33 @@ export default function Card({ card }) {
         alt="Pokemon"
       />
       <div className={`bg-${especiePokemon.color?.name} ${css.sub_card}`}>
-        <strong className={css.id_card}>001</strong>
-        <h1 className={css.name_card}>Nombre</h1>
-        <h3 className={css.altura}>Altura</h3>
-        <h3 className={css.peso}>Peso</h3>
-        <h3 className={css.habitat}>Habitat</h3>
+        <strong className={css.id_card}>{itemPokemon.id}</strong>
+        <h1 className={css.name_card}>{itemPokemon.name}</h1>
+        <h3 className={css.altura}>Altura:{itemPokemon.height}0 Cm</h3>
+        <h3 className={css.peso}>Peso: {itemPokemon.weight} Kg</h3>
+        <h3 className={css.habitat}>Habitat:{" "}{especiePokemon.habitat?.name}</h3>
         <div className={css.stats}>
           {itemPokemon?.stats?.map((sta, index) => {
             return (
               <h6 key={index} className={css.item_stats}>
                 <span className={css.name_stat}> {sta.stat.name} </span>
-                <progress className={css.bar_stat} value={sta.base_stat} max={110}></progress>
+                <progress
+                  className={css.bar_stat}
+                  value={sta.base_stat}
+                  max={110}></progress>
                 <span className={css.num_stat}> {sta.base_stat} </span>
               </h6>
             );
           })}
         </div>
         <div className={css.type_color}>
-            {itemPokemon.types?.map((ti,index)=>{
-                return(
-                    <h6 key={index} className={`color-${ti.type.name} ${css.color_type}`}>
-                {" "}
+          {itemPokemon.types?.map((ti, index) => {
+            return (
+              <h6 key={index} className={`color-${ti.type.name} ${css.color_type}`}>
                 {ti.type.name}
-                {" "}
-                </h6>
-                )
-            })}
+              </h6>
+            );
+          })}
         </div>
       </div>
     </div>
