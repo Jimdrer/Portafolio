@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import css from "./card.module.scss";
 import axios from "axios";
-import { url_especies, url_evoluciones, url_pokemon } from "../../../api/apiRest";
+import {
+  url_especies,
+  url_evoluciones,
+  url_pokemon,
+} from "../../../api/apiRest";
 
 export default function Card({ card }) {
   const [itemPokemon, setItemPokemon] = useState({});
   const [especiePokemon, setEspeciePokemon] = useState({});
+  const [evoluciones, setEvoluciones] = useState([]);
 
   useEffect(() => {
     const dataPokemon = async () => {
@@ -14,37 +19,67 @@ export default function Card({ card }) {
       console.log(api);
     };
     dataPokemon();
-  }, []);
-
+  }, [card]);
+  
   useEffect(() => {
     const dataEspecie = async () => {
       const url = card.url.split("/");
       const api = await axios.get(`${url_especies}/${url[6]}`);
       setEspeciePokemon({
-        url_especie: api?.data?.evolucion_chain,
-        data: api.data,
+        url_especie: api?.data?.evolution_chain,
+        data: api?.data,
       });
     };
     dataEspecie();
-  }, []);
-
+  }, [card]);
+  
   useEffect(() => {
     async function getPokemonImagen(id) {
       const response = await axios.get(`${url_pokemon}/${id}`);
-      return response.data.sprites?.other["official-artork"]?.front_default;
+      return response?.data?.sprites?.other["official-artwork"]?.front_default;
     }
-
+    
     const arrayEvoluciones = [];
-
+    
     if (especiePokemon?.url_especie) {
       const obtenerEvoluciones = async () => {
-        const url = especiePokemon.url.split("/");
+        const arrayEvoluciones = [];
+        const url = especiePokemon.url_especie.url.split("/");
         const api = await axios.get(`${url_evoluciones}/${url[6]}`);
+        const url2 = api.data.chain.species.url.split("/");
+        const img1 = await getPokemonImagen(url2[6]);
+        arrayEvoluciones.push({
+          img: img1,
+          name: api.data.chain.species.name,
+        });
+        
+        if (api.data.chain.evolves_to.length != 0) {
+          const data2 = api.data.chain.evolves_to[0].species;
+          const ID = data2.url.split("/");
+          const img2 = await getPokemonImagen(ID[6]);
+          
+          arrayEvoluciones.push({
+            img: img2,
+            name: data2.name,
+          });
+          
+          if (api.data.chain.evolves_to[0].evolves_to.length != 0) {
+            const data3 = api.data.chain.evolves_to[0].evolves_to[0].species;
+            const ID = data3.url.split("/");
+            const img3 = await getPokemonImagen(ID[6]);
+            
+            arrayEvoluciones.push({
+              img: img3,
+              name: data3.name,
+            });
+            console.log(arrayEvoluciones);
+          }
+        }
+        setEvoluciones(arrayEvoluciones);
       };
+      obtenerEvoluciones();
     }
-  }, []);
-
-  console.log(itemPokemon);
+  }, [especiePokemon]);
 
   let pokeId = itemPokemon.id?.toString();
 
@@ -61,7 +96,7 @@ export default function Card({ card }) {
         src={itemPokemon.sprites?.other["official-artwork"].front_default}
         alt="Pokemon"
       />
-      <div className={`bg-${especiePokemon.color?.name} ${css.sub_card}`}>
+      <div className={`bg-${especiePokemon.data?.color?.name} ${css.sub_card}`}>
         <strong className={css.id_card}>{pokeId}</strong>
         <h1 className={css.name_card}>{itemPokemon.name}</h1>
         <h3 className={css.altura}>Altura:{itemPokemon.height}0 Cm</h3>
@@ -89,6 +124,16 @@ export default function Card({ card }) {
                 className={`color-${ti.type.name} ${css.color_type}`}>
                 {ti.type.name}
               </h6>
+            );
+          })}
+        </div>
+        <div className={css.div_evo}>
+          {evoluciones.map((evo) => {
+            return (
+              <div className={css.item_evo}>
+                <img src={evo.img} alt="" className={css.img}/>
+                <h6>{evo.name}</h6>
+              </div>
             );
           })}
         </div>
