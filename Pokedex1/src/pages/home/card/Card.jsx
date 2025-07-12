@@ -16,7 +16,6 @@ export default function Card({ card }) {
     const dataPokemon = async () => {
       const api = await axios.get(`${url_pokemon}/${card.name}`);
       setItemPokemon(api.data);
-      console.log(api);
     };
     dataPokemon();
   }, [card]);
@@ -72,7 +71,6 @@ export default function Card({ card }) {
               img: img3,
               name: data3.name,
             });
-            console.log(arrayEvoluciones);
           }
         }
         setEvoluciones(arrayEvoluciones);
@@ -128,9 +126,9 @@ export default function Card({ card }) {
           })}
         </div>
         <div className={css.div_evo}>
-          {evoluciones.map((evo) => {
+          {evoluciones.map((evo,index) => {
             return (
-              <div className={css.item_evo}>
+              <div key={index} className={css.item_evo}>
                 <img src={evo.img} alt="" className={css.img}/>
                 <h6>{evo.name}</h6>
               </div>
