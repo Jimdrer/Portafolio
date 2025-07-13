@@ -6,7 +6,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: calc(100% - 70px);
+        max-width: calc(100% - 50px);
         
     .div_logo{
         img{
@@ -14,4 +14,23 @@
         }
     }
     }
+    .div_search{
+        background-color: rgb(0, 110, 255);
+        display: flex;
+        height: 40%;
+        border-radius: 8px;
+        div{
+            color: white;
+            width: 20%;
+            display: grid;
+            place-items: center;
+        }
+        input{
+            font-weight: bold;
+            width: 80%;
+            outline: none;
+            
+        }
+    }
+
 }

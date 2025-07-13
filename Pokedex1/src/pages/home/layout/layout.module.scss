@@ -7,3 +7,40 @@
     grid-gap: 25px;
     padding-bottom: 30px;
 }
+.paginacion{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    
+    .div_paginacion{
+        width: auto;
+        background-color: rgb(128, 189, 243);
+        border-radius: 8px;
+        display: flex;
+        
+        .flecha_izq{
+            height: 30px;
+            width: 30px;
+            display:grid;
+            place-items: center;
+            cursor: pointer;
+        }
+        .item{
+            border: 1px solid rgba(110, 110, 110, 0.281);
+            background-color: rgb(218, 218, 218);
+            height: 30px;
+            width: 40px;
+            display:grid;
+            place-items: center;
+            font-weight: bold;
+        }
+        .flecha_der{
+            height: 30px;
+            width: 30px;
+            display:grid;
+            place-items: center;
+            cursor: pointer;
+            
+        }
+    }
+}

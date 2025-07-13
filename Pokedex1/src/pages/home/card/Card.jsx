@@ -96,10 +96,10 @@ export default function Card({ card }) {
       />
       <div className={`bg-${especiePokemon.data?.color?.name} ${css.sub_card}`}>
         <strong className={css.id_card}>{pokeId}</strong>
-        <h1 className={css.name_card}>{itemPokemon.name}</h1>
+        <strong className={css.name_card}>{" "}{itemPokemon.name}</strong>
         <h3 className={css.altura}>Altura:{itemPokemon.height}0 Cm</h3>
         <h3 className={css.peso}>Peso: {itemPokemon.weight} Kg</h3>
-        <h3 className={css.habitat}>Habitat: {especiePokemon.habitat?.name}</h3>
+        <h3 className={css.habitat}>Habitat: {especiePokemon.data?.habitat?.name}</h3>
         <div className={css.stats}>
           {itemPokemon?.stats?.map((sta, index) => {
             return (

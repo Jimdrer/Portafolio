@@ -10,6 +10,7 @@ export default function Layouthome() {
   const [arrayPokemon, setArrayPokemon] = useState([]);
   const [globalPokemon, setGlobalPokemon] = useState([]);
   const [xpage, setXpage] = useState(1);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const api = async () => {
@@ -23,10 +24,8 @@ export default function Layouthome() {
     api();
     getGlobalPokemon();
   }, [xpage]);
-
   const getGlobalPokemon = async () => {
     const res = await axios.get(`${url_pokemon}?offset=0&limit=1000`);
-
     const promises = res.data.results.map((pokemon) => {
       return pokemon;
     });
@@ -34,11 +33,19 @@ export default function Layouthome() {
     const results = await Promise.all(promises);
     setGlobalPokemon(results);
   };
-  console.log(globalPokemon);
+
+  const filtro = search.length > 0 
+  ? globalPokemon.filter(pokemon => pokemon?.name?.includes(search)) : arrayPokemon
+
+  const busqueda = (e) => {
+    const texto = e.toLowerCase();
+    setSearch(texto);
+    setXpage(1);
+  };
 
   return (
     <div className={css.layout}>
-      <Header />
+      <Header busqueda={busqueda} />
       <section className={css.paginacion}>
         <div className={css.div_paginacion}>
           <span
@@ -49,26 +56,28 @@ export default function Layouthome() {
               }
               setXpage(xpage - 1);
             }}>
-            <FaIcons.FaAngleLeft />{" "}
+            <FaIcons.FaAngleLeft />
           </span>
           <span className={css.item}> {xpage} </span>
-          <span className={css.item}></span>
           <span className={css.item}>DE</span>
-          <span className={css.flecha_der}
-          onClick={() => {
+          <span className={css.item}>
+            {" "}
+            {Math.round(globalPokemon?.length / 15)}
+          </span>
+          <span
+            className={css.flecha_der}
+            onClick={() => {
               if (xpage == 67) {
                 return console.log("No se puede retroceder");
               }
               setXpage(xpage + 1);
-            }}
-          >
-            {" "}
-            {Math.round(globalPokemon?.length / 15)} <FaIcons.FaAngleRight />
+            }}>
+            <FaIcons.FaAngleRight />
           </span>
         </div>
       </section>
       <div className={css.card_content}>
-        {arrayPokemon.map((card, index) => {
+        {filtro.map((card, index) => {
           return <Card key={index} card={card} />;
         })}
       </div>
@@ -83,7 +92,20 @@ export default function Layouthome() {
             {" "}
             {Math.round(globalPokemon?.length / 15)}{" "}
           </span>
-          <span className={css.flecha_der}>
+          <span
+            className={css.flecha_der}
+            onClick={() => {
+              if (xpage == 67) {
+                return console.log("No se puede retroceder");
+              }
+              setXpage(xpage + 1);
+              setTimeout(() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              });
+            }}>
             <FaIcons.FaAngleRight />
           </span>
         </div>
