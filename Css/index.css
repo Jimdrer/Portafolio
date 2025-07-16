@@ -284,22 +284,41 @@ header::before{
     border-image: radial-gradient(circle, red, transparent);
 }
 .pt img{
-    height: 80px;
-    padding-left: 7px;
+    width:15%;
+    padding-left:6px;
 }
-
 .grid_prjts{
+    max-height: 100%;
+    height: 100%;
     padding-top: 20px;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
     text-align: center;
     gap: 16px;
-}  
-
-.info_proy img{
-    height: 40px;
-    width: 40px;
+}
+.pokedex{
+    height: 100%;
+}
+.pag_poke{
+    display: flex;
+    background-color: #695f52;
+    width: 100%;
+    height: 200px;
+}
+.pag_poke img:hover{
+    transform: scale(2);
+    transition-duration: 300ms;
+    transform-origin: 0%  ; 
+}
+.design_poke{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+.v2{
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 .info_proy{
     margin: auto;
@@ -307,6 +326,18 @@ header::before{
     border-radius: 8px;
     width: 100%;
     box-shadow: #695f52;
+}
+.info_proy img{
+    height: 40px;
+    width: 40px;
+}
+.poke_info{
+    display: flex;
+    justify-content: space-around;
+}
+.poke_v{
+    display: flex;
+    justify-content: space-around;
 }
 .img{
     height: 165px;
