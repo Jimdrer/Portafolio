@@ -38,7 +38,7 @@ export default function Layout({ children }: LayoutProps) {
             <Link to="/" className="flex items-center space-x-3">
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg animate-pulse">
-                  <span className="text-white font-bold">JD</span>
+                  <span className="text-white font-bold">JoD</span>
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
               </div>
