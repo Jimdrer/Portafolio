@@ -36,6 +36,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useState, useEffect } from "react"
+import Link from "next/link"
 
 export default function EnhancedPortfolio() {
   const [activeSection, setActiveSection] = useState("inicio")
@@ -394,7 +395,7 @@ export default function EnhancedPortfolio() {
                 className="text-green-600 hover:bg-green-50 hover:scale-110 transition-all duration-300 relative group"
               >
                 <Phone className="h-4 w-4" />
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   WhatsApp
                 </div>
               </Button>
@@ -404,7 +405,7 @@ export default function EnhancedPortfolio() {
                 className="text-blue-600 hover:bg-blue-50 hover:scale-110 transition-all duration-300 relative group"
               >
                 <Linkedin className="h-4 w-4" />
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   LinkedIn
                 </div>
               </Button>
@@ -414,20 +415,22 @@ export default function EnhancedPortfolio() {
                 className="text-yellow-600 hover:bg-yellow-50 hover:scale-110 transition-all duration-300 relative group"
               >
                 <Mail className="h-4 w-4" />
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   Email
                 </div>
               </Button>
+              <Link href={"https://github.com/Jimdrer"}>
               <Button
                 variant="ghost"
                 size="icon"
                 className="text-gray-800 hover:bg-gray-50 hover:scale-110 transition-all duration-300 relative group"
               >
                 <Github className="h-4 w-4" />
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   GitHub
                 </div>
               </Button>
+              </Link>
             </div>
           </div>
         </div>
