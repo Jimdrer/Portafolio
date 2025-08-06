@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Github,
@@ -30,26 +30,26 @@ import {
   ChevronDown,
   Play,
   Quote,
-} from "lucide-react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { useState, useEffect } from "react"
-import Link from "next/link"
+} from "lucide-react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function EnhancedPortfolio() {
-  const [activeSection, setActiveSection] = useState("inicio")
-  const [isVisible, setIsVisible] = useState(false)
+  const [activeSection, setActiveSection] = useState("inicio");
+  const [isVisible, setIsVisible] = useState(false);
   const [counters, setCounters] = useState({
     projects: 0,
     experience: 0,
     satisfaction: 0,
     technologies: 0,
-  })
+  });
 
   useEffect(() => {
-    setIsVisible(true)
+    setIsVisible(true);
     // Animate counters
     const timer = setTimeout(() => {
       setCounters({
@@ -57,16 +57,17 @@ export default function EnhancedPortfolio() {
         experience: 4,
         satisfaction: 100,
         technologies: 12,
-      })
-    }, 1000)
-    return () => clearTimeout(timer)
-  }, [])
+      });
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const skills = [
     {
       icon: Code,
       title: "Frontend Development",
-      description: "Desarrollo de interfaces modernas y responsivas con React, Next.js y TypeScript",
+      description:
+        "Desarrollo de interfaces modernas y responsivas con React, Next.js y TypeScript",
       years: "4+ años",
       color: "from-blue-500 to-cyan-500",
       projects: "8 proyectos",
@@ -75,7 +76,8 @@ export default function EnhancedPortfolio() {
     {
       icon: Palette,
       title: "UX/UI Design",
-      description: "Diseño centrado en el usuario con metodologías ágiles y design thinking",
+      description:
+        "Diseño centrado en el usuario con metodologías ágiles y design thinking",
       years: "3+ años",
       color: "from-purple-500 to-pink-500",
       projects: "6 proyectos",
@@ -102,7 +104,8 @@ export default function EnhancedPortfolio() {
     {
       icon: Bug,
       title: "Testing & Debug",
-      description: "Testing automatizado, debugging y optimización de rendimiento",
+      description:
+        "Testing automatizado, debugging y optimización de rendimiento",
       years: "3+ años",
       color: "from-indigo-500 to-purple-500",
       projects: "10 proyectos",
@@ -117,7 +120,7 @@ export default function EnhancedPortfolio() {
       projects: "7 proyectos",
       level: 82,
     },
-  ]
+  ];
 
   const technologies = [
     {
@@ -127,7 +130,13 @@ export default function EnhancedPortfolio() {
       color: "bg-orange-100 text-orange-600 border-orange-200",
       category: "Frontend",
     },
-    { name: "CSS3", icon: "🎨", level: 90, color: "bg-blue-100 text-blue-600 border-blue-200", category: "Frontend" },
+    {
+      name: "CSS3",
+      icon: "🎨",
+      level: 90,
+      color: "bg-blue-100 text-blue-600 border-blue-200",
+      category: "Frontend",
+    },
     {
       name: "JavaScript",
       icon: "⚡",
@@ -135,8 +144,20 @@ export default function EnhancedPortfolio() {
       color: "bg-yellow-100 text-yellow-600 border-yellow-200",
       category: "Frontend",
     },
-    { name: "React", icon: "⚛️", level: 90, color: "bg-cyan-100 text-cyan-600 border-cyan-200", category: "Frontend" },
-    { name: "Next.js", icon: "▲", level: 85, color: "bg-gray-100 text-gray-600 border-gray-200", category: "Frontend" },
+    {
+      name: "React",
+      icon: "⚛️",
+      level: 90,
+      color: "bg-cyan-100 text-cyan-600 border-cyan-200",
+      category: "Frontend",
+    },
+    {
+      name: "Next.js",
+      icon: "▲",
+      level: 85,
+      color: "bg-gray-100 text-gray-600 border-gray-200",
+      category: "Frontend",
+    },
     {
       name: "TypeScript",
       icon: "📘",
@@ -165,10 +186,28 @@ export default function EnhancedPortfolio() {
       color: "bg-purple-100 text-purple-600 border-purple-200",
       category: "Design",
     },
-    { name: "Git", icon: "📝", level: 90, color: "bg-red-100 text-red-600 border-red-200", category: "Tools" },
-    { name: "WordPress", icon: "📰", level: 75, color: "bg-blue-100 text-blue-600 border-blue-200", category: "CMS" },
-    { name: "Photoshop", icon: "🖼️", level: 80, color: "bg-blue-100 text-blue-600 border-blue-200", category: "Design" },
-  ]
+    {
+      name: "Git",
+      icon: "📝",
+      level: 90,
+      color: "bg-red-100 text-red-600 border-red-200",
+      category: "Tools",
+    },
+    {
+      name: "WordPress",
+      icon: "📰",
+      level: 75,
+      color: "bg-blue-100 text-blue-600 border-blue-200",
+      category: "CMS",
+    },
+    {
+      name: "Photoshop",
+      icon: "🖼️",
+      level: 80,
+      color: "bg-blue-100 text-blue-600 border-blue-200",
+      category: "Design",
+    },
+  ];
 
   const projects = [
     {
@@ -176,10 +215,22 @@ export default function EnhancedPortfolio() {
       category: "Full-Stack Development",
       description:
         "Plataforma de comercio electrónico completa con sistema de pagos, gestión de inventario y panel administrativo. Diseño atractivo y experiencia de usuario optimizada para maximizar conversiones.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API", "Tailwind CSS"],
-      metrics: ["40% ↗ conversiones", "500+ usuarios activos", "99.9% uptime", "4.8★ rating"],
+      technologies: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Stripe API",
+        "Tailwind CSS",
+      ],
+      metrics: [
+        "40% ↗ conversiones",
+        "500+ usuarios activos",
+        "99.9% uptime",
+        "4.8★ rating",
+      ],
       status: "En producción",
-      image: "/placeholder.svg?height=300&width=400&text=Sweet+Cupcake+Platform",
+      image:
+        "/placeholder.svg?height=300&width=400&text=Sweet+Cupcake+Platform",
       color: "bg-gradient-to-br from-pink-100 to-rose-100",
       link: "#",
       featured: true,
@@ -192,7 +243,12 @@ export default function EnhancedPortfolio() {
       description:
         "Aplicación educativa sobre conservación marina con realidad aumentada, gamificación y contenido interactivo para concienciar sobre la vida marina y el cambio climático.",
       technologies: ["React Native", "Three.js", "Firebase", "AR.js", "WebGL"],
-      metrics: ["10K+ descargas", "4.8★ rating", "Featured en App Store", "85% retention"],
+      metrics: [
+        "10K+ descargas",
+        "4.8★ rating",
+        "Featured en App Store",
+        "85% retention",
+      ],
       status: "Publicado",
       image: "/placeholder.svg?height=300&width=400&text=Blue+Extinction+App",
       color: "bg-gradient-to-br from-blue-100 to-cyan-100",
@@ -206,8 +262,19 @@ export default function EnhancedPortfolio() {
       category: "Frontend Development",
       description:
         "Aplicación web interactiva con API REST, búsqueda avanzada, favoritos persistentes y animaciones fluidas inspiradas en el universo Pokémon. Incluye modo batalla simulado.",
-      technologies: ["Vue.js", "REST API", "LocalStorage", "CSS Animations", "PWA"],
-      metrics: ["2K+ usuarios únicos", "95% satisfacción", "Open source", "50+ contributors"],
+      technologies: [
+        "Vue.js",
+        "REST API",
+        "LocalStorage",
+        "CSS Animations",
+        "PWA",
+      ],
+      metrics: [
+        "2K+ usuarios únicos",
+        "95% satisfacción",
+        "Open source",
+        "50+ contributors",
+      ],
       status: "Completado",
       image: "/placeholder.svg?height=300&width=400&text=Interactive+Pokedex",
       color: "bg-gradient-to-br from-red-100 to-yellow-100",
@@ -222,7 +289,12 @@ export default function EnhancedPortfolio() {
       description:
         "Tienda online especializada en mountain biking con catálogo interactivo, comparador de productos, sistema de reseñas y configurador 3D de bicicletas.",
       technologies: ["React", "CSS3", "Stripe", "Node.js", "Three.js"],
-      metrics: ["300+ productos", "85% conversión", "Mobile-first", "2.5s load time"],
+      metrics: [
+        "300+ productos",
+        "85% conversión",
+        "Mobile-first",
+        "2.5s load time",
+      ],
       status: "Completado",
       image: "/placeholder.svg?height=300&width=400&text=MTB+Store",
       color: "bg-gradient-to-br from-green-100 to-emerald-100",
@@ -237,7 +309,12 @@ export default function EnhancedPortfolio() {
       description:
         "Plataforma de marketplace local que conecta pequeños comerciantes con la comunidad, promoviendo el comercio local con sistema de geolocalización y pagos seguros.",
       technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
-      metrics: ["50+ comerciantes", "Local impact", "Community driven", "200+ productos"],
+      metrics: [
+        "50+ comerciantes",
+        "Local impact",
+        "Community driven",
+        "200+ productos",
+      ],
       status: "Completado",
       image: "/placeholder.svg?height=300&width=400&text=Merkadito+Marketplace",
       color: "bg-gradient-to-br from-yellow-100 to-orange-100",
@@ -251,8 +328,19 @@ export default function EnhancedPortfolio() {
       category: "WordPress Development",
       description:
         "Sitio web corporativo para panadería artesanal con galería de productos, sistema de pedidos online, blog de recetas y integración con redes sociales.",
-      technologies: ["WordPress", "PHP", "MySQL", "Custom Theme", "WooCommerce"],
-      metrics: ["200% ↗ pedidos online", "SEO optimized", "Mobile responsive", "3.2s load time"],
+      technologies: [
+        "WordPress",
+        "PHP",
+        "MySQL",
+        "Custom Theme",
+        "WooCommerce",
+      ],
+      metrics: [
+        "200% ↗ pedidos online",
+        "SEO optimized",
+        "Mobile responsive",
+        "3.2s load time",
+      ],
       status: "Completado",
       image: "/placeholder.svg?height=300&width=400&text=Flor+D+Vainilla",
       color: "bg-gradient-to-br from-purple-100 to-pink-100",
@@ -261,7 +349,7 @@ export default function EnhancedPortfolio() {
       timeline: "2 meses",
       client: "Panadería Artesanal",
     },
-  ]
+  ];
 
   const testimonials = [
     {
@@ -288,7 +376,7 @@ export default function EnhancedPortfolio() {
       rating: 5,
       image: "/placeholder.svg?height=60&width=60&text=AR",
     },
-  ]
+  ];
 
   const experience = [
     {
@@ -325,20 +413,68 @@ export default function EnhancedPortfolio() {
       color: "from-green-500 to-teal-500",
       technologies: ["Python", "Vue.js", "WordPress", "Git", "Docker"],
     },
-  ]
+  ];
 
   const certifications = [
-    { name: "Microsoft Azure Fundamentals", icon: "☁️", year: "2024", issuer: "Microsoft", verified: true },
-    { name: "FreeCodeCamp - Responsive Web Design", icon: "📱", year: "2023", issuer: "FreeCodeCamp", verified: true },
-    { name: "Cisco - JavaScript Essentials", icon: "🔧", year: "2023", issuer: "Cisco", verified: true },
-    { name: "Udemy - Advanced React Development", icon: "⚛️", year: "2024", issuer: "Udemy", verified: true },
-    { name: "Google UX Design Certificate", icon: "🎨", year: "2023", issuer: "Google", verified: true },
-    { name: "Meta Frontend Developer", icon: "💻", year: "2024", issuer: "Meta", verified: true },
-  ]
+    {
+      name: "Microsoft Azure Fundamentals",
+      icon: "☁️",
+      year: "2024",
+      issuer: "Microsoft",
+      verified: true,
+    },
+    {
+      name: "FreeCodeCamp - Responsive Web Design",
+      icon: "📱",
+      year: "2023",
+      issuer: "FreeCodeCamp",
+      verified: true,
+    },
+    {
+      name: "Cisco - JavaScript Essentials",
+      icon: "🔧",
+      year: "2023",
+      issuer: "Cisco",
+      verified: true,
+    },
+    {
+      name: "Udemy - Advanced React Development",
+      icon: "⚛️",
+      year: "2024",
+      issuer: "Udemy",
+      verified: true,
+    },
+    {
+      name: "Google UX Design Certificate",
+      icon: "🎨",
+      year: "2023",
+      issuer: "Google",
+      verified: true,
+    },
+    {
+      name: "Meta Frontend Developer",
+      icon: "💻",
+      year: "2024",
+      issuer: "Meta",
+      verified: true,
+    },
+  ];
 
   const stats = [
-    { label: "Proyectos Completados", value: counters.projects, suffix: "+", icon: Rocket, color: "text-blue-600" },
-    { label: "Años de Experiencia", value: counters.experience, suffix: "+", icon: Calendar, color: "text-purple-600" },
+    {
+      label: "Proyectos Completados",
+      value: counters.projects,
+      suffix: "+",
+      icon: Rocket,
+      color: "text-blue-600",
+    },
+    {
+      label: "Años de Experiencia",
+      value: counters.experience,
+      suffix: "+",
+      icon: Calendar,
+      color: "text-purple-600",
+    },
     {
       label: "Satisfacción del Cliente",
       value: counters.satisfaction,
@@ -346,8 +482,14 @@ export default function EnhancedPortfolio() {
       icon: Heart,
       color: "text-green-600",
     },
-    { label: "Tecnologías Dominadas", value: counters.technologies, suffix: "+", icon: Code, color: "text-orange-600" },
-  ]
+    {
+      label: "Tecnologías Dominadas",
+      value: counters.technologies,
+      suffix: "+",
+      icon: Code,
+      color: "text-orange-600",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-x-hidden">
@@ -372,7 +514,14 @@ export default function EnhancedPortfolio() {
             </div>
 
             <div className="hidden md:flex space-x-8">
-              {["inicio", "habilidades", "experiencia", "proyectos", "testimonios", "contacto"].map((section) => (
+              {[
+                "inicio",
+                "habilidades",
+                "experiencia",
+                "proyectos",
+                "testimonios",
+                "contacto",
+              ].map((section) => (
                 <a
                   key={section}
                   href={`#${section}`}
@@ -381,55 +530,56 @@ export default function EnhancedPortfolio() {
                       ? "text-blue-600 border-b-2 border-blue-600"
                       : "text-gray-600 hover:text-blue-600"
                   }`}
-                  onClick={() => setActiveSection(section)}
-                >
+                  onClick={() => setActiveSection(section)}>
                   {section.toUpperCase()}
                 </a>
               ))}
             </div>
 
             <div className="flex space-x-2">
+              <Link href={'https://wa.me/5214561079874'}>
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-green-600 hover:bg-green-50 hover:scale-110 transition-all duration-300 relative group"
-              >
+                className="text-green-600 hover:bg-green-50 hover:scale-110 transition-all duration-300 relative group">
                 <Phone className="h-4 w-4" />
                 <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                   WhatsApp
                 </div>
               </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-blue-600 hover:bg-blue-50 hover:scale-110 transition-all duration-300 relative group"
-              >
-                <Linkedin className="h-4 w-4" />
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                  LinkedIn
-                </div>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-yellow-600 hover:bg-yellow-50 hover:scale-110 transition-all duration-300 relative group"
-              >
-                <Mail className="h-4 w-4" />
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                  Email
-                </div>
-              </Button>
+              </Link>
+              <Link href={''}>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-blue-600 hover:bg-blue-50 hover:scale-110 transition-all duration-300 relative group">
+                  <Linkedin className="h-4 w-4" />
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                    LinkedIn
+                  </div>
+                </Button>
+              </Link>
+              <Link href={''}>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-yellow-600 hover:bg-yellow-50 hover:scale-110 transition-all duration-300 relative group">
+                  <Mail className="h-4 w-4" />
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                    Email
+                  </div>
+                </Button>
+              </Link>
               <Link href={"https://github.com/Jimdrer"}>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-gray-800 hover:bg-gray-50 hover:scale-110 transition-all duration-300 relative group"
-              >
-                <Github className="h-4 w-4" />
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                  GitHub
-                </div>
-              </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-gray-800 hover:bg-gray-50 hover:scale-110 transition-all duration-300 relative group">
+                  <Github className="h-4 w-4" />
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                    GitHub
+                  </div>
+                </Button>
               </Link>
             </div>
           </div>
@@ -437,7 +587,9 @@ export default function EnhancedPortfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section
+        id="inicio"
+        className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-purple-50/20 to-pink-50/20"></div>
 
@@ -445,12 +597,17 @@ export default function EnhancedPortfolio() {
           <div className="grid lg:grid-cols-3 gap-12 items-center">
             <div className="lg:col-span-2 space-y-8">
               <div
-                className={`space-y-6 transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-              >
+                className={`space-y-6 transition-all duration-1000 ${
+                  isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}>
                 <div className="flex flex-wrap items-center gap-4 text-sm">
                   <div className="flex items-center bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full shadow-sm border border-green-200">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-                    <span className="font-medium">Disponible para trabajar</span>
+                    <span className="font-medium">
+                      Disponible para trabajar
+                    </span>
                   </div>
                   <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
                     <MapPin className="w-4 h-4 mr-1" />
@@ -479,7 +636,9 @@ export default function EnhancedPortfolio() {
                     <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1">
                       Senior Frontend Developer
                     </Badge>
-                    <Badge variant="outline" className="border-purple-300 text-purple-700">
+                    <Badge
+                      variant="outline"
+                      className="border-purple-300 text-purple-700">
                       UX/UI Designer
                     </Badge>
                   </div>
@@ -487,10 +646,14 @@ export default function EnhancedPortfolio() {
 
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Especializado en crear{" "}
-                  <span className="font-semibold text-blue-600">aplicaciones web escalables</span>, centradas en el
-                  usuario y con un enfoque en{" "}
-                  <span className="font-semibold text-purple-600">rendimiento y accesibilidad</span>. Transformo ideas
-                  en experiencias digitales excepcionales.
+                  <span className="font-semibold text-blue-600">
+                    aplicaciones web escalables
+                  </span>
+                  , centradas en el usuario y con un enfoque en{" "}
+                  <span className="font-semibold text-purple-600">
+                    rendimiento y accesibilidad
+                  </span>
+                  . Transformo ideas en experiencias digitales excepcionales.
                 </p>
 
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg">
@@ -498,15 +661,17 @@ export default function EnhancedPortfolio() {
                     {stats.map((stat, index) => (
                       <div key={index} className="text-center group">
                         <div
-                          className={`w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}
-                        >
+                          className={`w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
                           <stat.icon className={`h-6 w-6 ${stat.color}`} />
                         </div>
-                        <div className={`text-2xl font-bold ${stat.color} transition-all duration-1000`}>
+                        <div
+                          className={`text-2xl font-bold ${stat.color} transition-all duration-1000`}>
                           {stat.value}
                           {stat.suffix}
                         </div>
-                        <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
+                        <div className="text-xs text-gray-600 font-medium">
+                          {stat.label}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -516,38 +681,46 @@ export default function EnhancedPortfolio() {
                   <p className="flex items-start space-x-2">
                     <Lightbulb className="w-5 h-5 text-yellow-500 mt-0.5 flex-shrink-0" />
                     <span>
-                      Con más de <strong className="text-gray-800">4 años de experiencia</strong> y{" "}
-                      <strong className="text-gray-800">15+ proyectos completados</strong>, he trabajado con tecnologías
-                      como JavaScript, React, Node.js, Angular, Vue.js, Python, Figma y Photoshop. Me mantengo
-                      actualizado constantemente con las últimas tendencias y mejores prácticas.
+                      Con más de{" "}
+                      <strong className="text-gray-800">
+                        4 años de experiencia
+                      </strong>{" "}
+                      y{" "}
+                      <strong className="text-gray-800">
+                        15+ proyectos completados
+                      </strong>
+                      , he trabajado con tecnologías como JavaScript, React,
+                      Node.js, Angular, Vue.js, Python, Figma y Photoshop. Me
+                      mantengo actualizado constantemente con las últimas
+                      tendencias y mejores prácticas.
                     </span>
                   </p>
                 </div>
               </div>
 
               <div
-                className={`flex flex-wrap gap-4 transition-all duration-1000 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-              >
+                className={`flex flex-wrap gap-4 transition-all duration-1000 delay-300 ${
+                  isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}>
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all hover:scale-105 group"
-                >
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
                   <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                   Descargar CV
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent hover:scale-105 transition-all group"
-                >
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent hover:scale-105 transition-all group">
                   <Play className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   Ver Demo Reel
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent hover:scale-105 transition-all group"
-                >
+                  className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent hover:scale-105 transition-all group">
                   <ArrowRight className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   Ver Proyectos
                 </Button>
@@ -555,8 +728,11 @@ export default function EnhancedPortfolio() {
             </div>
 
             <div
-              className={`space-y-6 transition-all duration-1000 delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-            >
+              className={`space-y-6 transition-all duration-1000 delay-500 ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}>
               <div className="relative flex justify-center">
                 <div className="relative group">
                   <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-1 shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105">
@@ -595,20 +771,36 @@ export default function EnhancedPortfolio() {
                   </h3>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center p-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg">
-                      <span className="text-gray-700 font-medium">Proyectos Entregados</span>
-                      <span className="font-bold text-blue-600 text-lg">15+</span>
+                      <span className="text-gray-700 font-medium">
+                        Proyectos Entregados
+                      </span>
+                      <span className="font-bold text-blue-600 text-lg">
+                        15+
+                      </span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-                      <span className="text-gray-700 font-medium">Satisfacción Cliente</span>
-                      <span className="font-bold text-purple-600 text-lg">100%</span>
+                      <span className="text-gray-700 font-medium">
+                        Satisfacción Cliente
+                      </span>
+                      <span className="font-bold text-purple-600 text-lg">
+                        100%
+                      </span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg">
-                      <span className="text-gray-700 font-medium">Tiempo Promedio</span>
-                      <span className="font-bold text-green-600 text-lg">-30%</span>
+                      <span className="text-gray-700 font-medium">
+                        Tiempo Promedio
+                      </span>
+                      <span className="font-bold text-green-600 text-lg">
+                        -30%
+                      </span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg">
-                      <span className="text-gray-700 font-medium">Conversiones</span>
-                      <span className="font-bold text-orange-600 text-lg">+40%</span>
+                      <span className="text-gray-700 font-medium">
+                        Conversiones
+                      </span>
+                      <span className="font-bold text-orange-600 text-lg">
+                        +40%
+                      </span>
                     </div>
                   </div>
                 </CardContent>
@@ -624,11 +816,15 @@ export default function EnhancedPortfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="habilidades" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm relative">
+      <section
+        id="habilidades"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-transparent"></div>
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2">Expertise</Badge>
+            <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2">
+              Expertise
+            </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Habilidades Profesionales
               <span className="block text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-2">
@@ -636,8 +832,9 @@ export default function EnhancedPortfolio() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Competencias técnicas y creativas desarrolladas a través de años de experiencia práctica, formación
-              continua y proyectos desafiantes en el mundo real.
+              Competencias técnicas y creativas desarrolladas a través de años
+              de experiencia práctica, formación continua y proyectos
+              desafiantes en el mundo real.
             </p>
           </div>
 
@@ -645,45 +842,51 @@ export default function EnhancedPortfolio() {
             {skills.map((skill, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 bg-white/95 backdrop-blur-sm overflow-hidden relative"
-              >
+                className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 bg-white/95 backdrop-blur-sm overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="p-8 relative">
                   <div className="flex items-start justify-between mb-6">
                     <div
-                      className={`w-16 h-16 bg-gradient-to-br ${skill.color} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}
-                    >
+                      className={`w-16 h-16 bg-gradient-to-br ${skill.color} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
                       <skill.icon className="h-8 w-8 text-white" />
                     </div>
                     <div className="text-right">
-                      <Badge variant="secondary" className="text-xs bg-gray-100 mb-1">
+                      <Badge
+                        variant="secondary"
+                        className="text-xs bg-gray-100 mb-1">
                         {skill.years}
                       </Badge>
-                      <div className="text-xs text-gray-500">{skill.projects}</div>
+                      <div className="text-xs text-gray-500">
+                        {skill.projects}
+                      </div>
                     </div>
                   </div>
 
                   <h3 className="font-bold text-lg text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {skill.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{skill.description}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    {skill.description}
+                  </p>
 
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium text-gray-700">Nivel de competencia</span>
-                      <span className="text-xs font-bold text-gray-900">{skill.level}%</span>
+                      <span className="text-xs font-medium text-gray-700">
+                        Nivel de competencia
+                      </span>
+                      <span className="text-xs font-bold text-gray-900">
+                        {skill.level}%
+                      </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div
                         className={`bg-gradient-to-r ${skill.color} h-2 rounded-full transition-all duration-1000 group-hover:animate-pulse`}
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
+                        style={{ width: `${skill.level}%` }}></div>
                     </div>
                   </div>
 
                   <div
-                    className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${skill.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
-                  ></div>
+                    className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${skill.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
                 </CardContent>
               </Card>
             ))}
@@ -696,7 +899,9 @@ export default function EnhancedPortfolio() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-purple-50/30 to-pink-50/30"></div>
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2">Tech Stack</Badge>
+            <Badge className="mb-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2">
+              Tech Stack
+            </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Conocimientos Técnicos
               <span className="block text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mt-2">
@@ -704,8 +909,8 @@ export default function EnhancedPortfolio() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Stack tecnológico completo con niveles de competencia verificados y experiencia práctica en proyectos
-              reales
+              Stack tecnológico completo con niveles de competencia verificados
+              y experiencia práctica en proyectos reales
             </p>
           </div>
 
@@ -713,14 +918,15 @@ export default function EnhancedPortfolio() {
             {technologies.map((tech, index) => (
               <Card
                 key={index}
-                className={`group hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-2 ${tech.color} bg-white/95 backdrop-blur-sm overflow-hidden relative`}
-              >
+                className={`group hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-2 ${tech.color} bg-white/95 backdrop-blur-sm overflow-hidden relative`}>
                 <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-bl-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Star className="w-4 h-4 text-white" />
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="text-3xl group-hover:scale-110 transition-transform duration-300">{tech.icon}</div>
+                    <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
+                      {tech.icon}
+                    </div>
                     <div className="flex-1">
                       <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                         {tech.name}
@@ -733,14 +939,17 @@ export default function EnhancedPortfolio() {
 
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium text-gray-600">Competencia</span>
-                      <span className="text-sm font-bold text-gray-900">{tech.level}%</span>
+                      <span className="text-xs font-medium text-gray-600">
+                        Competencia
+                      </span>
+                      <span className="text-sm font-bold text-gray-900">
+                        {tech.level}%
+                      </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
                       <div
                         className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-2.5 rounded-full transition-all duration-1000 group-hover:animate-pulse"
-                        style={{ width: `${tech.level}%` }}
-                      ></div>
+                        style={{ width: `${tech.level}%` }}></div>
                     </div>
                   </div>
                 </CardContent>
@@ -751,10 +960,14 @@ export default function EnhancedPortfolio() {
       </section>
 
       {/* Experience Section */}
-      <section id="experiencia" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm">
+      <section
+        id="experiencia"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-green-600 to-teal-600 text-white px-4 py-2">Career</Badge>
+            <Badge className="mb-4 bg-gradient-to-r from-green-600 to-teal-600 text-white px-4 py-2">
+              Career
+            </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Experiencia Profesional
               <span className="block text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600 mt-2">
@@ -762,8 +975,8 @@ export default function EnhancedPortfolio() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Trayectoria profesional marcada por el crecimiento continuo, la innovación y el impacto positivo en cada
-              proyecto
+              Trayectoria profesional marcada por el crecimiento continuo, la
+              innovación y el impacto positivo en cada proyecto
             </p>
           </div>
 
@@ -771,24 +984,30 @@ export default function EnhancedPortfolio() {
             {experience.map((exp, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-xl overflow-hidden bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
-              >
+                className="border-0 shadow-xl overflow-hidden bg-white/95 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                 <CardContent className="p-0">
                   <div className="grid lg:grid-cols-3 gap-0">
                     <div
-                      className={`lg:col-span-1 p-8 bg-gradient-to-br ${exp.color} text-white relative overflow-hidden`}
-                    >
+                      className={`lg:col-span-1 p-8 bg-gradient-to-br ${exp.color} text-white relative overflow-hidden`}>
                       <div className="absolute inset-0 bg-black/10"></div>
                       <div className="relative z-10">
                         <div className="flex items-center mb-4">
                           <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
-                          <Badge className="bg-white/20 text-white border-white/30">{exp.period}</Badge>
+                          <Badge className="bg-white/20 text-white border-white/30">
+                            {exp.period}
+                          </Badge>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">{exp.position}</h3>
-                        <p className="text-lg font-medium opacity-90 mb-4">{exp.company}</p>
+                        <h3 className="text-xl font-bold mb-2">
+                          {exp.position}
+                        </h3>
+                        <p className="text-lg font-medium opacity-90 mb-4">
+                          {exp.company}
+                        </p>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech, techIndex) => (
-                            <Badge key={techIndex} className="bg-white/20 text-white text-xs border-white/30">
+                            <Badge
+                              key={techIndex}
+                              className="bg-white/20 text-white text-xs border-white/30">
                               {tech}
                             </Badge>
                           ))}
@@ -797,7 +1016,9 @@ export default function EnhancedPortfolio() {
                     </div>
 
                     <div className="lg:col-span-2 p-8">
-                      <p className="text-gray-600 mb-6 leading-relaxed text-lg">{exp.description}</p>
+                      <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                        {exp.description}
+                      </p>
                       <div className="space-y-4">
                         <h4 className="font-bold text-gray-900 flex items-center text-lg">
                           <Award className="w-6 h-6 text-yellow-500 mr-3" />
@@ -805,7 +1026,9 @@ export default function EnhancedPortfolio() {
                         </h4>
                         <div className="grid md:grid-cols-2 gap-3">
                           {exp.achievements.map((achievement, achIndex) => (
-                            <div key={achIndex} className="flex items-start group">
+                            <div
+                              key={achIndex}
+                              className="flex items-start group">
                               <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                               <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
                                 {achievement}
@@ -828,7 +1051,9 @@ export default function EnhancedPortfolio() {
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/50"></div>
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2">Portfolio</Badge>
+            <Badge className="mb-4 bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2">
+              Portfolio
+            </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Proyectos Destacados
               <span className="block text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 mt-2">
@@ -836,8 +1061,8 @@ export default function EnhancedPortfolio() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Selección de trabajos que demuestran mis capacidades técnicas, creatividad y enfoque en resultados
-              medibles
+              Selección de trabajos que demuestran mis capacidades técnicas,
+              creatividad y enfoque en resultados medibles
             </p>
           </div>
 
@@ -853,8 +1078,7 @@ export default function EnhancedPortfolio() {
                 .map((project, index) => (
                   <Card
                     key={index}
-                    className={`group hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border-0 ${project.color} overflow-hidden relative`}
-                  >
+                    className={`group hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border-0 ${project.color} overflow-hidden relative`}>
                     <div className="absolute top-4 left-4 z-10">
                       <Badge className="bg-yellow-500 text-white shadow-lg">
                         <Star className="w-3 h-3 mr-1" />
@@ -872,7 +1096,9 @@ export default function EnhancedPortfolio() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute bottom-4 right-4 flex gap-2">
-                        <Badge variant="outline" className="bg-white/90 text-gray-700 border-white/50">
+                        <Badge
+                          variant="outline"
+                          className="bg-white/90 text-gray-700 border-white/50">
                           {project.category}
                         </Badge>
                         <Badge
@@ -880,8 +1106,7 @@ export default function EnhancedPortfolio() {
                             project.status === "En producción"
                               ? "bg-green-500 text-white shadow-lg"
                               : "bg-blue-500 text-white shadow-lg"
-                          }
-                        >
+                          }>
                           {project.status}
                         </Badge>
                       </div>
@@ -904,7 +1129,9 @@ export default function EnhancedPortfolio() {
                         </div>
                       </div>
 
-                      <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {project.description}
+                      </p>
 
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
@@ -916,8 +1143,7 @@ export default function EnhancedPortfolio() {
                             <Badge
                               key={techIndex}
                               variant="secondary"
-                              className="bg-white/80 hover:bg-white transition-colors"
-                            >
+                              className="bg-white/80 hover:bg-white transition-colors">
                               {tech}
                             </Badge>
                           ))}
@@ -933,8 +1159,7 @@ export default function EnhancedPortfolio() {
                           {project.metrics.map((metric, metricIndex) => (
                             <div
                               key={metricIndex}
-                              className="flex items-center text-sm text-gray-700 bg-white/60 rounded-lg p-2"
-                            >
+                              className="flex items-center text-sm text-gray-700 bg-white/60 rounded-lg p-2">
                               <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                               {metric}
                             </div>
@@ -946,16 +1171,14 @@ export default function EnhancedPortfolio() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="flex-1 group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent"
-                        >
+                          className="flex-1 group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
                           <ExternalLink className="mr-2 h-4 w-4" />
                           Ver Proyecto
                         </Button>
                         <Button
                           variant="outline"
                           size="sm"
-                          className="group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent"
-                        >
+                          className="group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
                           <Github className="h-4 w-4" />
                         </Button>
                       </div>
@@ -977,8 +1200,7 @@ export default function EnhancedPortfolio() {
                 .map((project, index) => (
                   <Card
                     key={index}
-                    className={`group hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border-0 ${project.color} overflow-hidden`}
-                  >
+                    className={`group hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border-0 ${project.color} overflow-hidden`}>
                     <div className="relative">
                       <Image
                         src={project.image || "/placeholder.svg"}
@@ -993,8 +1215,7 @@ export default function EnhancedPortfolio() {
                             project.status === "Completado"
                               ? "bg-green-500 text-white shadow-lg"
                               : "bg-blue-500 text-white shadow-lg"
-                          }
-                        >
+                          }>
                           {project.status}
                         </Badge>
                       </div>
@@ -1010,17 +1231,26 @@ export default function EnhancedPortfolio() {
                         </Badge>
                       </div>
 
-                      <p className="text-gray-600 mb-4 leading-relaxed text-sm">{project.description}</p>
+                      <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                        {project.description}
+                      </p>
 
                       <div className="mb-4">
                         <div className="flex flex-wrap gap-1 mb-3">
-                          {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                            <Badge key={techIndex} variant="secondary" className="text-xs bg-white/80">
-                              {tech}
-                            </Badge>
-                          ))}
+                          {project.technologies
+                            .slice(0, 3)
+                            .map((tech, techIndex) => (
+                              <Badge
+                                key={techIndex}
+                                variant="secondary"
+                                className="text-xs bg-white/80">
+                                {tech}
+                              </Badge>
+                            ))}
                           {project.technologies.length > 3 && (
-                            <Badge variant="secondary" className="text-xs bg-white/80">
+                            <Badge
+                              variant="secondary"
+                              className="text-xs bg-white/80">
                               +{project.technologies.length - 3}
                             </Badge>
                           )}
@@ -1028,19 +1258,22 @@ export default function EnhancedPortfolio() {
                       </div>
 
                       <div className="space-y-2 mb-4">
-                        {project.metrics.slice(0, 2).map((metric, metricIndex) => (
-                          <div key={metricIndex} className="text-xs text-gray-600 flex items-center">
-                            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
-                            {metric}
-                          </div>
-                        ))}
+                        {project.metrics
+                          .slice(0, 2)
+                          .map((metric, metricIndex) => (
+                            <div
+                              key={metricIndex}
+                              className="text-xs text-gray-600 flex items-center">
+                              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                              {metric}
+                            </div>
+                          ))}
                       </div>
 
                       <Button
                         variant="outline"
                         size="sm"
-                        className="w-full group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent"
-                      >
+                        className="w-full group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Ver Detalles
                       </Button>
@@ -1055,8 +1288,7 @@ export default function EnhancedPortfolio() {
       {/* Testimonials Section */}
       <section
         id="testimonios"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
-      >
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-gradient-to-r from-pink-600 to-purple-600 text-white px-4 py-2">
@@ -1069,7 +1301,8 @@ export default function EnhancedPortfolio() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              La satisfacción de mis clientes es mi mayor logro. Aquí algunas experiencias de trabajo conjunto.
+              La satisfacción de mis clientes es mi mayor logro. Aquí algunas
+              experiencias de trabajo conjunto.
             </p>
           </div>
 
@@ -1077,8 +1310,7 @@ export default function EnhancedPortfolio() {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-xl bg-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden"
-              >
+                className="border-0 shadow-xl bg-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
@@ -1090,11 +1322,18 @@ export default function EnhancedPortfolio() {
                       className="rounded-full mr-4 border-2 border-gray-200"
                     />
                     <div>
-                      <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-600">{testimonial.position}</p>
+                      <h4 className="font-bold text-gray-900">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.position}
+                      </p>
                       <div className="flex mt-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                          <Star
+                            key={i}
+                            className="w-4 h-4 text-yellow-500 fill-current"
+                          />
                         ))}
                       </div>
                     </div>
@@ -1102,7 +1341,9 @@ export default function EnhancedPortfolio() {
 
                   <div className="relative">
                     <Quote className="w-8 h-8 text-gray-300 absolute -top-2 -left-2" />
-                    <p className="text-gray-700 leading-relaxed italic pl-6">"{testimonial.content}"</p>
+                    <p className="text-gray-700 leading-relaxed italic pl-6">
+                      "{testimonial.content}"
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -1115,7 +1356,9 @@ export default function EnhancedPortfolio() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-4 py-2">Education</Badge>
+            <Badge className="mb-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-4 py-2">
+              Education
+            </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Certificaciones & Formación
               <span className="block text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600 mt-2">
@@ -1123,8 +1366,8 @@ export default function EnhancedPortfolio() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Compromiso constante con el aprendizaje y la actualización profesional a través de certificaciones
-              verificadas
+              Compromiso constante con el aprendizaje y la actualización
+              profesional a través de certificaciones verificadas
             </p>
           </div>
 
@@ -1132,8 +1375,7 @@ export default function EnhancedPortfolio() {
             {certifications.map((cert, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/95 backdrop-blur-sm group overflow-hidden"
-              >
+                className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/95 backdrop-blur-sm group overflow-hidden">
                 <CardContent className="p-6 relative">
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform">
@@ -1156,7 +1398,9 @@ export default function EnhancedPortfolio() {
                     {cert.name}
                   </h3>
                   <p className="text-sm text-gray-600 mb-1">{cert.issuer}</p>
-                  <p className="text-xs text-gray-500">Certificación Profesional</p>
+                  <p className="text-xs text-gray-500">
+                    Certificación Profesional
+                  </p>
 
                   <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 </CardContent>
@@ -1167,13 +1411,17 @@ export default function EnhancedPortfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section
+        id="contacto"
+        className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900"></div>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-blue-500/5 to-purple-500/5"></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <Badge className="mb-6 bg-white/20 text-white border-white/30 px-4 py-2">Let's Connect</Badge>
+          <Badge className="mb-6 bg-white/20 text-white border-white/30 px-4 py-2">
+            Let's Connect
+          </Badge>
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
             ¿Listo para trabajar juntos?
             <span className="block text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mt-2">
@@ -1181,9 +1429,12 @@ export default function EnhancedPortfolio() {
             </span>
           </h2>
           <p className="text-xl text-gray-200 mb-12 leading-relaxed">
-            Estoy disponible para nuevos proyectos, oportunidades laborales y colaboraciones emocionantes.
+            Estoy disponible para nuevos proyectos, oportunidades laborales y
+            colaboraciones emocionantes.
             <br />
-            <span className="text-yellow-300">¡Transformemos tus ideas en realidad digital!</span>
+            <span className="text-yellow-300">
+              ¡Transformemos tus ideas en realidad digital!
+            </span>
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -1192,9 +1443,15 @@ export default function EnhancedPortfolio() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
                   <Mail className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-bold text-white mb-2 text-lg">Email Profesional</h3>
-                <p className="text-gray-300 mb-4">Respuesta garantizada en 24h</p>
-                <p className="text-blue-300 font-medium">jose.espinosa@email.com</p>
+                <h3 className="font-bold text-white mb-2 text-lg">
+                  Email Profesional
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  Respuesta garantizada en 24h
+                </p>
+                <p className="text-blue-300 font-medium">
+                  jose.espinosa@email.com
+                </p>
               </CardContent>
             </Card>
 
@@ -1213,32 +1470,28 @@ export default function EnhancedPortfolio() {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-xl hover:shadow-2xl transition-all hover:scale-105 group text-lg px-8 py-4"
-            >
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-xl hover:shadow-2xl transition-all hover:scale-105 group text-lg px-8 py-4">
               <Mail className="mr-3 h-6 w-6 group-hover:animate-bounce" />
               Enviar Mensaje
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4"
-            >
+              className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
               <Phone className="mr-3 h-6 w-6" />
               WhatsApp
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4"
-            >
+              className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
               <Linkedin className="mr-3 h-6 w-6" />
               LinkedIn
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4"
-            >
+              className="border-2 border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
               <Github className="mr-3 h-6 w-6" />
               GitHub
             </Button>
@@ -1248,8 +1501,7 @@ export default function EnhancedPortfolio() {
             <p className="text-gray-300 mb-2">¿Prefieres descargar mi CV?</p>
             <Button
               variant="outline"
-              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl"
-            >
+              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl">
               <Download className="mr-2 h-5 w-5" />
               Descargar Curriculum
             </Button>
@@ -1269,31 +1521,43 @@ export default function EnhancedPortfolio() {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl">Jose Dimas Espinosa</h3>
-                  <p className="text-gray-400">Frontend Developer & UX/UI Designer</p>
+                  <p className="text-gray-400">
+                    Frontend Developer & UX/UI Designer
+                  </p>
                 </div>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                Transformando ideas en experiencias digitales excepcionales. Siempre buscando la perfección en cada
-                línea de código.
+                Transformando ideas en experiencias digitales excepcionales.
+                Siempre buscando la perfección en cada línea de código.
               </p>
             </div>
 
             <div className="space-y-4">
               <h4 className="font-bold text-lg text-white">Enlaces Rápidos</h4>
               <div className="space-y-2">
-                <a href="#inicio" className="block text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="#inicio"
+                  className="block text-gray-300 hover:text-white transition-colors">
                   Inicio
                 </a>
-                <a href="#habilidades" className="block text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="#habilidades"
+                  className="block text-gray-300 hover:text-white transition-colors">
                   Habilidades
                 </a>
-                <a href="#experiencia" className="block text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="#experiencia"
+                  className="block text-gray-300 hover:text-white transition-colors">
                   Experiencia
                 </a>
-                <a href="#proyectos" className="block text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="#proyectos"
+                  className="block text-gray-300 hover:text-white transition-colors">
                   Proyectos
                 </a>
-                <a href="#contacto" className="block text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="#contacto"
+                  className="block text-gray-300 hover:text-white transition-colors">
                   Contacto
                 </a>
               </div>
@@ -1305,29 +1569,25 @@ export default function EnhancedPortfolio() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all"
-                >
+                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
                   <Linkedin className="h-5 w-5" />
                 </Button>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all"
-                >
+                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
                   <Github className="h-5 w-5" />
                 </Button>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all"
-                >
+                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
                   <Mail className="h-5 w-5" />
                 </Button>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all"
-                >
+                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
                   <Phone className="h-5 w-5" />
                 </Button>
               </div>
@@ -1342,8 +1602,13 @@ export default function EnhancedPortfolio() {
           <div className="border-t border-gray-700 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
-                <p className="text-gray-400">© 2024 Jose Dimas Alejandro Espinosa Razo</p>
-                <p className="text-gray-500 text-sm">Desarrollado con ❤️ usando Next.js, Tailwind CSS y mucho café ☕</p>
+                <p className="text-gray-400">
+                  © 2024 Jose Dimas Alejandro Espinosa Razo
+                </p>
+                <p className="text-gray-500 text-sm">
+                  Desarrollado con ❤️ usando Next.js, Tailwind CSS y mucho café
+                  ☕
+                </p>
               </div>
               <div className="flex items-center space-x-4 text-sm text-gray-400">
                 <span>Hecho en México 🇲🇽</span>
@@ -1355,5 +1620,5 @@ export default function EnhancedPortfolio() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
