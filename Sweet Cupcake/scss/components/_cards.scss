@@ -1,0 +1,192 @@
+// Cards de productos
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:color";
+
+.feature {
+  background: color.adjust(v.$dark-color, $lightness: 8%);
+  padding: 1.5rem;
+  &-card {
+    text-align: center;
+    i {
+      color: v.$gold;
+    }
+    h3 {
+      color: v.$pink;
+    }
+    p{
+      color: v.$white;
+      text-align: justify;
+    }
+  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  &-images {
+    background: v.$pink;
+    border-radius: 8px ;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.products{
+  
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.product-card {
+  background: v.$white;
+  border-radius: v.$border-radius-lg;
+  overflow: hidden;
+  @include m.shadow(1);
+  @include m.transition(all, 0.3s, ease);
+  margin-bottom: v.$spacing-unit;
+  position: relative;
+
+  &-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: v.$primary-color;
+    color: v.$white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+  }
+
+  &-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3)
+      );
+      opacity: 0;
+      @include m.transition(opacity);
+    }
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    @include m.shadow(3);
+
+    .product-card-img::after {
+      opacity: 1;
+    }
+  }
+
+  &-info {
+    padding: 1.5rem;
+    text-align: center;
+
+    h3 {
+      color: v.$primary-color;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .product-description {
+      color: v.$text-color;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      min-height: 60px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: v.$dark-color;
+      font-size: 1.3rem;
+      margin: 1rem 0;
+      display: block;
+
+      &-old {
+        text-decoration: line-through;
+        color: color.scale(v.$text-color, $lightness: 20%);
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  // Variantes
+  &-featured {
+    border: 2px solid v.$primary-color;
+
+    .product-card-badge {
+      background: v.$secondary-color;
+    }
+  }
+}
+
+// Cards de eventos
+.event-card {
+  @include m.shadow(1);
+  border-radius: v.$border-radius;
+  overflow: hidden;
+  @include m.transition(all, 0.3s, ease);
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &-content {
+    padding: 1.5rem;
+    background: v.$white;
+
+    h3 {
+      color: v.$primary-color;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: v.$text-color;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .event-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+
+      .price {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    @include m.shadow(2);
+  }
+}

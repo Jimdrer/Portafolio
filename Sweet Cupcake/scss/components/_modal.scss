@@ -1,0 +1,163 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.cart-modal {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background: v.$white;
+  z-index: 9999;
+  @include m.shadow(3);
+  @include m.transition(right, 0.3s, ease);
+  display: flex;
+  flex-direction: column;
+
+  &.show {
+    right: 0;
+  }
+
+  &-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid v.$medium-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+      color: v.$primary-color;
+    }
+
+    .close-cart {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: v.$text-color;
+      @include m.transition(color);
+
+      &:hover {
+        color: v.$primary-color;
+      }
+    }
+  }
+
+  &-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+  }
+
+  &-footer {
+    padding: 1.5rem;
+    border-top: 1px solid v.$medium-gray;
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      span {
+        color: v.$primary-color;
+        font-size: 1.4rem;
+      }
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid v.$light-gray;
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: v.$border-radius-sm;
+  }
+
+  &-info {
+    flex: 1;
+    padding: 0 1rem;
+
+    h4 {
+      color: v.$primary-color;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .item-price {
+      font-weight: bold;
+    }
+
+    .item-quantity {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      button {
+        background: v.$light-gray;
+        border: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+        @include m.transition(background-color);
+
+        &:hover {
+          background: v.$medium-gray;
+        }
+      }
+
+      span {
+        margin: 0 0.5rem;
+        min-width: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .remove-item {
+    background: none;
+    border: none;
+    color: v.$text-color;
+    font-size: 1.2rem;
+    cursor: pointer;
+    @include m.transition(color);
+
+    &:hover {
+      color: v.$primary-color;
+    }
+  }
+}
+
+// Overlay del modal
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  @include m.transition(all, 0.3s, ease);
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}

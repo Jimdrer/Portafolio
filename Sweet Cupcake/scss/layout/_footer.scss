@@ -1,0 +1,158 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "sass:color";
+
+footer {
+  background: v.$dark-color;
+  color: v.$white;
+  padding: 4rem 0 0;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .col, .info {
+    margin-bottom: 2rem;
+    justify-content: center;
+    
+    
+    h4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: v.$white;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        width: 50px;
+        height: 2px;
+        background: v.$primary-color;
+        margin-left: -5px;
+      }
+    }
+
+    .logo {
+      img {
+        width: 150px;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: rgba(v.$white, 0.7);
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+      }
+    }
+
+    
+    ul {
+      list-style: none;
+      text-align: center;
+      
+      li {
+        margin-bottom: 0.8rem;
+        
+        a {
+          color: rgba(v.$white, 0.7);
+          @include m.transition(color);
+          display: inline-block;
+          
+
+          &:hover {
+            color: v.$primary-color;
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+  }
+  .info {
+    justify-content: center;
+    align-items: center;
+
+    p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      i {
+        margin-right: 0.8rem;
+        color: v.$primary-color;
+        width: 20px;
+        text-align: center;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      margin-top: 1.5rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(v.$white, 0.1);
+        border-radius: 50%;
+        margin-right: 0.8rem;
+        color: v.$white;
+        @include m.transition(all);
+
+        &:hover {
+          background: v.$primary-color;
+          transform: translateY(-3px);
+        }
+      }
+    }
+
+    .payment-methods {
+      margin-top: 1.5rem;
+      text-align: center;
+      i {
+        font-size: 1.8rem;
+        margin-right: 0.5rem;
+        color: rgba(v.$white, 0.7);
+      }
+    }
+  }
+
+  .bottom {
+    background: color.adjust(v.$dark-color, $lightness: 5%);
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+
+    p {
+      color: rgba(v.$white, 0.5);
+      font-size: 0.9rem;
+      margin-bottom: 0;
+
+      i {
+        color: v.$primary-color;
+        margin: 0 0.3rem;
+      }
+
+      a {
+        color: v.$primary-color;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @include m.respond-to("md") {
+    &-content {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

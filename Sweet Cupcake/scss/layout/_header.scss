@@ -1,0 +1,154 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.header {
+  background-color: rgba(v.$white, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  @include m.shadow(1);
+  @include m.transition(all, 0.3s, ease);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 80px;
+
+
+  .logo {
+    img {
+      width: 80px;
+      @include m.transition(filter);
+
+      &:hover {
+        filter: drop-shadow(0 2px 5px rgba(v.$primary-color, 0.3));
+      }
+    }
+  }
+
+  .nav {
+     ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-left: 1.5rem;
+        position: relative;
+
+        a {
+          font-weight: 600;
+          color: v.$dark-color;
+          @include m.transition(color);
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            color: v.$primary-color;
+          }
+
+          .cart-count {
+            background: v.$primary-color;
+            color: v.$white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7rem;
+            margin-left: 0.3rem;
+          }
+        }
+
+        // Efecto subrayado
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: v.$primary-color;
+          @include m.transition(width);
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: v.$dark-color;
+      cursor: pointer;
+    }
+  }
+
+  // Estilos para scroll
+  &.scrolled {
+    height: 70px;
+    background-color: rgba(v.$white, 0.98);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+    .header-container {
+      height: 70px;
+    }
+
+    .logo img {
+      height: 45px;
+    }
+  }
+
+  // Responsive
+  @include m.respond-to('lg', max) {
+    .nav {
+      ul {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: v.$white;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        transform: translateY(-150%);
+        opacity: 0;
+        @include m.transition(all, 0.3s, ease);
+
+        &.show {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        &-i {
+          margin: 0.5rem 0;
+          padding: 0.5rem 0;
+
+          &::after {
+            bottom: 0;
+          }
+        }
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    &.scrolled {
+      .nav-list {
+        top: 70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../scss/abstracts/variables" as v;
+@use "../scss/abstracts/mixins" as m;
+@use "../scss/abstracts/functions";
+
+@use "../scss/base/reset";
+@use "../scss/base/typography";
+@use "../scss/base/base";
+
+@use "../scss/components/buttons";
+@use "../scss/components/cards";
+@use "../scss/components/forms";
+@use "../scss/components/modal";
+
+@use "../scss/layout/header";
+@use "../scss/layout/footer";
+@use "../scss/layout/grid";
+@use "../scss/layout/navigation";
+
+@use "../scss/pages/home";
+@use "../scss/pages/contact";
+
+.hero-title {
+  font-size: 2.5rem;
+  @include m.respond-to("md") {
+    font-size: 3.5rem;
+  }
+}

@@ -1,0 +1,46 @@
+// Colores
+$primary-color: #e91e63;
+$secondary-color: #ff9800;
+$accent-color: #9c27b0;
+$dark-color: #333;
+$light-color: #fff;
+$gray-color: #f5f5f5;
+$medium-gray: rgb(148, 148, 148);
+$light-gray: rgb(179, 179, 179);
+$text-color: #555;
+$dark-gray:#333;
+$white:#fff;
+$pink:#e7bab1;
+$gold:#ecc235;
+
+// Fuentes
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Playfair Display', serif;
+
+// Tamaños
+$base-font-size: 16px;
+$h1-font-size: 3rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 1.8rem;
+
+// Espaciados
+$spacing-unit: 1rem;
+$section-padding: 5rem 0;
+
+// Breakpoints
+$breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+
+// Sombras
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+// Bordes
+$border-radius: 8px;
+$border-radius-lg: 16px;
+$border-radius-sm: 4px;

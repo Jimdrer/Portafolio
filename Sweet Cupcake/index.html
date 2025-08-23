@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sweet Cupcake - Pastelería artesanal premium. Cupcakes, tortas personalizadas y dulces hechos con ingredientes orgánicos y mucho amor." />
+    <meta
+      name="keywords"
+      content="pastelería, cupcakes, tortas, postres, repostería, dulces, eventos" />
+    <title>
+      Sweet Cupcake | Pastelería Artesanal Premium | Tortas y Cupcakes
+    </title>
+    <link rel="stylesheet" href="/Portafolio/Sweet Cupcake/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="./img/pasteleria.png"
+          alt="Sweet Cupcake - Pastelería Artesanal"
+          width="180" />
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Nuestros Dulces</a></li>
+          <li><a href="#eventos">Para Eventos</a></li>
+          <li><a href="#nosotros">Nuestra Filosofía</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li>
+            <a href="#" class="cart-btn"
+              ><i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span></a
+            >
+          </li>
+        </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+      <div class="content">
+        <h1>Arte Dulce que Endulza tus Momentos Especiales</h1>
+        <p class="subtitle">
+          Pastelería gourmet hecha con ingredientes orgánicos y técnicas
+          tradicionales
+        </p>
+        <div class="btns">
+          <a href="#productos" class="btn btn-primary"
+            >Explora Nuestros Sabores</a
+          >
+          <a href="#eventos" class="btn btn-secondary">Cotiza tu Evento</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div>
+        <div class="feature-card">
+          <i class="fas fa-leaf"></i>
+          <h3>🌱 Selección Rigurosa de Ingredientes</h3>
+          <p>
+            Cada materia prima pasa por un estricto control: harinas orgánicas
+            certificadas, frutas frescas lavadas y desinfectadas, y chocolates
+            de origen ético. Nada llega a tus manos sin cumplir nuestros
+            estándares.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-award"></i>
+          <h3>👩‍🍳 Elaboración Artesanal en Entorno Controlado</h3>
+          <p>
+            Trabajamos en espacios estrerilizados, con utensilios y equipos
+            sanitizados diariamente. Cada postre se prepara con técnicas
+            tradicionales y manos expertas, evitando conservantes o procesos
+            industriales.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-birthday-cake"></i>
+          <h3>✨ Decoración con Precisión y Creatividad</h3>
+          <p>
+            Los detalles finales se realizan con herramientas profesionales e
+            ingredientes frescos. Glaseados, cremas y adornos se preparan al
+            momento para garantizar frescura y sabor.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-truck"></i>
+          <h3>🚚 Empaque y Transporte Seguro</h3>
+          <p>
+            Usamos materiales ecoamigables y sellos térmicos para mantener la
+            temperatura ideal. Tu postre llega intacto, como si acabara de salir
+            del horno.
+          </p>
+        </div>
+      </div>
+      <div class="feature-images">
+        <div>
+            <video src="./img/honey.mp4" autoplay loop width="660" height="485"></video>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="products">
+      <div class="section-header">
+        <h2>Nuestra Colección Dulce</h2>
+        <p>Explora nuestras creaciones signature</p>
+      </div>
+      <div class="category-tabs">
+        <button class="tab-btn active" data-category="todos">Todos</button>
+        <button class="tab-btn" data-category="cupcakes">Cupcakes</button>
+        <button class="tab-btn" data-category="tortas">Tortas</button>
+        <button class="tab-btn" data-category="especiales">Especiales</button>
+      </div>
+      <div class="product-grid">
+        <!-- Productos se cargarán con JS -->
+      </div>
+    </section>
+
+    <section id="eventos" class="events">
+      <div class="section-header">
+        <h2>Pastelería para Eventos Especiales</h2>
+        <p>Hacemos de tus celebraciones momentos memorables</p>
+      </div>
+      <div class="event-types">
+        <div class="event-card">
+          <img src="wedding-cake.jpg" alt="Torta de bodas" />
+          <h3>Bodas</h3>
+          <p>Tortas elegantes y diseños personalizados para tu día especial</p>
+        </div>
+        <div class="event-card">
+          <img src="birthday-cake.jpg" alt="Torta de cumpleaños" />
+          <h3>Cumpleaños</h3>
+          <p>Desde tortas infantiles hasta diseños sofisticados para adultos</p>
+        </div>
+        <div class="event-card">
+          <img
+            src="corporate-event.jpg"
+            alt="Postres para eventos corporativos" />
+          <h3>Eventos Corporativos</h3>
+          <p>Minipasteles y postres de lujo para impresionar a tus clientes</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="section-header">
+        <h2>Lo que Dicen Nuestros Clientes</h2>
+      </div>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <p>
+            "La torta de mi boda fue absolutamente perfecta. No solo era
+            hermosa, sino que sabía increíble. Todos mis invitados preguntaron
+            dónde la habíamos encargado."
+          </p>
+          <div class="client">
+            <img src="client1.jpg" alt="María González" />
+            <h4>María González</h4>
+            <span>Novia</span>
+          </div>
+        </div>
+        <!-- Más testimonios se cargarán con JS -->
+      </div>
+    </section>
+
+    <section id="nosotros" class="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Nuestra Filosofía Dulce</h2>
+          <p>
+            En Sweet Cupcake creemos que los postres no son solo alimentos, son
+            experiencias. Fundada en 2015 por la chef repostera Ana Martínez,
+            nuestra pastelería combina técnicas francesas tradicionales con
+            ingredientes locales de la más alta calidad.
+          </p>
+          <p>
+            Cada creación es una obra de arte comestible, diseñada para
+            despertar emociones y crear recuerdos duraderos. Nos especializamos
+            en:
+          </p>
+          <ul>
+            <li>
+              <i class="fas fa-check"></i> Ingredientes 100% naturales y
+              orgánicos
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Sabores innovadores y clásicos
+              reinventados
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Diseños personalizados para cada
+              ocasión
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Compromiso con la sostenibilidad
+            </li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="chef.jpg" alt="Chef Ana Martínez" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="section-header">
+        <h2>Dulce Contacto</h2>
+        <p>¿Listo para endulzar tu vida? Escríbenos</p>
+      </div>
+      <div class="contact-container">
+        <form id="contact-form">
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre Completo"
+            required />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Correo Electrónico"
+            required />
+          <div class="form-group">
+            <input type="tel" placeholder="Teléfono" />
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="">Tipo de Consulta</option>
+              <option>Cotización para Evento</option>
+              <option>Pedido Especial</option>
+              <option>Consulta General</option>
+              <option>Feedback</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea
+              placeholder="Cuéntanos sobre tu evento o pedido..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        </form>
+        <div class="contact-info">
+          <h3>Visítanos en Nuestra Tienda</h3>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Calle Dulce 123, Distrito Gourmet<br />Ciudad Azúcar</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <p>
+              <strong>Horario:</strong><br />
+              Lunes-Viernes: 9am - 7pm<br />
+              Sábados: 10am - 5pm<br />
+              Domingos: Cerrado
+            </p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <p>
+              +1 234 567 890<br />
+              +1 987 654 321
+            </p>
+          </div>
+          <div class="social-media">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h3>Únete a Nuestro Club Dulce</h3>
+        <p>
+          Recibe descuentos exclusivos, nuevas creaciones y consejos de
+          repostería
+        </p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Tu correo electrónico" required />
+          <button type="submit" class="btn btn-secondary">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div class=".logo">
+          <img src="logo-white.png" alt="Sweet Cupcake" width="150" />
+          <p>
+            Pastelería artesanal que transforma ingredientes simples en
+            experiencias extraordinarias.
+          </p>
+        </div>
+        <div class="footer-content">
+          <div class="col">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#productos">Productos</a></li>
+              <li><a href="#eventos">Eventos</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Políticas</h4>
+            <ul>
+              <li><a href="#">Términos y Condiciones</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Política de Envíos</a></li>
+              <li><a href="#">Preguntas Frecuentes</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-envelope"></i> hola@sweetcupcake.com</p>
+            <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            <div class="payment-methods">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-paypal"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>&copy; 2023 Sweet Cupcake. Todos los derechos reservados.</p>
+        <p>Diseñado con <i class="fas fa-heart"></i> por Sweet Cupcake Team</p>
+      </div>
+    </footer>
+
+    <div class="cart-modal">
+      <div class="cart-content">
+        <div class="cart-header">
+          <h3>Tu Carrito Dulce</h3>
+          <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+          <!-- Items del carrito se cargarán con JS -->
+        </div>
+        <div class="cart-total">
+          <p>Total: <span>$0.00</span></p>
+          <button class="btn btn-primary">Proceder al Pago</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay"></div>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

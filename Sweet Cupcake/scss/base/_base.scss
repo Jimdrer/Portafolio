@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// _typography.scss
+body {
+  font-family: v.$font-primary;
+  line-height: 1.6;
+  color: v.$dark-gray;
+}
+
+h1, h2, h3 {
+  font-family: v.$font-secondary;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  
+  @include m.respond-to('md') {
+    font-size: 3.5rem;
+  }
+}

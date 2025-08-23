@@ -1,0 +1,48 @@
+@use "variables" as v;
+@use "sass:map";
+
+// Media queries responsive
+@mixin respond-to($breakpoint, $type: min) {
+  @if not map.has-key(v.$breakpoints, $breakpoint) {
+    @error "Breakpoint '#{$breakpoint}' no esta definido en $breakpoints";
+  }
+  $bp-value: map.get(v.$breakpoints, $breakpoint);
+
+  @if $type ==max {
+    @media (max-width: ($bp-value - 0.02px)) {
+      @content;
+    }
+  } @else if $type== min {
+    @media (min-width: $bp-value) {
+      @content;
+    }
+  } @else {
+    @error "Tipo de media query no soportado: '#{$type}'";
+  }
+}
+
+// Flexbox centrado
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+// Transiciones
+@mixin transition($properties: all, $duration: 0.3s, $timing: ease) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+}
+
+// Sombras adaptativas
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  } @else if $level == 2 {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}

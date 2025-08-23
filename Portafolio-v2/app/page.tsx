@@ -36,6 +36,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import en from "../public/locales/en/common.json"
+import es from "../public/locales/es/common.json"
 import Link from "next/link";
 
 export default function EnhancedPortfolio() {
@@ -61,6 +64,7 @@ export default function EnhancedPortfolio() {
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
+
 
   const skills = [
     {
@@ -537,18 +541,18 @@ export default function EnhancedPortfolio() {
             </div>
 
             <div className="flex space-x-2">
-              <Link href={'https://wa.me/5214561079874'}>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-green-600 hover:bg-green-50 hover:scale-110 transition-all duration-300 relative group">
-                <Phone className="h-4 w-4" />
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                  WhatsApp
-                </div>
-              </Button>
+              <Link href={"https://wa.me/5214561079874"}>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-green-600 hover:bg-green-50 hover:scale-110 transition-all duration-300 relative group">
+                  <Phone className="h-4 w-4" />
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                    WhatsApp
+                  </div>
+                </Button>
               </Link>
-              <Link href={''}>
+              <Link href={""}>
                 <Button
                   variant="ghost"
                   size="icon"
@@ -559,7 +563,7 @@ export default function EnhancedPortfolio() {
                   </div>
                 </Button>
               </Link>
-              <Link href={''}>
+              <Link href={""}>
                 <Button
                   variant="ghost"
                   size="icon"
@@ -704,12 +708,15 @@ export default function EnhancedPortfolio() {
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
                 }`}>
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
-                  <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                  Descargar CV
-                </Button>
+                <Link
+                  href={"https://drive.proton.me/urls/H4QBBPVQ70#ZcuFEGiMiMv9"}>
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
+                    <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                    Descargar CV
+                  </Button>
+                </Link>
                 <Button
                   size="lg"
                   variant="outline"
@@ -717,13 +724,15 @@ export default function EnhancedPortfolio() {
                   <Play className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   Ver Demo Reel
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent hover:scale-105 transition-all group">
-                  <ArrowRight className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  Ver Proyectos
-                </Button>
+                <Link href="#proyectos" scroll={true}>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent hover:scale-105 transition-all group">
+                    <ArrowRight className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    Ver Proyectos
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -738,7 +747,7 @@ export default function EnhancedPortfolio() {
                   <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-1 shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105">
                     <div className="w-full h-full rounded-full bg-white p-2">
                       <Image
-                        src="/placeholder.svg?height=300&width=300&text=Professional+Photo"
+                        src="/me.jpeg?height=300&width=300&text=Professional+Photo"
                         alt="Jose Dimas Alejandro Espinosa Razo"
                         width={300}
                         height={300}
