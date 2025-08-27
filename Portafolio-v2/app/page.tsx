@@ -36,9 +36,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import en from "../public/locales/en/common.json"
-import es from "../public/locales/es/common.json"
 import Link from "next/link";
 
 export default function EnhancedPortfolio() {
