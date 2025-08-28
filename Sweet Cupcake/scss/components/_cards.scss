@@ -14,7 +14,7 @@
     h3 {
       color: v.$pink;
     }
-    p{
+    p {
       color: v.$white;
       text-align: justify;
     }
@@ -24,7 +24,7 @@
   gap: 2rem;
   &-images {
     background: v.$pink;
-    border-radius: 8px ;
+    border-radius: 8px;
     div {
       display: flex;
       justify-content: center;
@@ -33,8 +33,15 @@
   }
 }
 .products{
-  
+  .productos{
+    display: flex;
+  }
+  .category-tabs{
+    display: block;
+    width: 60;
+  }
 }
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

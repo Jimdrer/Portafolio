@@ -62,7 +62,6 @@ export default function EnhancedPortfolio() {
     return () => clearTimeout(timer);
   }, []);
 
-
   const skills = [
     {
       icon: Code,
@@ -1174,13 +1173,19 @@ export default function EnhancedPortfolio() {
                       </div>
 
                       <div className="flex gap-3">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="flex-1 group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
-                          <ExternalLink className="mr-2 h-4 w-4" />
-                          Ver Proyecto
-                        </Button>
+                        <a
+                          href="https://sweet-cupcake.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="flex-1 group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            Ver Proyecto
+                          </Button>
+                        </a>
                         <Button
                           variant="outline"
                           size="sm"
