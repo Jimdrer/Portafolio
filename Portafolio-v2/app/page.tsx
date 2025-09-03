@@ -230,9 +230,12 @@ export default function EnhancedPortfolio() {
       ],
       status: "En producción",
       image:
-        "/placeholder.svg?height=300&width=400&text=Sweet+Cupcake+Platform",
+        "/pasteleria.png?height=300&width=400&text=Sweet+Cupcake+Platform",
       color: "bg-gradient-to-br from-pink-100 to-rose-100",
-      link: "#",
+      links: {
+        demo:"https://sweet-cupcake.vercel.app/",
+        code:"https://github.com/Jimdrer/Portafolio/tree/master/Sweet%20Cupcake",
+      },
       featured: true,
       timeline: "3 meses",
       client: "Panadería Local",
@@ -250,12 +253,15 @@ export default function EnhancedPortfolio() {
         "85% retention",
       ],
       status: "Publicado",
-      image: "/placeholder.svg?height=300&width=400&text=Blue+Extinction+App",
+      image: "/mundo.svg",
       color: "bg-gradient-to-br from-blue-100 to-cyan-100",
       link: "#",
       featured: true,
       timeline: "6 meses",
       client: "ONG Ambiental",
+      imageWidth:255,
+      imageHeigth:300,
+      className:"h-30 w-30"
     },
     {
       title: "Interactive Pokédex",
@@ -276,7 +282,7 @@ export default function EnhancedPortfolio() {
         "50+ contributors",
       ],
       status: "Completado",
-      image: "/placeholder.svg?height=300&width=400&text=Interactive+Pokedex",
+      image: "/pokeico.png?height=300&width=400&text=Interactive+Pokedex",
       color: "bg-gradient-to-br from-red-100 to-yellow-100",
       link: "#",
       featured: false,
@@ -296,7 +302,7 @@ export default function EnhancedPortfolio() {
         "2.5s load time",
       ],
       status: "Completado",
-      image: "/placeholder.svg?height=300&width=400&text=MTB+Store",
+      image: "/mtblogo.png?height=300&width=400&text=MTB+Store",
       color: "bg-gradient-to-br from-green-100 to-emerald-100",
       link: "#",
       featured: false,
@@ -316,7 +322,7 @@ export default function EnhancedPortfolio() {
         "200+ productos",
       ],
       status: "Completado",
-      image: "/placeholder.svg?height=300&width=400&text=Merkadito+Marketplace",
+      image: "/shop.png?height=300&width=400&text=Merkadito+Marketplace",
       color: "bg-gradient-to-br from-yellow-100 to-orange-100",
       link: "#",
       featured: false,
@@ -342,7 +348,7 @@ export default function EnhancedPortfolio() {
         "3.2s load time",
       ],
       status: "Completado",
-      image: "/placeholder.svg?height=300&width=400&text=Flor+D+Vainilla",
+      image: "/flor.png?height=300&width=400&text=Flor+D+Vainilla",
       color: "bg-gradient-to-br from-purple-100 to-pink-100",
       link: "#",
       featured: false,
@@ -1093,11 +1099,12 @@ export default function EnhancedPortfolio() {
 
                     <div className="relative overflow-hidden">
                       <Image
-                        src={project.image || "/placeholder.svg"}
+                        src={project.image || ""}
                         alt={project.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                        width={255}
+                        height={300}
+                        className="mx-auto h-64 w-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                        
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute bottom-4 right-4 flex gap-2">
@@ -1174,24 +1181,29 @@ export default function EnhancedPortfolio() {
 
                       <div className="flex gap-3">
                         <a
-                          href="https://sweet-cupcake.vercel.app/"
+                          href={project.links?.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full inline-block">
+                          <Button
+                            size="sm"
+                            className="w-full flex items-center gap-2 bg-gradient-to-r from-pink-400 to-rose-400 text-white border-0 hover:from-pink-500 hover:to-rose-500 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group rounded-full px-6">
+                            <ExternalLink className="h-4 w-4 group-hover:rotate-45 transition-transform" />
+                            <span className="font-semibold">Ver Proyecto</span>
+                          </Button>
+                        </a>
+                        <a
+                          href={project.links?.code}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-block">
                           <Button
                             variant="outline"
                             size="sm"
-                            className="flex-1 group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            Ver Proyecto
+                            className="group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
+                            <Github className="h-4 w-4" />
                           </Button>
                         </a>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
-                          <Github className="h-4 w-4" />
-                        </Button>
                       </div>
                     </CardContent>
                   </Card>
