@@ -62,6 +62,13 @@ export default function EnhancedPortfolio() {
     return () => clearTimeout(timer);
   }, []);
 
+  const contact = {
+    email: "mailto:dim_er89@outlook.com",
+    whatsapp: "https://wa.me/5214561079874",
+    linkedin: "www.linkedin.com/in/jimdrer",
+    github: "https://github.com/Jimdrer/Portafolio",
+    cv: "https://drive.proton.me/urls/H4QBBPVQ70#ZcuFEGiMiMv9",
+  };
   const skills = [
     {
       icon: Code,
@@ -229,12 +236,11 @@ export default function EnhancedPortfolio() {
         "4.8★ rating",
       ],
       status: "En producción",
-      image:
-        "/pasteleria.png?height=300&width=400&text=Sweet+Cupcake+Platform",
+      image: "/pasteleria.png?height=300&width=400&text=Sweet+Cupcake+Platform",
       color: "bg-gradient-to-br from-pink-100 to-rose-100",
       links: {
-        demo:"https://sweet-cupcake.vercel.app/",
-        code:"https://github.com/Jimdrer/Portafolio/tree/master/Sweet%20Cupcake",
+        demo: "https://sweet-cupcake.vercel.app/",
+        code: "https://github.com/Jimdrer/Portafolio/tree/master/Sweet%20Cupcake",
       },
       featured: true,
       timeline: "3 meses",
@@ -253,15 +259,13 @@ export default function EnhancedPortfolio() {
         "85% retention",
       ],
       status: "Publicado",
-      image: "/mundo.svg",
+      image:
+        "/mundo.svg?height=300&width=500&text=Blue+Extinction+Conservation",
       color: "bg-gradient-to-br from-blue-100 to-cyan-100",
       link: "#",
       featured: true,
       timeline: "6 meses",
       client: "ONG Ambiental",
-      imageWidth:255,
-      imageHeigth:300,
-      className:"h-30 w-30"
     },
     {
       title: "Interactive Pokédex",
@@ -330,7 +334,7 @@ export default function EnhancedPortfolio() {
       client: "Comunidad Local",
     },
     {
-      title: "Flor D Vainilla Bakery",
+      title: "Flor D Vainilla",
       category: "WordPress Development",
       description:
         "Sitio web corporativo para panadería artesanal con galería de productos, sistema de pedidos online, blog de recetas y integración con redes sociales.",
@@ -364,7 +368,7 @@ export default function EnhancedPortfolio() {
       content:
         "Jose transformó completamente nuestro negocio online. Las ventas aumentaron un 40% en los primeros 3 meses. Su atención al detalle y profesionalismo son excepcionales.",
       rating: 5,
-      image: "/placeholder.svg?height=60&width=60&text=MG",
+      image: "/MG.jpg?height=60&width=60&text=MG",
     },
     {
       name: "Carlos Mendoza",
@@ -372,7 +376,7 @@ export default function EnhancedPortfolio() {
       content:
         "La aplicación que desarrolló Jose ha sido fundamental para nuestra misión de conservación. Su creatividad y habilidades técnicas superaron nuestras expectativas.",
       rating: 5,
-      image: "/placeholder.svg?height=60&width=60&text=CM",
+      image: "/CM.jpg?height=60&width=60&text=CM",
     },
     {
       name: "Ana Rodríguez",
@@ -380,7 +384,7 @@ export default function EnhancedPortfolio() {
       content:
         "Profesional, creativo y siempre dispuesto a ir más allá. Jose entregó un proyecto que no solo cumplió, sino que superó todos nuestros requisitos.",
       rating: 5,
-      image: "/placeholder.svg?height=60&width=60&text=AR",
+      image: "/AR.jpg?height=60&width=60&text=AR",
     },
   ];
 
@@ -543,7 +547,10 @@ export default function EnhancedPortfolio() {
             </div>
 
             <div className="flex space-x-2">
-              <Link href={"https://wa.me/5214561079874"}>
+              <a
+                href={contact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -553,8 +560,11 @@ export default function EnhancedPortfolio() {
                     WhatsApp
                   </div>
                 </Button>
-              </Link>
-              <Link href={""}>
+              </a>
+              <a
+                href={contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -564,8 +574,8 @@ export default function EnhancedPortfolio() {
                     LinkedIn
                   </div>
                 </Button>
-              </Link>
-              <Link href={""}>
+              </a>
+              <a href={contact.email} target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -575,8 +585,11 @@ export default function EnhancedPortfolio() {
                     Email
                   </div>
                 </Button>
-              </Link>
-              <Link href={"https://github.com/Jimdrer"}>
+              </a>
+              <a
+                href={contact.github}
+                target="_blank"
+                rel="noopener noreferrer">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -586,7 +599,7 @@ export default function EnhancedPortfolio() {
                     GitHub
                   </div>
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -710,15 +723,17 @@ export default function EnhancedPortfolio() {
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
                 }`}>
-                <Link
-                  href={"https://drive.proton.me/urls/H4QBBPVQ70#ZcuFEGiMiMv9"}>
+                <a
+                  href={contact.cv}
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
                     <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                     Descargar CV
                   </Button>
-                </Link>
+                </a>
                 <Button
                   size="lg"
                   variant="outline"
@@ -1103,8 +1118,7 @@ export default function EnhancedPortfolio() {
                         alt={project.title}
                         width={255}
                         height={300}
-                        className="mx-auto h-64 w-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                        
+                        className="mx-auto h-64 group-hover:scale-110 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute bottom-4 right-4 flex gap-2">
@@ -1228,9 +1242,9 @@ export default function EnhancedPortfolio() {
                       <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
-                        width={400}
-                        height={250}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                        width={220}
+                        height={200}
+                        className="mx-auto h-48 group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute top-4 right-4 flex gap-2">
                         <Badge
@@ -1473,7 +1487,7 @@ export default function EnhancedPortfolio() {
                   Respuesta garantizada en 24h
                 </p>
                 <p className="text-blue-300 font-medium">
-                  jose.espinosa@email.com
+                  dim_er89@outlook.com
                 </p>
               </CardContent>
             </Card>
@@ -1485,49 +1499,65 @@ export default function EnhancedPortfolio() {
                 </div>
                 <h3 className="font-bold text-white mb-2 text-lg">WhatsApp</h3>
                 <p className="text-gray-300 mb-4">Disponible de 9:00 - 18:00</p>
-                <p className="text-green-300 font-medium">+52 (555) 123-4567</p>
+                <p className="text-green-300 font-medium">+52 (456) 126-7556</p>
               </CardContent>
             </Card>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-xl hover:shadow-2xl transition-all hover:scale-105 group text-lg px-8 py-4">
-              <Mail className="mr-3 h-6 w-6 group-hover:animate-bounce" />
-              Enviar Mensaje
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
-              <Phone className="mr-3 h-6 w-6" />
-              WhatsApp
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
-              <Linkedin className="mr-3 h-6 w-6" />
-              LinkedIn
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
-              <Github className="mr-3 h-6 w-6" />
-              GitHub
-            </Button>
+            <a href={contact.email} target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-xl hover:shadow-2xl transition-all hover:scale-105 group text-lg px-8 py-4">
+                <Mail className="mr-3 h-6 w-6 group-hover:animate-bounce" />
+                Enviar Mensaje
+              </Button>
+            </a>
+            <a
+              href={contact.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
+                <Phone className="mr-3 h-6 w-6" />
+                WhatsApp
+              </Button>
+            </a>
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
+                <Linkedin className="mr-3 h-6 w-6" />
+                LinkedIn
+              </Button>
+            </a>
+            <a href={contact.github} target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl text-lg px-8 py-4">
+                <Github className="mr-3 h-6 w-6" />
+                GitHub
+              </Button>
+            </a>
           </div>
 
           <div className="text-center">
             <p className="text-gray-300 mb-2">¿Prefieres descargar mi CV?</p>
-            <Button
-              variant="outline"
-              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl">
-              <Download className="mr-2 h-5 w-5" />
-              Descargar Curriculum
-            </Button>
+            <a href={contact.cv} target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 bg-transparent hover:scale-105 transition-all shadow-xl">
+                <Download className="mr-2 h-5 w-5" />
+                Descargar Curriculum
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -1543,7 +1573,9 @@ export default function EnhancedPortfolio() {
                   <span className="text-white font-bold text-lg">JD</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl">Jose Dimas Espinosa</h3>
+                  <h3 className="font-bold text-xl">
+                    Jose Dimas Alejandro Espinosa Razo
+                  </h3>
                   <p className="text-gray-400">
                     Frontend Developer & UX/UI Designer
                   </p>
@@ -1589,34 +1621,54 @@ export default function EnhancedPortfolio() {
             <div className="space-y-4">
               <h4 className="font-bold text-lg text-white">Conecta Conmigo</h4>
               <div className="flex space-x-4">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
-                  <Linkedin className="h-5 w-5" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
-                  <Github className="h-5 w-5" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
-                  <Mail className="h-5 w-5" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
-                  <Phone className="h-5 w-5" />
-                </Button>
+                <a
+                  href={contact.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a
+                  href={contact.github}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
+                    <Github className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a
+                  href={contact.email}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
+                    <Mail className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a
+                  href={contact.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-gray-400 hover:text-white hover:bg-white/10 hover:scale-110 transition-all">
+                    <Phone className="h-5 w-5" />
+                  </Button>
+                </a>
               </div>
               <div className="space-y-2 text-sm">
-                <p className="text-gray-300">jose.espinosa@email.com</p>
-                <p className="text-gray-300">+52 (555) 123-4567</p>
+                <p className="text-gray-300">dim_er89@outlook.com</p>
+                <p className="text-gray-300">+52 (456) 126-7556</p>
                 <p className="text-gray-300">México, Remote</p>
               </div>
             </div>
