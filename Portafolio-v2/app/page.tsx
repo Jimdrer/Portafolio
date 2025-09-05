@@ -65,7 +65,7 @@ export default function EnhancedPortfolio() {
   const contact = {
     email: "mailto:dim_er89@outlook.com",
     whatsapp: "https://wa.me/5214561079874",
-    linkedin: "www.linkedin.com/in/jimdrer",
+    linkedin: "https://www.linkedin.com/in/jimdrer/",
     github: "https://github.com/Jimdrer/Portafolio",
     cv: "https://drive.proton.me/urls/H4QBBPVQ70#ZcuFEGiMiMv9",
   };
@@ -1574,7 +1574,8 @@ export default function EnhancedPortfolio() {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl">
-                    Jose Dimas Alejandro Espinosa Razo
+                    Jose Dimas Alejandro <br />
+                    Espinosa Razo
                   </h3>
                   <p className="text-gray-400">
                     Frontend Developer & UX/UI Designer
