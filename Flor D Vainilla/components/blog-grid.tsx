@@ -208,7 +208,7 @@ export default function BlogGrid() {
           </div>
         )}
 
-        {/* Regular Posts Grid */}
+        {/* Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {regularPosts.map((post) => (
             <Card
@@ -257,7 +257,6 @@ export default function BlogGrid() {
           ))}
         </div>
 
-        {/* Load More Button */}
         <div className="text-center mt-12">
           <Button variant="outline" size="lg">
             Cargar Más Artículos

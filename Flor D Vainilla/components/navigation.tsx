@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Phone } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Phone } from "lucide-react";
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { href: "/", label: "Inicio" },
@@ -16,7 +16,7 @@ export default function Navigation() {
     { href: "/blog", label: "Blog" },
     { href: "/trabajo", label: "Bolsa de Trabajo" },
     { href: "/contacto", label: "Contacto" },
-  ]
+  ];
 
   return (
     <nav className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
@@ -24,10 +24,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">FV</span>
-            </div>
-            <span className="font-playfair font-bold text-xl text-foreground">Flor D Vainilla</span>
+            <img src="favicon.jpg" className="w-25 h-16"></img>
+
+            <span className="font-playfair font-bold text-xl text-foreground">
+              Flor D Vainilla
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -36,8 +37,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium">
                 {item.label}
               </Link>
             ))}
@@ -49,8 +49,15 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -64,8 +71,7 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   className="block px-3 py-2 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                  onClick={() => setIsMenuOpen(false)}>
                   {item.label}
                 </Link>
               ))}
@@ -80,5 +86,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }

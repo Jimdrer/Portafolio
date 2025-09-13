@@ -221,14 +221,8 @@ export default function EnhancedPortfolio() {
       title: "Sweet Cupcake E-Commerce",
       category: "Full-Stack Development",
       description:
-        "Plataforma de comercio electrónico completa con sistema de pagos, gestión de inventario y panel administrativo. Diseño atractivo y experiencia de usuario optimizada para maximizar conversiones.",
-      technologies: [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Stripe API",
-        "Tailwind CSS",
-      ],
+        "Sitio web corporativo para panadería artesanal con galería de productos, sistema de pedidos online, blog de recetas e integración con redes sociales.",
+      technologies: ["React", "Node.js", "Scss"],
       metrics: [
         "40% ↗ conversiones",
         "500+ usuarios activos",
@@ -251,7 +245,7 @@ export default function EnhancedPortfolio() {
       category: "Mobile & Web Application",
       description:
         "Aplicación educativa sobre conservación marina con realidad aumentada, gamificación y contenido interactivo para concienciar sobre la vida marina y el cambio climático.",
-      technologies: ["React Native", "Three.js", "Firebase", "AR.js", "WebGL"],
+      technologies: ["React", "Next", "Tailwind CSS" , "Por integrar Three.js"],
       metrics: [
         "10K+ descargas",
         "4.8★ rating",
@@ -262,7 +256,11 @@ export default function EnhancedPortfolio() {
       image:
         "/mundo.svg?height=300&width=500&text=Blue+Extinction+Conservation",
       color: "bg-gradient-to-br from-blue-100 to-cyan-100",
-      link: "#",
+      links:{
+        demo: "https://blue-extinction.vercel.app/",
+        code:""
+        
+      } 
       featured: true,
       timeline: "6 meses",
       client: "ONG Ambiental",
@@ -271,7 +269,7 @@ export default function EnhancedPortfolio() {
       title: "Interactive Pokédex",
       category: "Frontend Development",
       description:
-        "Aplicación web interactiva con API REST, búsqueda avanzada, favoritos persistentes y animaciones fluidas inspiradas en el universo Pokémon. Incluye modo batalla simulado.",
+        "Aplicación web interactiva con API REST, búsqueda avanzada, favoritos persistentes y animaciones fluidas inspiradas en el universo Pokémon.",
       technologies: [
         "Vue.js",
         "REST API",
@@ -337,14 +335,8 @@ export default function EnhancedPortfolio() {
       title: "Flor D Vainilla",
       category: "WordPress Development",
       description:
-        "Sitio web corporativo para panadería artesanal con galería de productos, sistema de pedidos online, blog de recetas y integración con redes sociales.",
-      technologies: [
-        "WordPress",
-        "PHP",
-        "MySQL",
-        "Custom Theme",
-        "WooCommerce",
-      ],
+        "Sitio web Gourmet 100% mexicano con galería de platillos, agenda de reservaciones online, blog con recetas e historia, integración con redes sociales y servicio de eventos.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind Css"],
       metrics: [
         "200% ↗ pedidos online",
         "SEO optimized",
@@ -354,7 +346,7 @@ export default function EnhancedPortfolio() {
       status: "Completado",
       image: "/flor.png?height=300&width=400&text=Flor+D+Vainilla",
       color: "bg-gradient-to-br from-purple-100 to-pink-100",
-      link: "#",
+      link: "https://flor-d-vainilla.vercel.app/",
       featured: false,
       timeline: "2 meses",
       client: "Panadería Artesanal",
@@ -723,10 +715,7 @@ export default function EnhancedPortfolio() {
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
                 }`}>
-                <a
-                  href={contact.cv}
-                  target="_blank"
-                  rel="noopener noreferrer">
+                <a href={contact.cv} target="_blank" rel="noopener noreferrer">
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
@@ -1306,14 +1295,33 @@ export default function EnhancedPortfolio() {
                             </div>
                           ))}
                       </div>
-
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-full group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Ver Detalles
-                      </Button>
+                      <div className="flex gap-3">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="w-full group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            Ver Detalles
+                          </Button>
+                        </a>
+                        <a
+                          href={project.links?.code}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="group-hover:bg-white/90 group-hover:scale-105 transition-all bg-transparent">
+                            <Github className="h-4 w-4" />
+                          </Button>
+                        </a>
+                      </div>
                     </CardContent>
                   </Card>
                 ))}

@@ -17,7 +17,9 @@ export const metadata: Metadata = {
   title: "Flor D Vainilla - Fondita Gourmet",
   description:
     "Fondita gourmet mexicana con sabores auténticos y elegancia culinaria. Reserva eventos, explora nuestro menú y vive una experiencia gastronómica única.",
-  generator: "v0.app",
+    icons:{
+    icon:{url:'./favicon.jpg', type:'image/jpg+xml'}
+  }
 }
 
 export default function RootLayout({
