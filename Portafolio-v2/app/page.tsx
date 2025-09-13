@@ -258,9 +258,8 @@ export default function EnhancedPortfolio() {
       color: "bg-gradient-to-br from-blue-100 to-cyan-100",
       links:{
         demo: "https://blue-extinction.vercel.app/",
-        code:""
-        
-      } 
+        code:"https://github.com/Jimdrer/Portafolio/tree/master/Blue-Extinction",
+      }, 
       featured: true,
       timeline: "6 meses",
       client: "ONG Ambiental",
