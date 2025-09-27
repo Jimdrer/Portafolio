@@ -1,6 +1,6 @@
 class SweetCupcakeApp {
   constructor() {
-    this.cart = JSON.parse(localStorage.getItem('cart')) || [];
+    this.cart = JSON.parse(localStorage.getItem("cart")) || [];
     this.products = [
       {
         id: 1,
@@ -8,56 +8,65 @@ class SweetCupcakeApp {
         price: 2.5,
         category: "cupcakes",
         description: "Deliciosos cupcakes con frosting de vainilla o chocolate",
-        image: "img/cupcake-classic.jpg",
-        badge: "Nuevo"
+        image: "img/cake-balls-g307bf7104_1280.jpg",
+        badge: "Nuevo",
       },
       {
         id: 2,
-        name: "Torta Red Velvet",
+        name: "Pastel Red Velvet",
         price: 35,
-        category: "tortas",
-        description: "Clásica torta de terciopelo rojo con crema de queso",
-        image: "img/red-velvet.jpg"
+        category: "pasteles",
+        description: "Clásico pastel de terciopelo rojo con crema de queso",
+        image: "img/velvet-01.jpg",
       },
       {
         id: 3,
-        name: "Macarons Franceses",
+        name: "Hojaldradas Rellenas",
         price: 3.0,
         category: "especiales",
-        description: "Delicados macarons en diversos sabores",
-        image: "img/macarons.jpg",
-        badge: "Popular"
+        description:
+          "Delicadas hojaldradas rellenas de diversos frutos de temporada",
+        image: "img/cake-g6aa0351c4_1280.jpg",
+        badge: "Popular",
       },
       {
         id: 4,
-        name: "Torta de Chocolate Belga",
+        name: "Pastel de Chocolate Belga",
         price: 42,
-        category: "tortas",
-        description: "Torta de chocolate intenso con relleno de ganache",
-        image: "img/chocolate-cake.jpg"
-      }
+        category: "pasteles",
+        description: "pastel de chocolate intenso con relleno de ganache",
+        image: "img/cake-g140c9e0e1_1280.jpg",
+      },
     ];
 
     this.testimonials = [
       {
-        text: "La torta de mi boda fue absolutamente perfecta. No solo era hermosa, sino que sabía increíble.",
+        text: "El pastel de mi boda fue absolutamente perfecto. No solo era hermoso, sino que sabía increíble.",
         name: "María González",
         role: "Novia",
-        image: "img/client1.jpg"
+        image: "img/2149708104.jpg",
       },
       {
         text: "Los cupcakes para el cumpleaños de mi hija fueron un éxito. Todos preguntaron dónde los compramos.",
         name: "Carlos Mendoza",
         role: "Padre",
-        image: "img/client2.jpg"
+        image: "img/2147997462.jpg",
       },
       {
         text: "Nuestros clientes quedaron encantados con los postres para nuestro evento corporativo.",
         name: "Laura Jiménez",
         role: "Gerente de Marketing",
-        image: "img/client3.jpg"
-      }
+        image: "img/642.jpg",
+      },
     ];
+
+    this.container = document.querySelector(".grid-carousel-container");
+    this.grid = document.querySelector(".product-grid");
+    this.prevBtn = document.querySelector(".prev-btn");
+    this.nextBtn = document.querySelector(".next-btn");
+    this.items = document.querySelectorAll(".product-card");
+
+    this.isMobile = window.innerWidth <= 992;
 
     this.init();
   }
@@ -67,110 +76,208 @@ class SweetCupcakeApp {
     this.renderProducts();
     this.loadTestimonials();
     this.updateCartCount();
+    setTimeout(() =>{
+      this.initResponsiveCarousel();
+    }, 300);
+  }
+
+  initResponsiveCarousel() {
+
+
+    if (!this.container) return;
+    if (this.isMobile) {
+      this.setupCarousel();
+    }
+    window.addEventListener("resize", () => this.handleResize());
+  }
+  setupCarousel() {
+    this.prevBtn.addEventListener("click", () => this.scroll("prev"));
+    this.nextBtn.addEventListener("click", () => this.scroll("next"));
+
+    this.grid.addEventListener("scroll", () => this.updateButtonState());
+    this.updateButtonState();
+    this.prevBtn.style.display = "flex";
+    this.nextBtn.style.display = "flex";
+  }
+  handleResize() {
+    const nowMobile = window.innerWidth <= 992;
+    if (nowMobile && !this.isMobile) {
+      this.isMobile = true;
+      this.setupCarousel();
+    } else if (!nowMobile && this.isMobile) {
+      this.isMobile = false;
+      this.destroyCarousel();
+    }
+  }
+  scroll(direction) {
+    if (!this.isMobile || !this.items.length) return;
+    try{
+      const firstItem = this.items[0];
+      letitemWidth = 300;
+      if (firstItem && firstItem.offsetWidth > 0){
+        itemWidth = firstItem.offsetWidth;
+      }else{
+        const computedStyle = window.getComputedStyle(firstItem);
+        itemWidth= firstItem.clientWidth ||
+        parseInt(computedStyle.width) ||
+        300;
+      }
+      const scrollAmount = itemWidth + 32;
+      this.grid.scrollBy({
+        left: direction === "next" ? scrollAmount : -scrollAmount,
+        behavior: "smooth",
+      });
+    }catch (error){
+      console.log('Error en scroll', error);
+      this.grid.scrollBy({
+        left: direction === "next" ? 332 : -332,
+        behavior: "smooth",
+      });
+    }
+  }
+  updateButtonState() {
+    if (!this.isMobile) return;
+    const { scrollLeft, scrollWidth, clientWidth } = this.grid;
+    this.prevBtn.disabled = scrollLeft <= 10;
+    this.nextBtn.disabled = scrollLeft >= scrollWidth - clientWidth - 10;
+  }
+
+  destroyCarousel() {
+    this.prevBtn.style.display = "none";
+    this.nextBtn.style.display = "none";
+
+    const newPrevBtn = this.prevBtn.cloneNode(true);
+    const newNextBtn = this.nextBtn.cloneNode(true);
+
+    this.prevBtn.parentNode.replaceChild(newPrevBtn, this.prevBtn);
+    this.nextBtn.parentNode.replaceChild(newNextBtn, this.nextBtn);
+
+    this.prevBtn = newPrevBtn;
+    this.nextBtn = newNextBtn;
   }
 
   setupEventListeners() {
     // Menú móvil
-    const menuToggle = document.querySelector('.menu-toggle');
+    const menuToggle = document.querySelector(".menu-toggle");
     if (menuToggle) {
-      menuToggle.addEventListener('click', this.toggleMobileMenu.bind(this));
+      menuToggle.addEventListener("click", this.toggleMobileMenu.bind(this));
     }
 
     // Filtrado de productos
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabButtons = document.querySelectorAll(".tab-btn");
     if (tabButtons.length > 0) {
-      tabButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          tabButtons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          tabButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
           this.filterProducts(btn.dataset.category);
         });
       });
     }
 
     // Formularios
-    const contactForm = document.getElementById('contact-form');
+    const contactForm = document.getElementById("contact-form");
     if (contactForm) {
-      contactForm.addEventListener('submit', (e) => this.handleContactSubmit(e));
+      contactForm.addEventListener("submit", (e) =>
+        this.handleContactSubmit(e)
+      );
     }
 
-    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterForm = document.getElementById("newsletter-form");
     if (newsletterForm) {
-      newsletterForm.addEventListener('submit', (e) => this.handleNewsletterSubmit(e));
+      newsletterForm.addEventListener("submit", (e) =>
+        this.handleNewsletterSubmit(e)
+      );
     }
 
     // Carrito
-    const cartBtn = document.querySelector('.cart-btn');
+    const cartBtn = document.querySelector(".cart-btn");
     if (cartBtn) {
-      cartBtn.addEventListener('click', () => this.toggleCart());
+      cartBtn.addEventListener("click", () => this.toggleCart());
     }
 
-    const closeCart = document.querySelector('.close-cart');
+    const closeCart = document.querySelector(".close-cart");
     if (closeCart) {
-      closeCart.addEventListener('click', () => this.toggleCart());
+      closeCart.addEventListener("click", () => this.toggleCart());
     }
 
-    const modalOverlay = document.querySelector('.modal-overlay');
+    const modalOverlay = document.querySelector(".modal-overlay");
     if (modalOverlay) {
-      modalOverlay.addEventListener('click', () => this.toggleCart());
+      modalOverlay.addEventListener("click", () => this.toggleCart());
     }
 
     // Scroll suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
         e.preventDefault();
-        const targetId = anchor.getAttribute('href');
+        const targetId = anchor.getAttribute("href");
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
           window.scrollTo({
             top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       });
     });
   }
 
-  renderProducts(filter = 'todos') {
-    const productGrid = document.querySelector('.product-grid');
+  renderProducts(filter = "todos") {
+    const productGrid = document.querySelector(".product-grid");
     if (!productGrid) return;
 
-    productGrid.innerHTML = '';
+    productGrid.innerHTML = "";
 
-    const filteredProducts = filter === 'todos' 
-      ? this.products 
-      : this.products.filter(p => p.category === filter);
+    const filteredProducts =
+      filter === "todos"
+        ? this.products
+        : this.products.filter((p) => p.category === filter);
 
     if (filteredProducts.length === 0) {
-      productGrid.innerHTML = '<p class="no-products">No hay productos en esta categoría</p>';
+      productGrid.innerHTML =
+        '<p class="no-products">No hay productos en esta categoría</p>';
       return;
     }
 
-    filteredProducts.forEach(product => {
-      const productCard = document.createElement('div');
-      productCard.className = `product-card ${product.badge ? 'product-card-featured' : ''}`;
-      
+    filteredProducts.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.className = `product-card ${
+        product.badge ? "product-card-featured" : ""
+      }`;
+
       productCard.innerHTML = `
-        ${product.badge ? `<span class="product-card-badge">${product.badge}</span>` : ''}
-        <div class="product-card-img" style="background-image: url('${product.image}')"></div>
+        ${
+          product.badge
+            ? `<span class="product-card-badge">${product.badge}</span>`
+            : ""
+        }
+        <div class="product-card-img" style="background-image: url('${
+          product.image
+        }')"></div>
         <div class="product-card-info">
           <h3>${product.name}</h3>
           <p class="product-description">${product.description}</p>
           <p class="price">$${product.price.toFixed(2)}</p>
-          <button class="btn btn-primary" data-id="${product.id}">Añadir al carrito</button>
+          <button class="btn btn-primary" data-id="${
+            product.id
+          }">Añadir al carrito</button>
         </div>
       `;
-      
+
       productGrid.appendChild(productCard);
     });
 
     // Eventos para botones "Añadir al carrito"
-    document.querySelectorAll('.product-card .btn').forEach(btn => {
-      btn.addEventListener('click', () => {
+    document.querySelectorAll(".product-card .btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
         const productId = parseInt(btn.dataset.id);
         this.addToCart(productId);
-        this.showNotification(`${btn.closest('.product-card').querySelector('h3').textContent} añadido al carrito`);
+        this.showNotification(
+          `${
+            btn.closest(".product-card").querySelector("h3").textContent
+          } añadido al carrito`
+        );
       });
     });
   }
@@ -181,10 +288,10 @@ class SweetCupcakeApp {
 
   // Carrito de compras
   addToCart(productId) {
-    const product = this.products.find(p => p.id === productId);
+    const product = this.products.find((p) => p.id === productId);
     if (!product) return;
 
-    const existingItem = this.cart.find(item => item.id === productId);
+    const existingItem = this.cart.find((item) => item.id === productId);
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
@@ -196,11 +303,13 @@ class SweetCupcakeApp {
   }
 
   updateCartUI() {
-    const cartItems = document.querySelector('.cart-items');
-    const cartTotal = document.querySelector('.cart-total span');
+    const cartItems = document.querySelector(".cart-items");
+    const cartTotal = document.querySelector(".cart-total span");
     if (!cartItems || !cartTotal) return;
 
-    cartItems.innerHTML = this.cart.map(item => `
+    cartItems.innerHTML = this.cart
+      .map(
+        (item) => `
       <div class="cart-item">
         <img src="${item.image}" alt="${item.name}">
         <div class="cart-item-info">
@@ -214,41 +323,46 @@ class SweetCupcakeApp {
         </div>
         <button class="remove-item" data-id="${item.id}">&times;</button>
       </div>
-    `).join('');
+    `
+      )
+      .join("");
 
-    const total = this.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const total = this.cart.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
     cartTotal.textContent = `$${total.toFixed(2)}`;
 
     // Eventos para botones del carrito
-    document.querySelectorAll('.remove-item').forEach(btn => {
-      btn.addEventListener('click', () => {
+    document.querySelectorAll(".remove-item").forEach((btn) => {
+      btn.addEventListener("click", () => {
         this.removeFromCart(parseInt(btn.dataset.id));
-        this.showNotification('Producto eliminado del carrito');
+        this.showNotification("Producto eliminado del carrito");
       });
     });
 
-    document.querySelectorAll('.increase').forEach(btn => {
-      btn.addEventListener('click', () => {
+    document.querySelectorAll(".increase").forEach((btn) => {
+      btn.addEventListener("click", () => {
         this.updateQuantity(parseInt(btn.dataset.id), 1);
       });
     });
 
-    document.querySelectorAll('.decrease').forEach(btn => {
-      btn.addEventListener('click', () => {
+    document.querySelectorAll(".decrease").forEach((btn) => {
+      btn.addEventListener("click", () => {
         this.updateQuantity(parseInt(btn.dataset.id), -1);
       });
     });
   }
 
   updateQuantity(productId, change) {
-    const item = this.cart.find(item => item.id === productId);
+    const item = this.cart.find((item) => item.id === productId);
     if (!item) return;
 
     item.quantity += change;
 
     if (item.quantity <= 0) {
-      this.cart = this.cart.filter(item => item.id !== productId);
-      this.showNotification('Producto eliminado del carrito');
+      this.cart = this.cart.filter((item) => item.id !== productId);
+      this.showNotification("Producto eliminado del carrito");
     }
 
     this.saveCart();
@@ -256,43 +370,43 @@ class SweetCupcakeApp {
   }
 
   removeFromCart(productId) {
-    this.cart = this.cart.filter(item => item.id !== productId);
+    this.cart = this.cart.filter((item) => item.id !== productId);
     this.saveCart();
     this.updateCartUI();
   }
 
   saveCart() {
-    localStorage.setItem('cart', JSON.stringify(this.cart));
+    localStorage.setItem("cart", JSON.stringify(this.cart));
     this.updateCartCount();
   }
 
   updateCartCount() {
     const count = this.cart.reduce((sum, item) => sum + item.quantity, 0);
-    const cartCount = document.querySelector('.cart-count');
+    const cartCount = document.querySelector(".cart-count");
     if (cartCount) {
       cartCount.textContent = count;
     }
   }
 
   toggleCart() {
-    document.querySelector('.cart-modal')?.classList.toggle('show');
-    document.querySelector('.modal-overlay')?.classList.toggle('show');
-    document.body.classList.toggle('no-scroll');
+    document.querySelector(".cart-modal")?.classList.toggle("show");
+    document.querySelector(".modal-overlay")?.classList.toggle("show");
+    document.body.classList.toggle("no-scroll");
     this.updateCartUI();
   }
 
   // Testimonios
   loadTestimonials() {
-    const slider = document.querySelector('.testimonial-slider');
+    const slider = document.querySelector(".testimonial-slider");
     if (!slider) return;
 
-    this.testimonials.slice(1).forEach(testimonial => {
-      const testimonialEl = document.createElement('div');
-      testimonialEl.className = 'testimonial';
+    this.testimonials.slice(1).forEach((testimonial) => {
+      const testimonialEl = document.createElement("div");
+      testimonialEl.className = "testimonial";
       testimonialEl.innerHTML = `
-        <p>"${testimonial.text}"</p>
-        <div class="client">
-          <img src="${testimonial.image}" alt="${testimonial.name}">
+      <div class="client">
+      <img src="${testimonial.image}" alt="${testimonial.name}">
+      <p>"${testimonial.text}"</p>
           <h4>${testimonial.name}</h4>
           <span>${testimonial.role}</span>
         </div>
@@ -302,12 +416,12 @@ class SweetCupcakeApp {
 
     // Slider automático
     let currentIndex = 0;
-    const testimonialsEl = document.querySelectorAll('.testimonial');
+    const testimonialsEl = document.querySelectorAll(".testimonial");
     if (testimonialsEl.length > 0) {
       setInterval(() => {
-        testimonialsEl[currentIndex].classList.remove('active');
+        testimonialsEl[currentIndex].classList.remove("active");
         currentIndex = (currentIndex + 1) % testimonialsEl.length;
-        testimonialsEl[currentIndex].classList.add('active');
+        testimonialsEl[currentIndex].classList.add("active");
       }, 5000);
     }
   }
@@ -317,59 +431,68 @@ class SweetCupcakeApp {
     e.preventDefault();
     const form = e.target;
     let isValid = true;
-    
-    form.querySelectorAll('[required]').forEach(input => {
+
+    form.querySelectorAll("[required]").forEach((input) => {
       if (!input.value.trim()) {
-        input.classList.add('error');
+        input.classList.add("error");
         isValid = false;
       } else {
-        input.classList.remove('error');
+        input.classList.remove("error");
       }
     });
 
     if (isValid) {
-      this.showNotification('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.', 'success');
+      this.showNotification(
+        "Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.",
+        "success"
+      );
       form.reset();
     } else {
-      this.showNotification('Por favor completa todos los campos requeridos.', 'error');
+      this.showNotification(
+        "Por favor completa todos los campos requeridos.",
+        "error"
+      );
     }
   }
 
   handleNewsletterSubmit(e) {
     e.preventDefault();
     const emailInput = e.target.querySelector('input[type="email"]');
-    
-    if (emailInput.value && emailInput.value.includes('@')) {
-      this.showNotification('¡Gracias por suscribirte a nuestro newsletter!', 'success');
+
+    if (emailInput.value && emailInput.value.includes("@")) {
+      this.showNotification(
+        "¡Gracias por suscribirte a nuestro newsletter!",
+        "success"
+      );
       e.target.reset();
-      emailInput.classList.remove('error');
+      emailInput.classList.remove("error");
     } else {
-      emailInput.classList.add('error');
-      this.showNotification('Por favor ingresa un email válido', 'error');
+      emailInput.classList.add("error");
+      this.showNotification("Por favor ingresa un email válido", "error");
     }
   }
 
   // Menú móvil
   toggleMobileMenu() {
-    document.querySelector('nav ul')?.classList.toggle('show');
-    document.querySelector('.menu-toggle')?.classList.toggle('active');
+    document.querySelector("nav ul")?.classList.toggle("show");
+    document.querySelector(".menu-toggle")?.classList.toggle("active");
   }
 
   // Notificaciones
-  showNotification(message, type = 'success') {
-    const notification = document.createElement('div');
+  showNotification(message, type = "success") {
+    const notification = document.createElement("div");
     notification.className = `notification ${type}`;
     notification.innerHTML = `<p>${message}</p>`;
     document.body.appendChild(notification);
 
     setTimeout(() => {
-      notification.classList.add('fade-out');
+      notification.classList.add("fade-out");
       setTimeout(() => notification.remove(), 300);
     }, 3000);
   }
 }
 
 // Iniciar la aplicación
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const app = new SweetCupcakeApp();
 });

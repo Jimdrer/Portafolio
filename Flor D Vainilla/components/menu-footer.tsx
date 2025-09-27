@@ -41,9 +41,9 @@ export default function MenuFooter() {
               <MapPin className="w-8 h-8 text-primary mx-auto mb-4" />
               <h3 className="font-semibold text-foreground mb-2">Ubicación</h3>
               <p className="text-sm text-muted-foreground">
-                Av. Revolución 1234
+                Salón de Fiestas El potrero, Prolongación Matamoros Sur 48 antes 105.
                 <br />
-                Col. Centro, CDMX
+                Col. El Potrero, Valle de Santiago, Gto.
               </p>
             </CardContent>
           </Card>

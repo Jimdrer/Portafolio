@@ -37,6 +37,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Links } from "react-router-dom";
 
 export default function EnhancedPortfolio() {
   const [activeSection, setActiveSection] = useState("inicio");
@@ -285,14 +286,16 @@ export default function EnhancedPortfolio() {
       status: "Completado",
       image: "/pokeico.png?height=300&width=400&text=Interactive+Pokedex",
       color: "bg-gradient-to-br from-red-100 to-yellow-100",
-      link: "#",
+      links: {demo:"https://pokedex-gamma-lovat-22.vercel.app/",
+        code:"https://github.com/Jimdrer/Portafolio/tree/master/React/Pokedex"
+      },
       featured: false,
       timeline: "2 meses",
       client: "Proyecto Personal",
     },
     {
       title: "MTB Adventure Store",
-      category: "E-Commerce Development",
+      category: "eCommerce Development",
       description:
         "Tienda online especializada en mountain biking con catálogo interactivo, comparador de productos, sistema de reseñas y configurador 3D de bicicletas.",
       technologies: ["React", "CSS3", "Stripe", "Node.js", "Three.js"],
@@ -305,7 +308,9 @@ export default function EnhancedPortfolio() {
       status: "Completado",
       image: "/mtblogo.png?height=300&width=400&text=MTB+Store",
       color: "bg-gradient-to-br from-green-100 to-emerald-100",
-      link: "#",
+      links: {demo:"#",
+        code:""
+      },
       featured: false,
       timeline: "4 meses",
       client: "Tienda Deportiva",
@@ -322,17 +327,19 @@ export default function EnhancedPortfolio() {
         "Community driven",
         "200+ productos",
       ],
-      status: "Completado",
+      status: "Rediseño",
       image: "/shop.png?height=300&width=400&text=Merkadito+Marketplace",
       color: "bg-gradient-to-br from-yellow-100 to-orange-100",
-      link: "#",
+      links: {demo:"#",
+        code:""
+      },
       featured: false,
       timeline: "3 meses",
       client: "Comunidad Local",
     },
     {
       title: "Flor D Vainilla",
-      category: "WordPress Development",
+      category: "eCommerce-Development",
       description:
         "Sitio web Gourmet 100% mexicano con galería de platillos, agenda de reservaciones online, blog con recetas e historia, integración con redes sociales y servicio de eventos.",
       technologies: ["Next.js", "React", "TypeScript", "Tailwind Css"],
@@ -345,7 +352,9 @@ export default function EnhancedPortfolio() {
       status: "Completado",
       image: "/flor.png?height=300&width=400&text=Flor+D+Vainilla",
       color: "bg-gradient-to-br from-purple-100 to-pink-100",
-      link: "https://flor-d-vainilla.vercel.app/",
+      links: {demo:"https://flor-d-vainilla.vercel.app/",
+        code:"https://github.com/Jimdrer/Portafolio/tree/master/Flor%20D%20Vainilla",
+      },
       featured: false,
       timeline: "2 meses",
       client: "Panadería Artesanal",
@@ -1296,7 +1305,7 @@ export default function EnhancedPortfolio() {
                       </div>
                       <div className="flex gap-3">
                         <a
-                          href={project.link}
+                          href={project.links?.demo}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-full">
@@ -1330,6 +1339,7 @@ export default function EnhancedPortfolio() {
       </section>
 
       {/* Testimonials Section */}
+      {/*
       <section
         id="testimonios"
         className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
@@ -1395,6 +1405,7 @@ export default function EnhancedPortfolio() {
           </div>
         </div>
       </section>
+      */}      
 
       {/* Certifications */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm">

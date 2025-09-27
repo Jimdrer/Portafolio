@@ -4,8 +4,8 @@
 @use "sass:color";
 
 .feature {
+  padding: 1rem;
   background: color.adjust(v.$dark-color, $lightness: 8%);
-  padding: 1.5rem;
   &-card {
     text-align: center;
     i {
@@ -19,36 +19,75 @@
       text-align: justify;
     }
   }
+  &-images {
+    border-radius: 8px;
+    background: v.$pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    video {
+      @include m.respond-to("md", max) {
+        width: 90%;
+        height: 300px;
+      }
+    }
+  }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  &-images {
-    background: v.$pink;
-    border-radius: 8px;
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+  @include m.respond-to("sm", max) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+.products {
+  &-header {
+    @include m.respond-to("sm", max) {
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+    text-align: center;
+    color: v.$dark-gray;
+  }
+  .category-tabs {
+    display: flex;
+    width: 60;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    button {
+      padding: 5px;
+      border-color: v.$gold;
+      border-radius: 10px;
+      background: v.$pink;
     }
   }
 }
-.products{
-  .productos{
-    display: flex;
-  }
-  .category-tabs{
-    display: block;
-    width: 60;
-  }
+.grid-carousel-container {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  background: v.$gray-color;
 }
-
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  @include m.respond-to("lg");
+  @include m.respond-to("lg", max) {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 1rem 0;
+    margin: 0 -0.5rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 .product-card {
   background: v.$white;
@@ -58,6 +97,16 @@
   @include m.transition(all, 0.3s, ease);
   margin-bottom: v.$spacing-unit;
   position: relative;
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  margin: 0 0rem;
+
+  @include m.respond-to("sm", max) {
+    flex: 0 0 280px;
+  }
+  @include m.respond-to("xs", max) {
+    flex: 0 0 250px;
+  }
 
   &-badge {
     position: absolute;
@@ -150,17 +199,52 @@
     }
   }
 }
+.carousel-controls {
+  display: none;
 
+  @include m.respond-to("lg", max) {
+    @include m.flex-center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  .carousel-btn {
+    background: v.$primary-color;
+    color: v.$white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    @include m.transition(all, 0.3s, ease);
+    @include m.flex-center;
+
+    &:hover {
+      background: darken(v.$primary-color, 10%);
+      transform: scale(1.1);
+    }
+    &:disabled {
+      background: v.$light-gray;
+      cursor: not-allowed;
+      transform: none;
+      opacity: 0.5;
+    }
+  }
+}
+.events {
+  text-align: center;
+  padding: 2em;
+}
 // Cards de eventos
 .event-card {
   @include m.shadow(1);
   border-radius: v.$border-radius;
   overflow: hidden;
   @include m.transition(all, 0.3s, ease);
+  padding: 1em;
 
   img {
-    width: 100%;
-    height: 200px;
+    width: 80%;
+    height: 300px;
     object-fit: cover;
   }
 
@@ -195,5 +279,36 @@
   &:hover {
     transform: translateY(-5px);
     @include m.shadow(2);
+  }
+}
+.testimonials{
+  text-align: center;
+  padding: 2rem;
+  .testimonial-slider {
+    p{
+      margin-bottom: 1em;
+      text-align: justify;
+      
+    }
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    .client{
+      display: block;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      img{
+        margin-top: 0;
+        box-shadow: 0 4px 8px 0 rgba(247, 3, 3, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 90%;
+        
+      }
+    }
   }
 }

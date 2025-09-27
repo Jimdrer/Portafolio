@@ -46,9 +46,9 @@ export default function JobApplication() {
           </p>
         </div>
 
-        <Card className="border-border/50 shadow-lg">
+        <Card className="border-border/50 shadow-lg py-4">
           <CardHeader>
-            <CardTitle className="font-playfair text-2xl text-center text-foreground">
+            <CardTitle className="font-playfair text-2xl text-center text-foreground4">
               Formulario de Aplicación
             </CardTitle>
           </CardHeader>

@@ -26,7 +26,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center space-x-2">
             <img src="favicon.jpg" className="w-25 h-16"></img>
 
-            <span className="font-playfair font-bold text-xl text-foreground">
+            <span style={{fontFamily: 'Epunda Slab'}} className="font-playfair font-bold text-xl text-foreground">
               Flor D Vainilla
             </span>
           </Link>

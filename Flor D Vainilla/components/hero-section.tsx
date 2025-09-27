@@ -8,7 +8,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/elegant-mexican-restaurant-interior-with-warm-ligh.jpg"
+          src="/flordevainillafonda_gourmet-20250222-0004.jpg"
           alt="Interior elegante de Flor D Vainilla"
           className="w-full h-full object-cover"
         />
@@ -27,7 +27,7 @@ export default function HeroSection() {
         </div>
 
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 text-balance">
-          Bienvenidos a <span className="text-secondary">Flor D Vainilla</span>
+          Bienvenidos a <span style={{fontFamily: 'Epunda Slab'}} className="text-tertiary text-shadow-lg/40">Flor D Vainilla</span>
         </h1>
 
         <p className="text-xl md:text-2xl mb-8 text-pretty leading-relaxed max-w-3xl mx-auto">

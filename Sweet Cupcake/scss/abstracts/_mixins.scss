@@ -46,3 +46,20 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   }
 }
+@mixin grid-responsive($min-width: 280px, $gap:2rem){
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax ($min-width, 1fr));
+  gap:$gap;
+}
+@mixin grid-columns($colums: 3, $gap: 2rem){
+  display: grid;
+  grid-template-columns: repeat($colums, 1fr);
+  gap: $gap;
+  
+  @include respond-to('lg', max){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond-to('md', max){
+    grid-template-columns: 1fr;
+  }
+}

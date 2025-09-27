@@ -20,9 +20,9 @@
 
   .logo {
     img {
-      width: 80px;
+      display: flex;
+      width: 75px;
       @include m.transition(filter);
-
       &:hover {
         filter: drop-shadow(0 2px 5px rgba(v.$primary-color, 0.3));
       }
@@ -115,7 +115,7 @@
         position: fixed;
         top: 80px;
         left: 0;
-        width: 100%;
+        width: auto;
         background: v.$white;
         flex-direction: column;
         align-items: center;
