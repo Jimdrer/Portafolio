@@ -60,14 +60,6 @@ class SweetCupcakeApp {
       },
     ];
 
-    this.container = document.querySelector(".grid-carousel-container");
-    this.grid = document.querySelector(".product-grid");
-    this.prevBtn = document.querySelector(".prev-btn");
-    this.nextBtn = document.querySelector(".next-btn");
-    this.items = document.querySelectorAll(".product-card");
-
-    this.isMobile = window.innerWidth <= 992;
-
     this.init();
   }
 
