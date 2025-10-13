@@ -5,21 +5,34 @@
 footer {
   background: v.$dark-color;
   color: v.$white;
-  padding: 4rem 0 0;
-
+  padding: 1rem;
+  .logo{
+    img{
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 15rem;
+    }
+    p {
+      text-align: center;
+      color: rgba(v.$white, 0.7);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+  }
   .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 2rem;
   }
-  .col, .info {
-    margin-bottom: 2rem;
+  .col,
+  .info {
+    margin-bottom: 1rem;
     justify-content: center;
-    
-    
+
     h4 {
       display: flex;
       align-items: center;
@@ -42,31 +55,17 @@ footer {
       }
     }
 
-    .logo {
-      img {
-        width: 150px;
-        margin-bottom: 1rem;
-      }
-      p {
-        color: rgba(v.$white, 0.7);
-        margin-bottom: 1.5rem;
-        line-height: 1.7;
-      }
-    }
-
-    
     ul {
       list-style: none;
       text-align: center;
-      
+
       li {
         margin-bottom: 0.8rem;
-        
+
         a {
           color: rgba(v.$white, 0.7);
           @include m.transition(color);
           display: inline-block;
-          
 
           &:hover {
             color: v.$primary-color;
@@ -131,8 +130,7 @@ footer {
     background: color.adjust(v.$dark-color, $lightness: 5%);
     padding: 1.5rem;
     text-align: center;
-    margin-top: 3rem;
-
+    margin-top: 1rem;
     p {
       color: rgba(v.$white, 0.5);
       font-size: 0.9rem;
