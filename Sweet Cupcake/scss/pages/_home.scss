@@ -132,31 +132,4 @@
     }
   }
 }
-.contact{
-  padding: 1rem;
-  text-align: center;
-  &-container{
-    background-image: url("../img/flour.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    padding-top: 2rem;
-    form{
-      display: block;
-      padding: 1rem;
-      margin-left: auto;
-      margin-right: auto;
-      border: solid 1px black;
-      width: 60%;
-      background-color: rgba(255, 255, 255, 0.589);
-      backdrop-filter: blur(2px);
-    }
-  }
-  &-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
-.newsletter{
-  text-align: center;
-}
+
