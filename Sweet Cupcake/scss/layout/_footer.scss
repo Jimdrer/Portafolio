@@ -91,7 +91,14 @@ footer {
         text-align: center;
       }
     }
-
+    .social-media{
+      text-align: center;
+      i{
+        font-size: 2rem;
+        color: v.$primary-color;
+        padding: 5px;
+      }
+    }
     .social-links {
       display: flex;
       margin-top: 1.5rem;

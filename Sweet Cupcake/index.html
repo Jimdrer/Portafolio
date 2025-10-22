@@ -37,13 +37,13 @@
           <li><a href="#eventos">Para Eventos</a></li>
           <li><a href="#nosotros">Nuestra Filosofía</a></li>
           <li><a href="#contacto">Contacto</a></li>
-          <li>
-            <a href="#" class="cart-btn"
-              ><i class="fas fa-shopping-bag"></i>
-              <span class="cart-count">0</span></a
-            >
-          </li>
         </ul>
+        <div class="header-cart">
+          <a href="#" class="cart-btn"
+            ><i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span></a
+          >
+        </div>
         <div class="menu-toggle">
           <i class="fas fa-bars"></i>
         </div>
@@ -285,15 +285,6 @@
               +1 987 654 321
             </p>
           </div>
-          <div class="social-media">
-            <h3>Síguenos</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-pinterest-p"></i></a>
-              <a href="#"><i class="fab fa-tiktok"></i></a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -306,7 +297,7 @@
           repostería
         </p>
         <form class="newsletter-form">
-          <input type="email" placeholder="Tu correo electrónico" required >
+          <input type="email" placeholder="Tu correo electrónico" required />
           <button type="submit" class="btn btn-secondary">Suscribirme</button>
         </form>
       </div>
@@ -314,7 +305,7 @@
 
     <footer>
       <div class="logo">
-        <img src="./img/pasteleria.png" alt="Sweet Cupcake"/>
+        <img src="./img/pasteleria.png" alt="Sweet Cupcake" />
         <p>
           Pastelería artesanal que transforma ingredientes simples en
           experiencias extraordinarias.
@@ -341,9 +332,18 @@
           </ul>
         </div>
         <div class="info">
-          <h4>Contacto</h4>
+          <h4>Contacto y Redes</h4>
           <p><i class="fas fa-envelope"></i> hola@sweetcupcake.com</p>
           <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+          <div class="social-media">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
           <div class="payment-methods">
             <i class="fab fa-cc-visa"></i>
             <i class="fab fa-cc-mastercard"></i>
@@ -373,7 +373,46 @@
         </div>
       </div>
     </div>
-
+    
+    <div class="cart-popup" id="cartPopup">
+      <div class="popup-content">
+        <div class="popup-header">
+          <i class="fas fa-check-circle"></i>
+          <h3>¡Producto Agregado!</h3>
+          <button class="close-popup">&times;</button>
+        </div>
+        <div class="popup-body">
+          <div class="popup-product-info">
+            <img
+              id="popupProductImage"
+              src=""
+              alt="Producto"
+              class="popup-image" />
+            <div class="popup-details">
+              <h4 id="popupProductName">Nombre del Producto</h4>
+              <p id="popupProductPrice" class="popup-price">$0.00</p>
+            </div>
+          </div>
+          <div class="cart-summary">
+            <h4>Resumen del Carrito</h4>
+            <div id="popupCartItems" class="popup-cart-items">
+              <!-- Los items del carrito se cargarán aquí -->
+            </div>
+            <div class="popup-total">
+              <strong>Total: $<span id="popupCartTotal">0.00</span></strong>
+            </div>
+          </div>
+        </div>
+        <div class="popup-footer">
+          <button class="btn btn-secondary" id="continueShopping">
+            Seguir Comprando
+          </button>
+          <button class="btn btn-primary" id="goToCheckout">
+            Ver Carrito Completo
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="modal-overlay"></div>
     <script type="module" src="./js/script.js"></script>
   </body>

@@ -60,6 +60,8 @@ class SweetCupcakeApp {
       },
     ];
 
+    this.popup = document.getElementById("cartPopup");
+
     this.init();
   }
 
@@ -68,85 +70,83 @@ class SweetCupcakeApp {
     this.renderProducts();
     this.loadTestimonials();
     this.updateCartCount();
-    setTimeout(() =>{
+    setTimeout(() => {
       this.initResponsiveCarousel();
     }, 300);
   }
 
-  initResponsiveCarousel() {
+  //Metodo para popup
+  showCartPopup(product) {
+  const popup = document.getElementById('cartPopup');
+  if (!popup) return;
 
+  // Actualizar información del producto agregado
+  document.getElementById('popupProductName').textContent = product.name;
+  document.getElementById('popupProductPrice').textContent = `$${product.price.toFixed(2)}`;
+  
+  const productImage = document.getElementById('popupProductImage');
+  productImage.src = product.image;
+  productImage.alt = product.name;
 
-    if (!this.container) return;
-    if (this.isMobile) {
-      this.setupCarousel();
-    }
-    window.addEventListener("resize", () => this.handleResize());
+  // Actualizar resumen del carrito
+  this.updatePopupCartSummary();
+
+  // Mostrar popup
+  popup.classList.add('show');
+
+  // Auto-cerrar después de 5 segundos
+  setTimeout(() => {
+    this.hideCartPopup();
+  }, 5000);
+}
+
+// MÉTODO PARA ACTUALIZAR EL RESUMEN EN EL POPUP
+updatePopupCartSummary() {
+  const cartItemsContainer = document.getElementById('popupCartItems');
+  const cartTotalElement = document.getElementById('popupCartTotal');
+  
+  if (!cartItemsContainer || !cartTotalElement) return;
+
+  // Limpiar contenedor
+  cartItemsContainer.innerHTML = '';
+
+  // Calcular total
+  let total = 0;
+
+  // Agregar items al popup (máx # items)
+  this.cart.slice(0, 4).forEach(item => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+
+    const cartItem = document.createElement('div');
+    cartItem.className = 'popup-cart-item';
+    cartItem.innerHTML = `
+      <span class="popup-item-name">${item.name} x${item.quantity}</span>
+      <span class="popup-item-price">$${itemTotal.toFixed(2)}</span>
+    `;
+    cartItemsContainer.appendChild(cartItem);
+  });
+
+  // Mostrar total
+  cartTotalElement.textContent = total.toFixed(2);
+
+  // Mostrar mensaje si hay más items
+  if (this.cart.length > 3) {
+    const moreItems = document.createElement('div');
+    moreItems.className = 'popup-more-items';
+    moreItems.textContent = `+${this.cart.length - 3} productos más...`;
+    cartItemsContainer.appendChild(moreItems);
   }
-  setupCarousel() {
-    this.prevBtn.addEventListener("click", () => this.scroll("prev"));
-    this.nextBtn.addEventListener("click", () => this.scroll("next"));
+}
 
-    this.grid.addEventListener("scroll", () => this.updateButtonState());
-    this.updateButtonState();
-    this.prevBtn.style.display = "flex";
-    this.nextBtn.style.display = "flex";
+// MÉTODO PARA OCULTAR EL POPUP
+hideCartPopup() {
+  const popup = document.getElementById('cartPopup');
+  if (popup) {
+    popup.classList.remove('show');
   }
-  handleResize() {
-    const nowMobile = window.innerWidth <= 992;
-    if (nowMobile && !this.isMobile) {
-      this.isMobile = true;
-      this.setupCarousel();
-    } else if (!nowMobile && this.isMobile) {
-      this.isMobile = false;
-      this.destroyCarousel();
-    }
-  }
-  scroll(direction) {
-    if (!this.isMobile || !this.items.length) return;
-    try{
-      const firstItem = this.items[0];
-      letitemWidth = 300;
-      if (firstItem && firstItem.offsetWidth > 0){
-        itemWidth = firstItem.offsetWidth;
-      }else{
-        const computedStyle = window.getComputedStyle(firstItem);
-        itemWidth= firstItem.clientWidth ||
-        parseInt(computedStyle.width) ||
-        300;
-      }
-      const scrollAmount = itemWidth + 32;
-      this.grid.scrollBy({
-        left: direction === "next" ? scrollAmount : -scrollAmount,
-        behavior: "smooth",
-      });
-    }catch (error){
-      console.log('Error en scroll', error);
-      this.grid.scrollBy({
-        left: direction === "next" ? 332 : -332,
-        behavior: "smooth",
-      });
-    }
-  }
-  updateButtonState() {
-    if (!this.isMobile) return;
-    const { scrollLeft, scrollWidth, clientWidth } = this.grid;
-    this.prevBtn.disabled = scrollLeft <= 10;
-    this.nextBtn.disabled = scrollLeft >= scrollWidth - clientWidth - 10;
-  }
-
-  destroyCarousel() {
-    this.prevBtn.style.display = "none";
-    this.nextBtn.style.display = "none";
-
-    const newPrevBtn = this.prevBtn.cloneNode(true);
-    const newNextBtn = this.nextBtn.cloneNode(true);
-
-    this.prevBtn.parentNode.replaceChild(newPrevBtn, this.prevBtn);
-    this.nextBtn.parentNode.replaceChild(newNextBtn, this.nextBtn);
-
-    this.prevBtn = newPrevBtn;
-    this.nextBtn = newNextBtn;
-  }
+}
+  
 
   setupEventListeners() {
     // Menú móvil
@@ -213,6 +213,34 @@ class SweetCupcakeApp {
         }
       });
     });
+    //Listeners para el popup
+    document.querySelector(".close-popup")?.addEventListener("click", () => {
+      this.hideCartPopup();
+    });
+
+    document
+      .getElementById("continueShopping")?.addEventListener("click", () => {
+        this.hideCartPopup();
+      });
+
+    document.getElementById("goToCheckout")?.addEventListener("click", () => {
+      this.hideCartPopup();
+      this.toggleCart(); // Abrir el carrito completo
+    });
+
+    // Cerrar popup al hacer clic fuera
+    document.getElementById("cartPopup")?.addEventListener("click", (e) => {
+      if (e.target.id === "cartPopup") {
+        this.hideCartPopup();
+      }
+    });
+
+    // Cerrar con ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        this.hideCartPopup();
+      }
+    });
   }
 
   renderProducts(filter = "todos") {
@@ -264,12 +292,12 @@ class SweetCupcakeApp {
     document.querySelectorAll(".product-card .btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const productId = parseInt(btn.dataset.id);
-        this.addToCart(productId);
-        this.showNotification(
-          `${
-            btn.closest(".product-card").querySelector("h3").textContent
-          } añadido al carrito`
-        );
+        const product = this.products.find((p) => p.id === productId);
+        if (product) {
+          this.addToCart(productId);
+          this.showCartPopup(product);
+          this.showNotification(`${product.name} añadido al carrito`);
+        }
       });
     });
   }
