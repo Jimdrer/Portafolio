@@ -37,7 +37,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Links } from "react-router-dom";
 
 export default function EnhancedPortfolio() {
   const [activeSection, setActiveSection] = useState("inicio");
@@ -54,8 +53,8 @@ export default function EnhancedPortfolio() {
     // Animate counters
     const timer = setTimeout(() => {
       setCounters({
-        projects: 15,
-        experience: 4,
+        projects: 7,
+        experience: 5,
         satisfaction: 100,
         technologies: 12,
       });
@@ -73,19 +72,19 @@ export default function EnhancedPortfolio() {
   const skills = [
     {
       icon: Code,
-      title: "Frontend Development",
+      title: "Desarrollo Front-end",
       description:
         "Desarrollo de interfaces modernas y responsivas con React, Next.js y TypeScript",
-      years: "4+ años",
+      years: "5+ años",
       color: "from-blue-500 to-cyan-500",
       projects: "8 proyectos",
       level: 95,
     },
     {
       icon: Palette,
-      title: "UX/UI Design",
+      title: "Diseño UX/UI",
       description:
-        "Diseño centrado en el usuario con metodologías ágiles y design thinking",
+        "Diseño centrado en el usuario con metodologías ágiles y pensamiento de diseño",
       years: "3+ años",
       color: "from-purple-500 to-pink-500",
       projects: "6 proyectos",
@@ -93,16 +92,16 @@ export default function EnhancedPortfolio() {
     },
     {
       icon: Smartphone,
-      title: "Responsive Design",
+      title: "Diseño Responsivo",
       description: "Adaptación perfecta a todos los dispositivos y pantallas",
-      years: "4+ años",
+      years: "5+ años",
       color: "from-green-500 to-emerald-500",
       projects: "12 proyectos",
       level: 90,
     },
     {
       icon: Eye,
-      title: "Attention to Detail",
+      title: "Atencion a los detalles",
       description: "Precisión en cada elemento visual y funcional",
       years: "4+ años",
       color: "from-orange-500 to-red-500",
@@ -121,7 +120,7 @@ export default function EnhancedPortfolio() {
     },
     {
       icon: Database,
-      title: "API Integration",
+      title: "Integración Api",
       description: "Integración eficiente de servicios y manejo de datos",
       years: "3+ años",
       color: "from-teal-500 to-cyan-500",
@@ -223,14 +222,14 @@ export default function EnhancedPortfolio() {
       category: "Full-Stack Development",
       description:
         "Sitio web corporativo para panadería artesanal con galería de productos, sistema de pedidos online, blog de recetas e integración con redes sociales.",
-      technologies: ["React", "Node.js", "Scss"],
+      technologies: ["Html", "Js", "Scss"],
       metrics: [
         "40% ↗ conversiones",
         "500+ usuarios activos",
         "99.9% uptime",
         "4.8★ rating",
       ],
-      status: "En producción",
+      status: "Publicado",
       image: "/pasteleria.png?height=300&width=400&text=Sweet+Cupcake+Platform",
       color: "bg-gradient-to-br from-pink-100 to-rose-100",
       links: {
@@ -271,12 +270,11 @@ export default function EnhancedPortfolio() {
       description:
         "Aplicación web interactiva con API REST, búsqueda avanzada, favoritos persistentes y animaciones fluidas inspiradas en el universo Pokémon.",
       technologies: [
-        "Vue.js",
+        "React",
+        "Yarn",
         "REST API",
-        "LocalStorage",
-        "CSS Animations",
-        "PWA",
-      ],
+        "SCSS Animations",
+        ],
       metrics: [
         "2K+ usuarios únicos",
         "95% satisfacción",
@@ -297,8 +295,8 @@ export default function EnhancedPortfolio() {
       title: "MTB Adventure Store",
       category: "eCommerce Development",
       description:
-        "Tienda online especializada en mountain biking con catálogo interactivo, comparador de productos, sistema de reseñas y configurador 3D de bicicletas.",
-      technologies: ["React", "CSS3", "Stripe", "Node.js", "Three.js"],
+        "Tienda online especializada en mountain bike con catálogo interactivo, comparador de productos, sistema de reseñas y configurador 3D de bicicletas.",
+      technologies: ["Html", "CSS", "Stripe"],
       metrics: [
         "300+ productos",
         "85% conversión",
@@ -308,7 +306,7 @@ export default function EnhancedPortfolio() {
       status: "Completado",
       image: "/mtblogo.png?height=300&width=400&text=MTB+Store",
       color: "bg-gradient-to-br from-green-100 to-emerald-100",
-      links: {demo:"#",
+      links: {demo:"/MTB/mtb.html",
         code:""
       },
       featured: false,
@@ -390,38 +388,19 @@ export default function EnhancedPortfolio() {
 
   const experience = [
     {
-      company: "Freelance Developer",
-      position: "Senior Full-Stack Developer & UX/UI Designer",
+      company: "Medrac",
+      position: "Desarrollador Front-end & Diseñador UX/UI",
       period: "2022 - Presente",
       description:
         "Desarrollo de soluciones web personalizadas para pequeñas y medianas empresas, desde la conceptualización hasta el deployment y mantenimiento.",
       achievements: [
-        "15+ proyectos completados exitosamente",
+        "7+ proyectos completados exitosamente",
         "100% satisfacción del cliente verificada",
         "Reducción promedio del 30% en tiempo de carga",
-        "Aumento promedio del 40% en conversiones",
         "Implementación de metodologías ágiles",
-        "Mentoría a 5+ desarrolladores junior",
       ],
       color: "from-blue-500 to-purple-500",
-      technologies: ["React", "Next.js", "Node.js", "TypeScript", "Figma"],
-    },
-    {
-      company: "Continuous Learning & Development",
-      position: "Self-Taught Developer & Community Contributor",
-      period: "2021 - Presente",
-      description:
-        "Formación continua a través de plataformas reconocidas, participación activa en la comunidad de desarrollo y contribuciones open source.",
-      achievements: [
-        "6+ certificaciones profesionales obtenidas",
-        "Participación en 10+ hackathons y eventos tech",
-        "20+ contribuciones a proyectos open source",
-        "Mentoría a desarrolladores junior en comunidades",
-        "Speaker en 3 eventos locales de tecnología",
-        "Mantenimiento de blog técnico con 50+ artículos",
-      ],
-      color: "from-green-500 to-teal-500",
-      technologies: ["Python", "Vue.js", "WordPress", "Git", "Docker"],
+      technologies: ["React", "Next.js", "Js", "Node.js", "Php", "Python", "Wordpress", "TypeScript", "Sass", "Tailwind", "Figma", "Sketch", "Photoshop"],
     },
   ];
 
@@ -798,7 +777,7 @@ export default function EnhancedPortfolio() {
                         Proyectos Entregados
                       </span>
                       <span className="font-bold text-blue-600 text-lg">
-                        15+
+                        7
                       </span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
@@ -814,15 +793,7 @@ export default function EnhancedPortfolio() {
                         Tiempo Promedio
                       </span>
                       <span className="font-bold text-green-600 text-lg">
-                        -30%
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg">
-                      <span className="text-gray-700 font-medium">
-                        Conversiones
-                      </span>
-                      <span className="font-bold text-orange-600 text-lg">
-                        +40%
+                        1 a 2 Meses
                       </span>
                     </div>
                   </div>
