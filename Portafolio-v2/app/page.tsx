@@ -296,7 +296,7 @@ export default function EnhancedPortfolio() {
       category: "eCommerce Development",
       description:
         "Tienda online especializada en mountain bike con catálogo interactivo, comparador de productos, sistema de reseñas y configurador 3D de bicicletas.",
-      technologies: ["Html", "CSS", "Stripe"],
+      technologies: ["Html", "CSS", "Js"],
       metrics: [
         "300+ productos",
         "85% conversión",
