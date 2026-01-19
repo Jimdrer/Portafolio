@@ -51,9 +51,26 @@ Portafolio web moderno, responsivo y dinamico que muestra mis habilidades y expe
 | Desktop | Mobile |
 |---------|--------|
 | ![Desktop](https://via.placeholder.com/600x400/4F46E5/FFFFFF?text=Desktop+View) | ![Mobile](https://via.placeholder.com/300x500/4F46E5/FFFFFF?text=Mobile+View) |
+| ![00](/img/Screenshot00Dkp%20.png) | ![00](/img/ScreenshotRs00.png) |
+| ![01](/img/Screenshot01dkp.png) | ![01](/img/ScreenshotRs01.png) |
+| ![02](/img/Screenshot02dkp.png) | ![02](/img/ScreenshotRs02.png) |
+| ![03](/img/Screenshot03dkp.png) | ![03](/img/ScreenshotRs03.png) |
+| ![04](/img/Screenshot04dkp.png) | ![04](/img/ScreenshotRs04.png) |
+| ![05](/img/Screenshot05dkp.png) | ![05](/img/ScreenshotRs05.png) |
+| ![06](/img/Screenshot06dkp.png) | ![06](/img/ScreenshotRs06.png) |
+| ![07](/img/Screenshot07dkp.png) | ![07](/img/ScreenshotRs07.png) |
 
 ## 🏗️ Estructura del Proyecto
-
+Portafolio/ </br>
+├── 📁 Portafolio-v2/ </br>
+│ ├── 📁 components/ # Componentes reutilizables </br>
+│ ├── 📁 pages/ # Páginas principales </br>
+│ ├── 📁 styles/ # Estilos globales </br>
+│ ├── 📁 assets/ # Imágenes, fuentes, etc. </br>
+│ └── 📁 utils/ # Funciones auxiliares </br>
+├── 📄 package.json </br>
+├── 📄 README.md </br>
+└── 📄 LICENSE </br>
 
 ## ⚡ Instalación y Uso Local
 
