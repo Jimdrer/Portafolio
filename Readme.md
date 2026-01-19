@@ -59,23 +59,32 @@ Portafolio web moderno, responsivo y dinamico que muestra mis habilidades y expe
 
 1. **Clona el repositorio**
 ```bash
-git clone https://github.com/jimdrer/portafolio.git
+via http: https://github.com/jimdrer/portafolio.git
+via CLI: gh repo clone Jimdrer/Portafolio
 ```
 2. Instala las dependencias
+```bash
+cd portafolio
+npm install
+```
 3. Inicia el servidor de desarrollo
-4. Abre tu navegador
+```bash
+npm run dev
+```
+5. Abre tu navegador
+http://localhost:3000
 
 📈 Estadísticas de GitHub
 https://github-readme-stats.vercel.app/api/pin/?Jimdrer&repo=Portafolio&theme=radical
 
 🤝 Contribuciones
-¡Las contribuciones son bienvenidas! Por favor, lee las guías de contribución antes de enviar un PR.
+¡Las contribuciones son bienvenidas! Por favor, lee las [guías de contribución](https://contributing.md/) antes de enviar un PR.
 
 📄 Licencia
-Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](https://license/) para más detalles.
 
 📞 Contacto
 Jose Dimas ALejandro Espinosa Razo - dim_er89@outlook.com
 
-🔗 LinkedIn: Jimdrer
+🔗 LinkedIn: [Jimdrer](www.linkedin.com/in/jimdrer)
 💼 GitHub: @Jimdrer
