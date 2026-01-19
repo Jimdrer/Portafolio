@@ -63,14 +63,23 @@ Portafolio web moderno, responsivo y dinamico que muestra mis habilidades y expe
 ## 🏗️ Estructura del Proyecto
 Portafolio/ </br>
 ├── 📁 Portafolio-v2/ </br>
+│ ├── 📁 app/ # Páginas principales </br>
 │ ├── 📁 components/ # Componentes reutilizables </br>
-│ ├── 📁 pages/ # Páginas principales </br>
-│ ├── 📁 styles/ # Estilos globales </br>
-│ ├── 📁 assets/ # Imágenes, fuentes, etc. </br>
-│ └── 📁 utils/ # Funciones auxiliares </br>
-├── 📄 package.json </br>
-├── 📄 README.md </br>
-└── 📄 LICENSE </br>
+│ ├── 📁 hooks/ # Funcion auxiliar mobile </br>
+│ ├── 📁 lib/ # Libreria funcion auxiliar </br>
+│ ├── 📁 public/ # Imágenes, fuentes, etc. </br>
+│ ├── 📁 src/ # Codigo raiz </br>
+│ └── 📁 styles/ # Estilos globales </br>
+├── 📄.gitignore </br>
+├── 📄components.json </br>
+├── 📄next.config.mjs </br>
+├── 📄package-lock.json </br>
+├── 📄package.json </br>
+├── 📄pnpm-lock.yaml </br>
+├── 📄postcss.config.js </br>
+├── 📄tailwind.config.js </br>
+├── 📄tsconfig.json </br>
+└── 📄vite.config.ts </br>
 
 ## ⚡ Instalación y Uso Local
 
