@@ -1,22 +1,28 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import { SpeedInsights} from '@vercel/speed-insights/next'
-import { Analytics } from "@vercel/analytics/next"
-import './globals.css'
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import { GoogleTagManager } from "@next/third-parties/google"
+
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Portafolio-v2',
-  description: 'Potafolio-v2, Base en React, Typescript, Tailwind, Next.js',
-}
+  title: "Portafolio",
+  description: "Potafolio, Base en React, Typescript, Tailwind, Next.js",
+  icons: {
+    icon: "/portafolio.png",
+  },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId=""/>
       <head>
         <style>{`
 html {
@@ -27,10 +33,11 @@ html {
         `}</style>
       </head>
       <body>
-        {children}
-        <SpeedInsights />
-        <Analytics/>
-        </body>
+        <ThemeProvider>
+          {children}
+          <Analytics />
+        </ThemeProvider>
+      </body>
     </html>
-  )
+  );
 }

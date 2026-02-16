@@ -29,7 +29,9 @@ import {
   Rocket,
   ChevronDown,
   Play,
-  Quote,
+  Moon,
+  Sun,
+  Monitor
 } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -37,8 +39,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import { LanguageSwitcher } from "@/components/ui/languageSwitcher";
+import { ThemeSwitcher } from "@/components/ui/useTheme";
 
 export default function EnhancedPortfolio() {
+  const [t, i18n] = useTranslation("common");
   const [activeSection, setActiveSection] = useState("inicio");
   const [isVisible, setIsVisible] = useState(false);
   const [counters, setCounters] = useState({
@@ -50,7 +57,6 @@ export default function EnhancedPortfolio() {
 
   useEffect(() => {
     setIsVisible(true);
-    // Animate counters
     const timer = setTimeout(() => {
       setCounters({
         projects: 7,
@@ -85,7 +91,7 @@ export default function EnhancedPortfolio() {
       title: "Diseño UX/UI",
       description:
         "Diseño centrado en el usuario con metodologías ágiles y pensamiento de diseño",
-      years: "3+ años",
+      years: "4+ años",
       color: "from-purple-500 to-pink-500",
       projects: "6 proyectos",
       level: 85,
@@ -96,16 +102,16 @@ export default function EnhancedPortfolio() {
       description: "Adaptación perfecta a todos los dispositivos y pantallas",
       years: "5+ años",
       color: "from-green-500 to-emerald-500",
-      projects: "12 proyectos",
+      projects: "8 proyectos",
       level: 90,
     },
     {
       icon: Eye,
       title: "Atencion a los detalles",
       description: "Precisión en cada elemento visual y funcional",
-      years: "4+ años",
+      years: "5+ años",
       color: "from-orange-500 to-red-500",
-      projects: "Todos",
+      projects: "",
       level: 98,
     },
     {
@@ -113,9 +119,9 @@ export default function EnhancedPortfolio() {
       title: "Testing & Debug",
       description:
         "Testing automatizado, debugging y optimización de rendimiento",
-      years: "3+ años",
+      years: "5+ años",
       color: "from-indigo-500 to-purple-500",
-      projects: "10 proyectos",
+      projects: "8 proyectos",
       level: 88,
     },
     {
@@ -124,7 +130,7 @@ export default function EnhancedPortfolio() {
       description: "Integración eficiente de servicios y manejo de datos",
       years: "3+ años",
       color: "from-teal-500 to-cyan-500",
-      projects: "7 proyectos",
+      projects: "2 proyectos",
       level: 82,
     },
   ];
@@ -237,7 +243,7 @@ export default function EnhancedPortfolio() {
         code: "https://github.com/Jimdrer/Portafolio/tree/master/Sweet%20Cupcake",
       },
       featured: true,
-      timeline: "3 meses",
+      timeline: "2 meses",
       client: "Panadería Local",
     },
     {
@@ -245,7 +251,7 @@ export default function EnhancedPortfolio() {
       category: "Mobile & Web Application",
       description:
         "Aplicación educativa sobre conservación marina con realidad aumentada, gamificación y contenido interactivo para concienciar sobre la vida marina y el cambio climático.",
-      technologies: ["React", "Next", "Tailwind CSS" , "Por integrar Three.js"],
+      technologies: ["React", "Next", "Tailwind CSS", "Por integrar Three.js"],
       metrics: [
         "10K+ descargas",
         "4.8★ rating",
@@ -256,25 +262,20 @@ export default function EnhancedPortfolio() {
       image:
         "/mundo.svg?height=300&width=500&text=Blue+Extinction+Conservation",
       color: "bg-gradient-to-br from-blue-100 to-cyan-100",
-      links:{
+      links: {
         demo: "https://blue-extinction.vercel.app/",
-        code:"https://github.com/Jimdrer/Portafolio/tree/master/Blue-Extinction",
-      }, 
+        code: "https://github.com/Jimdrer/Portafolio/tree/master/Blue-Extinction",
+      },
       featured: true,
-      timeline: "6 meses",
+      timeline: "2 meses",
       client: "ONG Ambiental",
     },
     {
-      title: "Interactive Pokédex",
+      title: "Pokédex",
       category: "Frontend Development",
       description:
         "Aplicación web interactiva con API REST, búsqueda avanzada, favoritos persistentes y animaciones fluidas inspiradas en el universo Pokémon.",
-      technologies: [
-        "React",
-        "Yarn",
-        "REST API",
-        "SCSS Animations",
-        ],
+      technologies: ["React", "Yarn", "REST API", "SCSS Animations"],
       metrics: [
         "2K+ usuarios únicos",
         "95% satisfacción",
@@ -284,8 +285,9 @@ export default function EnhancedPortfolio() {
       status: "Completado",
       image: "/pokeico.png?height=300&width=400&text=Interactive+Pokedex",
       color: "bg-gradient-to-br from-red-100 to-yellow-100",
-      links: {demo:"https://pokedex-gamma-lovat-22.vercel.app/",
-        code:"https://github.com/Jimdrer/Portafolio/tree/master/React/Pokedex"
+      links: {
+        demo: "https://pokedex-gamma-lovat-22.vercel.app/",
+        code: "https://github.com/Jimdrer/Portafolio/tree/master/React/Pokedex",
       },
       featured: false,
       timeline: "2 meses",
@@ -306,9 +308,7 @@ export default function EnhancedPortfolio() {
       status: "Completado",
       image: "/mtblogo.png?height=300&width=400&text=MTB+Store",
       color: "bg-gradient-to-br from-green-100 to-emerald-100",
-      links: {demo:"/MTB/mtb.html",
-        code:""
-      },
+      links: { demo: "/MTB/mtb.html", code: "" },
       featured: false,
       timeline: "4 meses",
       client: "Tienda Deportiva",
@@ -328,9 +328,7 @@ export default function EnhancedPortfolio() {
       status: "Rediseño",
       image: "/shop.png?height=300&width=400&text=Merkadito+Marketplace",
       color: "bg-gradient-to-br from-yellow-100 to-orange-100",
-      links: {demo:"#",
-        code:""
-      },
+      links: { demo: "#", code: "" },
       featured: false,
       timeline: "3 meses",
       client: "Comunidad Local",
@@ -350,8 +348,9 @@ export default function EnhancedPortfolio() {
       status: "Completado",
       image: "/flor.png?height=300&width=400&text=Flor+D+Vainilla",
       color: "bg-gradient-to-br from-purple-100 to-pink-100",
-      links: {demo:"https://flor-d-vainilla.vercel.app/",
-        code:"https://github.com/Jimdrer/Portafolio/tree/master/Flor%20D%20Vainilla",
+      links: {
+        demo: "https://flor-d-vainilla.vercel.app/",
+        code: "https://github.com/Jimdrer/Portafolio/tree/master/Flor%20D%20Vainilla",
       },
       featured: false,
       timeline: "2 meses",
@@ -359,36 +358,9 @@ export default function EnhancedPortfolio() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "María González",
-      position: "CEO, Sweet Cupcake",
-      content:
-        "Jose transformó completamente nuestro negocio online. Las ventas aumentaron un 40% en los primeros 3 meses. Su atención al detalle y profesionalismo son excepcionales.",
-      rating: 5,
-      image: "/MG.jpg?height=60&width=60&text=MG",
-    },
-    {
-      name: "Carlos Mendoza",
-      position: "Director, ONG Blue Ocean",
-      content:
-        "La aplicación que desarrolló Jose ha sido fundamental para nuestra misión de conservación. Su creatividad y habilidades técnicas superaron nuestras expectativas.",
-      rating: 5,
-      image: "/CM.jpg?height=60&width=60&text=CM",
-    },
-    {
-      name: "Ana Rodríguez",
-      position: "Gerente, MTB Adventure",
-      content:
-        "Profesional, creativo y siempre dispuesto a ir más allá. Jose entregó un proyecto que no solo cumplió, sino que superó todos nuestros requisitos.",
-      rating: 5,
-      image: "/AR.jpg?height=60&width=60&text=AR",
-    },
-  ];
-
   const experience = [
     {
-      company: "Medrac",
+      company: "Medrac freelance",
       position: "Desarrollador Front-end & Diseñador UX/UI",
       period: "2022 - Presente",
       description:
@@ -400,7 +372,21 @@ export default function EnhancedPortfolio() {
         "Implementación de metodologías ágiles",
       ],
       color: "from-blue-500 to-purple-500",
-      technologies: ["React", "Next.js", "Js", "Node.js", "Php", "Python", "Wordpress", "TypeScript", "Sass", "Tailwind", "Figma", "Sketch", "Photoshop"],
+      technologies: [
+        "React",
+        "Next.js",
+        "Js",
+        "Node.js",
+        "Php",
+        "Python",
+        "Wordpress",
+        "TypeScript",
+        "Sass",
+        "Tailwind",
+        "Figma",
+        "Sketch",
+        "Photoshop",
+      ],
     },
   ];
 
@@ -480,7 +466,13 @@ export default function EnhancedPortfolio() {
     },
   ];
 
+  const toggleLanguages = () => {
+    const newLang = i18n.language === "es" ? "en" : "es";
+    i18n.changeLanguage(newLang);
+  };
+
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-200 shadow-sm">
@@ -497,18 +489,17 @@ export default function EnhancedPortfolio() {
                 <div className="font-bold text-gray-900">PORTAFOLIO</div>
                 <div className="text-xs text-gray-500 flex items-center">
                   <div className="w-1 h-1 bg-green-500 rounded-full mr-1 animate-pulse"></div>
-                  Online
+                  En linea
                 </div>
               </div>
             </div>
-
+            {/*<ThemeSwitcher/>*/}
             <div className="hidden md:flex space-x-8">
               {[
                 "inicio",
                 "habilidades",
                 "experiencia",
                 "proyectos",
-                "testimonios",
                 "contacto",
               ].map((section) => (
                 <a
@@ -609,8 +600,14 @@ export default function EnhancedPortfolio() {
                   </div>
                   <div className="flex items-center text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
                     <MapPin className="w-4 h-4 mr-1" />
-                    Remote / México
+                    Remoto / México
                   </div>
+                  {/*<button
+                    onClick={toggleLanguages}
+                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-all">
+                    <span>{i18n.language === "es" ? "🇪🇸" : "🇺🇸"}</span>
+                    <span>{i18n.language === "es" ? "ES" : "E"}</span>
+                  </button>*/}
                   <div className="flex items-center space-x-3">
                     <div className="flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
                       <span className="text-sm font-medium">🇪🇸 Español</span>
@@ -632,12 +629,12 @@ export default function EnhancedPortfolio() {
 
                   <div className="flex items-center space-x-2 text-lg">
                     <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1">
-                      Senior Frontend Developer
+                      Desarrolladror Frontend
                     </Badge>
                     <Badge
                       variant="outline"
                       className="border-purple-300 text-purple-700">
-                      UX/UI Designer
+                      Diseñador UX/UI
                     </Badge>
                   </div>
                 </div>
@@ -685,7 +682,7 @@ export default function EnhancedPortfolio() {
                       </strong>{" "}
                       y{" "}
                       <strong className="text-gray-800">
-                        15+ proyectos completados
+                        7+ proyectos completados
                       </strong>
                       , he trabajado con tecnologías como JavaScript, React,
                       Node.js, Angular, Vue.js, Python, Figma y Photoshop. Me
@@ -710,13 +707,6 @@ export default function EnhancedPortfolio() {
                     Descargar CV
                   </Button>
                 </a>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent hover:scale-105 transition-all group">
-                  <Play className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  Ver Demo Reel
-                </Button>
                 <Link href="#proyectos" scroll={true}>
                   <Button
                     size="lg"
@@ -776,9 +766,7 @@ export default function EnhancedPortfolio() {
                       <span className="text-gray-700 font-medium">
                         Proyectos Entregados
                       </span>
-                      <span className="font-bold text-blue-600 text-lg">
-                        7
-                      </span>
+                      <span className="font-bold text-blue-600 text-lg">7</span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
                       <span className="text-gray-700 font-medium">
@@ -817,7 +805,7 @@ export default function EnhancedPortfolio() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2">
-              Expertise
+              Habilidades
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Habilidades Profesionales
@@ -894,7 +882,7 @@ export default function EnhancedPortfolio() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2">
-              Tech Stack
+              Stack tecnológico
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Conocimientos Técnicos
@@ -960,7 +948,7 @@ export default function EnhancedPortfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-gradient-to-r from-green-600 to-teal-600 text-white px-4 py-2">
-              Career
+              Experiencia
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Experiencia Profesional
@@ -1046,7 +1034,7 @@ export default function EnhancedPortfolio() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2">
-              Portfolio
+              Portafolio
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Proyectos Destacados
@@ -1376,14 +1364,14 @@ export default function EnhancedPortfolio() {
           </div>
         </div>
       </section>
-      */}      
+      */}
 
       {/* Certifications */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-4 py-2">
-              Education
+              Educación
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Certificaciones & Formación
@@ -1446,7 +1434,7 @@ export default function EnhancedPortfolio() {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <Badge className="mb-6 bg-white/20 text-white border-white/30 px-4 py-2">
-            Let's Connect
+            ¡Conectémonos!
           </Badge>
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
             ¿Listo para trabajar juntos?

@@ -25,7 +25,6 @@ export default function Layout({ children }: LayoutProps) {
     { path: "/habilidades", label: "HABILIDADES" },
     { path: "/experiencia", label: "EXPERIENCIA" },
     { path: "/proyectos", label: "PROYECTOS" },
-    { path: "/testimonios", label: "TESTIMONIOS" },
     { path: "/contacto", label: "CONTACTO" },
   ]
 

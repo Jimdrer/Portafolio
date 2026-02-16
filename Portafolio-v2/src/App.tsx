@@ -345,7 +345,6 @@ function App() {
         <Route path="/habilidades" element={<Skills />} />
         <Route path="/experiencia" element={<Experience />} />
         <Route path="/proyectos" element={<Projects />} />
-        <Route path="/testimonios" element={<Testimonials />} />
         <Route path="/contacto" element={<Contact />} />
       </Routes>
     </Layout>

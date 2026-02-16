@@ -1,5 +1,120 @@
 {
-  "gretting": "Hola, mundo",
-  "button": "Descarga CV",
-  "welcome": "Bienbenido"
+  "nav": {
+    "home": "inicio",
+    "skills": "habilidades",
+    "experience": "experiencia",
+    "projects": "proyectos",
+    "contact": "contacto"
+  },
+  "hero": {
+    "status": "Disponible para trabajar",
+    "location": "Remoto / México",
+    "spanish": "🇪🇸 Español",
+    "english": "🇺🇸 English",
+    "name": "Jose Dimas Alejandro",
+    "surname": "Espinosa Razo",
+    "title": "Desarrollador Frontend",
+    "subtitle": "Diseñador UX/UI",
+    "description": "Especializado en crear <strong>aplicaciones web escalables</strong>, centradas en el usuario y con un enfoque en <strong>rendimiento y accesibilidad</strong>. Transformo ideas en experiencias digitales excepcionales.",
+    "years": "Con más de <strong>4 años de experiencia</strong> y <strong>7+ proyectos completados</strong>, he trabajado con tecnologías como JavaScript, React, Node.js, Angular, Vue.js, Python, Figma y Photoshop. Me mantengo actualizado constantemente con las últimas tendencias y mejores prácticas.",
+    "downloadCV": "Descargar CV",
+    "viewDemo": "Ver Demo Reel",
+    "viewProjects": "Ver Proyectos",
+    "impact": {
+      "title": "Impacto Profesional",
+      "projects": "Proyectos Entregados",
+      "satisfaction": "Satisfacción Cliente",
+      "averageTime": "Tiempo Promedio"
+    }
+  },
+  "skills": {
+    "title": "Habilidades Profesionales",
+    "subtitle": "🛠️ Competencias Técnicas",
+    "description": "Competencias técnicas y creativas desarrolladas a través de años de experiencia práctica, formación continua y proyectos desafiantes en el mundo real.",
+    "frontend": "Desarrollo Front-end",
+    "frontendDesc": "Desarrollo de interfaces modernas y responsivas con React, Next.js y TypeScript",
+    "uxui": "Diseño UX/UI",
+    "uxuiDesc": "Diseño centrado en el usuario con metodologías ágiles y pensamiento de diseño",
+    "responsive": "Diseño Responsivo",
+    "responsiveDesc": "Adaptación perfecta a todos los dispositivos y pantallas",
+    "details": "Atención a los detalles",
+    "detailsDesc": "Precisión en cada elemento visual y funcional",
+    "testing": "Testing & Debug",
+    "testingDesc": "Testing automatizado, debugging y optimización de rendimiento",
+    "api": "Integración Api",
+    "apiDesc": "Integración eficiente de servicios y manejo de datos",
+    "level": "Nivel de competencia"
+  },
+  "technologies": {
+    "title": "Conocimientos Técnicos",
+    "subtitle": "🔥 Tecnologías & Herramientas",
+    "description": "Stack tecnológico completo con niveles de competencia verificados y experiencia práctica en proyectos reales",
+    "competence": "Competencia",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Design",
+    "tools": "Tools",
+    "cms": "CMS"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "subtitle": "💼 Trayectoria & Logros",
+    "description": "Trayectoria profesional marcada por el crecimiento continuo, la innovación y el impacto positivo en cada proyecto",
+    "achievements": "Logros Destacados"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "🚀💡 Casos de Éxito",
+    "description": "Selección de trabajos que demuestran mis capacidades técnicas, creatividad y enfoque en resultados medibles",
+    "featured": "Proyectos Destacados",
+    "other": "Otros Proyectos",
+    "status": {
+      "published": "Publicado",
+      "completed": "Completado",
+      "redesign": "Rediseño"
+    },
+    "techStack": "Stack Tecnológico:",
+    "results": "Resultados Clave:",
+    "viewProject": "Ver Proyecto",
+    "details": "Ver Detalles"
+  },
+  "contact": {
+    "title": "¿Listo para trabajar juntos?",
+    "subtitle": "🤝 Hagamos algo increíble",
+    "description": "Estoy disponible para nuevos proyectos, oportunidades laborales y colaboraciones emocionantes. ¡Transformemos tus ideas en realidad digital!",
+    "email": "Email Profesional",
+    "emailSub": "Respuesta garantizada en 24h",
+    "whatsapp": "WhatsApp",
+    "whatsappSub": "Disponible de 9:00 - 18:00",
+    "sendMessage": "Enviar Mensaje",
+    "downloadCV": "Descargar Curriculum",
+    "preferCV": "¿Prefieres descargar mi CV?"
+  },
+  "footer": {
+    "name": "Jose Dimas Alejandro Espinosa Razo",
+    "title": "Frontend Developer & UX/UI Designer",
+    "description": "Transformando ideas en experiencias digitales excepcionales. Siempre buscando la perfección en cada línea de código.",
+    "links": "Enlaces Rápidos",
+    "connect": "Conecta Conmigo",
+    "copyright": "© {{year}} Jose Dimas Alejandro Espinosa Razo",
+    "built": "Desarrollado con ❤️ usando Next.js, Tailwind CSS y mucho café ☕",
+    "made": "Hecho en México 🇲🇽",
+    "love": "Con amor por el código 💻"
+  },
+  "stats": {
+    "projects": "Proyectos Completados",
+    "years": "Años de Experiencia",
+    "satisfaction": "Satisfacción del Cliente",
+    "technologies": "Tecnologías Dominadas"
+  },
+  "common": {
+    "available": "En linea",
+    "online": "Disponible",
+    "months": "meses",
+    "client": "Cliente",
+    "timeline": "Tiempo",
+    "view": "Ver",
+    "code": "Código",
+    "demo": "Demo"
+  }
 }

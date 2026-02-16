@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+/**@type {import('next').NextConfig} */
+
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -8,6 +9,11 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+  },
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    localeDetection: false,
   },
 }
 export default nextConfig
